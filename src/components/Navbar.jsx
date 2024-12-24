@@ -1,4 +1,4 @@
-import image from '../assets/icons/NavbarLogo.png'
+import image from "../assets/icons/NavbarLogo.png";
 const Navbar = () => {
   return (
     <div>
@@ -45,20 +45,20 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">
-            <img src={image} alt="" className='h-[50px] w-[50px]' />
+            <img src={image} alt="" className="h-[50px] w-[50px]" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className='font-bold'>Home</a>
+              <a className="font-bold">Home</a>
             </li>
             <li>
-              <a className='font-bold'>About Us</a>
+              <a className="font-bold">About Us</a>
             </li>
             <li>
               <details>
-                <summary className='font-bold'>Courses</summary>
+                <summary className="font-bold">Courses</summary>
                 <ul className="p-2">
                   <li>
                     <a>Course 1</a>
@@ -71,7 +71,7 @@ const Navbar = () => {
             </li>
             <li>
               <details>
-                <summary className='font-bold'>Blogs</summary>
+                <summary className="font-bold">Blogs</summary>
                 <ul className="p-2">
                   <li>
                     <a>Blog 1</a>
@@ -79,27 +79,52 @@ const Navbar = () => {
                   <li>
                     <a>Blog 2</a>
                   </li>
-                  
                 </ul>
               </details>
             </li>
-            
           </ul>
-          
-          
         </div>
         <div className="navbar-end">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-                  <a className="btn font-bold">Sign Up</a>
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <a className="btn font-bold mx-3 border-[#074226] px-10">Sign Up</a>
+            </li>
+            <li>
+              <a className="btn font-bold bg-[#074226] text-white mx-3 px-10">Log in</a>
+            </li>
+          </ul>
+          <ul className="menu menu-horizontal px-1">
+            <a className="btn font-bold bg-[#074226] text-white rounded-full">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+            </a>
 
+            <li>
+              <details>
+                <summary className="font-bold mx-3">Language</summary>
+                <ul className="p-2">
+                  <li>
+                    <a>English</a>
                   </li>
                   <li>
-                  <a className="btn font-bold">Log in</a>
-
+                    <a>Urdu</a>
                   </li>
+                </ul>
+              </details>
+            </li>
           </ul>
-          <a className="btn">Sign Up</a>
         </div>
       </div>
     </div>

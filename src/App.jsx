@@ -1,11 +1,14 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Banner from './components/Banner';
+import Footer from './components/Footer';
 function App() {
 
  return (
-  <div>
+  <div >
   <Navbar/>
-    I am Main
+  <Banner/>
+  <Footer/>
     </div>
  );
 }
