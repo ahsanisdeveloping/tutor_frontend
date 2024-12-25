@@ -31,7 +31,7 @@ const Banner = () => {
                     <button className='btn font-bold  h-[60px] border-[#074226] px-10'>Learn More</button>
                     
                 </div>
-                <div className='bg-[#D1BF8FB8] flex p-3 rounded-[10px] justify-between  text-black my-5 w-[402px] gap-2 h-[116px]'>
+                <div className='bg-[#D1BF8FB8] flex p-3 rounded-[10px] justify-between  text-black my-5 w-[402px] gap-2'>
                         <div>
                             <span className='font-bold text-[13px] '>More Than</span>
                             <p className='font-bold text-[53px]'>500+</p>

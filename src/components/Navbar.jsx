@@ -87,10 +87,10 @@ const Navbar = () => {
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="btn font-bold mx-3 border-[#074226] px-10">Sign Up</a>
+              <a className="btn font-bold mx-2 border-[#074226] px-5">Sign Up</a>
             </li>
             <li>
-              <a className="btn font-bold bg-[#074226] text-white mx-3 px-10">Log in</a>
+              <a className="btn font-bold bg-[#074226] text-white mx-2 px-5">Log in</a>
             </li>
           </ul>
           <ul className="menu menu-horizontal px-1">
