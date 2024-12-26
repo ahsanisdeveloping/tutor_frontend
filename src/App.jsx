@@ -5,6 +5,8 @@ import Footer from './components/Footer';
 import ExplorePage from './components/ExplorePage';
 import SatisfactionSection from './components/SatisfationPage';
 import OfferingSection from './components/OfferingSection';
+import Services from './components/Services';
+import LearningSolution from './components/LearningSolution';
 function App() {
 
  return (
@@ -14,6 +16,8 @@ function App() {
   <OfferingSection/>
   <ExplorePage/>
   <SatisfactionSection/>
+  <Services/>
+  <LearningSolution/>
   <Footer/>
     </div>
  );
