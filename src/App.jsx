@@ -7,6 +7,8 @@ import SatisfactionSection from './components/SatisfationPage';
 import OfferingSection from './components/OfferingSection';
 import Services from './components/Services';
 import LearningSolution from './components/LearningSolution';
+import SignIn from './components/SignIn';
+import RegisterPage from './components/Register';
 function App() {
 
  return (
@@ -19,6 +21,8 @@ function App() {
   <Services/>
   <LearningSolution/>
   <Footer/>
+  <SignIn/>
+  <RegisterPage/>
     </div>
  );
 }
