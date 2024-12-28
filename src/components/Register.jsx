@@ -100,7 +100,8 @@ const StudentForm = () => (
         Password
       </label>
       <input type="password" placeholder="Password" className="input" />
-    </div><div className="flex flex-col">
+    </div>
+    <div className="flex flex-col">
       <label htmlFor="" className="text-white">
         Confirm Password
       </label>
@@ -135,31 +136,56 @@ const TeacherForm = () => (
     {/* Personal Information */}
     <form className="space-y-4">
       {/* Personal Information */}
+
       <div className="grid grid-cols-2 gap-4">
-        <input type="text" placeholder="First Name" className="input" />
-        <input type="text" placeholder="Last Name" className="input" />
+        <div>
+          <label htmlFor="" className="text-white">
+            First Name
+          </label>
+          <input type="text" placeholder="First Name" className="input" />
+        </div>
+        <div>
+          <label htmlFor="" className="text-white">
+            Last Name
+          </label>
+          <input type="text" placeholder="Last Name" className="input" />
+        </div>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div className="flex items-center space-x-4">
           <label className="flex items-center space-x-2">
             <input type="radio" name="gender" value="Male" />
-            <span>Male</span>
+            <span className="text-white">Male</span>
           </label>
           <label className="flex items-center space-x-2">
             <input type="radio" name="gender" value="Female" />
-            <span>Female</span>
+            <span className="text-white">Female</span>
           </label>
         </div>
-        <input type="text" placeholder="Phone Number" className="input" />
+        <div>
+          <label htmlFor="" className="text-white">Phone</label>
+          <input type="text" placeholder="Phone Number" className="input" />
+        </div>
       </div>
-      <input type="email" placeholder="Email" className="input" />
-      <div className="grid grid-cols-2 gap-4">
-        <input type="password" placeholder="New Password" className="input" />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          className="input"
-        />
+      <div className="flex flex-col">
+        <label htmlFor="" className="text-white">Email</label>
+        <input type="email" placeholder="Email" className="input" />
+      </div>
+      <div className="">
+        <div className="flex flex-col">
+          <label htmlFor="" className="text-white">
+            Password
+          </label>
+          <input type="Password" placeholder="Email" className="input" />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="" className="text-white">Confirm Password</label>
+          <input
+            type="Confirm Password"
+            placeholder="Email"
+            className="input"
+          />
+        </div>
       </div>
 
       {/* Location */}
@@ -224,7 +250,7 @@ const TeacherForm = () => (
 
       <div className="flex items-center space-x-2">
         <input type="checkbox" id="terms" />
-        <label htmlFor="terms" className="text-gray-600">
+        <label htmlFor="terms" className="text-white">
           I Agree to Terms and Conditions
         </label>
       </div>

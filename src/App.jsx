@@ -9,20 +9,24 @@ import Services from './components/Services';
 import LearningSolution from './components/LearningSolution';
 import SignIn from './components/SignIn';
 import RegisterPage from './components/Register';
+import TrendingBlogs from './components/BlogsPage';
+import Blog from './components/Blog';
 function App() {
 
  return (
   <div >
-  <Navbar/>
-  <Banner/>
-  <OfferingSection/>
-  <ExplorePage/>
-  <SatisfactionSection/>
-  <Services/>
-  <LearningSolution/>
-  <Footer/>
-  <SignIn/>
-  <RegisterPage/>
+  {/* <Navbar/> */}
+  {/* <Banner/> */}
+  {/* <OfferingSection/> */}
+  {/* <ExplorePage/> */}
+  {/* <SatisfactionSection/> */}
+  {/* <Services/> */}
+  {/* <LearningSolution/> */}
+  {/* <Footer/> */}
+  {/* <SignIn/> */}
+  {/* <RegisterPage/> */}
+  {/* <TrendingBlogs/> */}
+  <Blog/>
     </div>
  );
 }
