@@ -11,6 +11,7 @@ import SignIn from './components/SignIn';
 import RegisterPage from './components/Register';
 import TrendingBlogs from './components/BlogsPage';
 import Blog from './components/Blog';
+import PaymentMethod from './components/PaymentMethod';
 function App() {
 
  return (
@@ -26,7 +27,8 @@ function App() {
   {/* <SignIn/> */}
   {/* <RegisterPage/> */}
   {/* <TrendingBlogs/> */}
-  <Blog/>
+  {/* <Blog/> */}
+  <PaymentMethod/>
     </div>
  );
 }
