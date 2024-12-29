@@ -12,23 +12,26 @@ import RegisterPage from './components/Register';
 import TrendingBlogs from './components/BlogsPage';
 import Blog from './components/Blog';
 import PaymentMethod from './components/PaymentMethod';
+import Discover from './components/Discover';
 function App() {
 
  return (
   <div >
-  {/* <Navbar/> */}
+  <Navbar/>
   {/* <Banner/> */}
   {/* <OfferingSection/> */}
   {/* <ExplorePage/> */}
   {/* <SatisfactionSection/> */}
   {/* <Services/> */}
   {/* <LearningSolution/> */}
-  {/* <Footer/> */}
   {/* <SignIn/> */}
   {/* <RegisterPage/> */}
   {/* <TrendingBlogs/> */}
   {/* <Blog/> */}
-  <PaymentMethod/>
+  {/* <PaymentMethod/> */}
+  <Discover/>
+  <Footer/>
+
     </div>
  );
 }
