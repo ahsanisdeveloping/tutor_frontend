@@ -1,5 +1,8 @@
 import image from "../assets/icons/NavbarLogo.png";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 const Navbar = () => {
+  const {t} = useTranslation();
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -51,7 +54,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="font-bold">Home</a>
+              <a className="font-bold">{t("test")}</a>
             </li>
             <li>
               <a className="font-bold">About Us</a>
@@ -112,17 +115,7 @@ const Navbar = () => {
             </a>
 
             <li>
-              <details>
-                <summary className="font-bold mx-3">Language</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>English</a>
-                  </li>
-                  <li>
-                    <a>Urdu</a>
-                  </li>
-                </ul>
-              </details>
+              <LanguageSelector/>
             </li>
           </ul>
         </div>

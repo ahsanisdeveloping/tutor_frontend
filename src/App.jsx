@@ -13,6 +13,7 @@ import TrendingBlogs from './components/BlogsPage';
 import Blog from './components/Blog';
 import PaymentMethod from './components/PaymentMethod';
 import Discover from './components/Discover';
+import "./i18n.js"
 function App() {
 
  return (
