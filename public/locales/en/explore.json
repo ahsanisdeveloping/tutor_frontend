@@ -1,0 +1,12 @@
+{
+    "title": "Explore Course by Categories",
+    "categories": {
+        "accounting": "Accounting & Auditing",
+        "finance": "Finance & Investment",
+        "marketing": "Digital Marketing",
+        "hr": "Human Resources & Total Rewards",
+        "supplyChain": "Supply Chain Management",
+        "professionalEducation": "Continuing Professional Education"
+    },
+    "exploreMore": "Explore More"
+}

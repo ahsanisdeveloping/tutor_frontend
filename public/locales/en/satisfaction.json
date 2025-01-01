@@ -1,0 +1,29 @@
+{
+    "title": "OpenSpace ensured satisfaction",
+    "services": {
+        "results": {
+            "title": "Online Results",
+            "description": "Join our online classes and stay updated with real-time results specifically for your learning journey."
+        },
+        "testing": {
+            "title": "Online Testing",
+            "description": "Online testing is available. Join us to get started!"
+        },
+        "quiz": {
+            "title": "Online Quiz",
+            "description": "Open space offers an engaging online quiz platform designed to enhance your Quran learning experience."
+        },
+        "resources": {
+            "title": "Online Resources",
+            "description": "Open space is one which has the most extensive library in the world for online education resources."
+        },
+        "classes": {
+            "title": "Online Classes",
+            "description": "Open space is one of the most experienced academies in online classes."
+        },
+        "learning": {
+            "title": "Online Learning",
+            "description": "Open space is one of the most experienced academies for learning online."
+        }
+    }
+}

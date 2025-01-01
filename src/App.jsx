@@ -14,24 +14,12 @@ import Blog from './components/Blog';
 import PaymentMethod from './components/PaymentMethod';
 import Discover from './components/Discover';
 import "./i18n.js"
+import LandingPage from './pages/LandingPage.jsx';
 function App() {
 
  return (
   <div >
-  <Navbar/>
-  {/* <Banner/> */}
-  {/* <OfferingSection/> */}
-  {/* <ExplorePage/> */}
-  {/* <SatisfactionSection/> */}
-  {/* <Services/> */}
-  {/* <LearningSolution/> */}
-  {/* <SignIn/> */}
-  {/* <RegisterPage/> */}
-  {/* <TrendingBlogs/> */}
-  {/* <Blog/> */}
-  {/* <PaymentMethod/> */}
-  <Discover/>
-  <Footer/>
+    <LandingPage/>
 
     </div>
  );

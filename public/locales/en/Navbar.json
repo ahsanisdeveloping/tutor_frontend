@@ -1,0 +1,23 @@
+{
+    "home":"Home",
+    "aboutUs":"About Us",
+    "courses":{
+        "title":"Courses",
+        "list":{
+            "course1":"Course 1",
+            "course2":"Course 2",
+            "course3":"Course 3"
+        }
+    },
+    "blogs":{
+        "title":"Blogs",
+        "list":{
+            "blog1":"Blog 1",
+            "blog2":"Blog 2",
+            "blog3":"Blog 3"
+        }
+    },
+    "signup":"Sign Up",
+    "login":"Login"
+
+}

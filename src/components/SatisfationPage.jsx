@@ -5,42 +5,45 @@ import img3 from "../assets/images/satisfaction/img3.png"
 import img4 from "../assets/images/satisfaction/img4.png"
 import img5 from "../assets/images/satisfaction/img5.png"
 import img6 from "../assets/images/satisfaction/img6.png"
+import { useTranslation } from "react-i18next";
+
 const SatisfactionSection = () => {
+  const {t} = useTranslation("satisfaction")
   const items = [
     {
       icon: img1,
-      title: "Online Quiz",
+      title: t("services").quiz.title,
       description:
-        "Open space offers an engaging online quiz platform designed to enhance your Quran learning experience.",
+      t("services").quiz.description,
     },
     {
       icon: img2,
-      title: "Online Testing",
-      description: "Online testing is available. Join us to get started!",
+      title: t("services").testing.title,
+      description: t("services").testing.description,
     },
     {
       icon: img3,
-      title: "Online Results",
+      title:  t("services").results.title,
       description:
-        "Join our online classes and stay updated with real-time results specifically for your learning journey!",
+      t("services").results.description,
     },
     {
       icon: img4,
-      title: "Online Learning",
+      title: t("services").learning.title,
       description:
-        "Open space is one of the most experienced academies for learning online.",
+      t("services").learning.description,
     },
     {
       icon: img5,
-      title: "Online Classes",
+      title: t("services").classes.title,
       description:
-        "Open space is one of the most experienced academies in online classes.",
+      t("services").classes.description,
     },
     {
       icon: img6,
-      title: "Online Resources",
+      title: t("services").resources.title,
       description:
-        "Open space is one which has the most extensive library in the world for online education resources.",
+      t("services").resources.description,
     },
   ];
 
@@ -48,7 +51,7 @@ const SatisfactionSection = () => {
     <div className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto text-left px-4">
         <h2 className="text-5xl font-bold mb-8 text-center py-10">
-          OpenSpace ensured satisfaction
+          {t("title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item, index) => (

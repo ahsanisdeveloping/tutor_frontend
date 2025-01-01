@@ -1,0 +1,20 @@
+{
+    "title":"What We Are Offering",
+    "train":{
+        "title":"Corporate Level Training",
+        "perks":{
+            "perk1":"Tailored programs for organizations.",
+            "perk2":"Boost team productivity and skills.",
+            "perk3":"Develop leadership expertise."
+        }
+    },
+    "consult":{
+        "title":"Consulting Service",
+        "perks":{
+            "perk1":"Learn anytime, anywhere.",
+            "perk2":"Flexible, on-demand courses.",
+            "perk3":"Track your progress easily."
+        }
+    },
+    "exploremore":"Explore More"
+}

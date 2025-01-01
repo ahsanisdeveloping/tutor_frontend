@@ -2,7 +2,7 @@ import image from "../assets/icons/NavbarLogo.png";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 const Navbar = () => {
-  const {t} = useTranslation();
+  const {t} = useTranslation("Navbar");
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -54,33 +54,33 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="font-bold">{t("test")}</a>
+              <a className="font-bold">{t('home')}</a>
             </li>
             <li>
-              <a className="font-bold">About Us</a>
+              <a className="font-bold">{t('aboutUs')}</a>
             </li>
             <li>
               <details>
-                <summary className="font-bold">Courses</summary>
+                <summary className="font-bold">{t('courses').title}</summary>
                 <ul className="p-2">
                   <li>
-                    <a>Course 1</a>
+                    <a>{t('courses').list.course1}</a>
                   </li>
                   <li>
-                    <a>Course 2</a>
+                    <a>{t('courses').list.course2}</a>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
               <details>
-                <summary className="font-bold">Blogs</summary>
+                <summary className="font-bold">{t('blogs').title}</summary>
                 <ul className="p-2">
                   <li>
-                    <a>Blog 1</a>
+                    <a>{t('blogs').list.blog1}</a>
                   </li>
                   <li>
-                    <a>Blog 2</a>
+                    <a>{t('blogs').list.blog2}</a>
                   </li>
                 </ul>
               </details>
@@ -90,10 +90,10 @@ const Navbar = () => {
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="btn font-bold mx-2 border-[#074226] px-5">Sign Up</a>
+              <a className="btn font-bold mx-2 border-[#074226] px-5">{t('signup')}</a>
             </li>
             <li>
-              <a className="btn font-bold bg-[#074226] text-white mx-2 px-5">Log in</a>
+              <a className="btn font-bold bg-[#074226] text-white mx-2 px-5">{t('login')}</a>
             </li>
           </ul>
           <ul className="menu menu-horizontal px-1">
