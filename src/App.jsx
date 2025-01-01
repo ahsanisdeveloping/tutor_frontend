@@ -15,12 +15,13 @@ import PaymentMethod from './components/PaymentMethod';
 import Discover from './components/Discover';
 import "./i18n.js"
 import LandingPage from './pages/LandingPage.jsx';
+import CourseSelfStudy from './components/CourseSelfStudy.jsx';
 function App() {
 
  return (
   <div >
-    <LandingPage/>
-
+    {/* <LandingPage/> */}
+    <CourseSelfStudy/>
     </div>
  );
 }
