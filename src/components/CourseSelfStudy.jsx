@@ -4,6 +4,9 @@ import assignment from "../assets/svgs/courses/clipboard.svg";
 import time from "../assets/svgs/courses/clock.svg";
 import rating from "../assets/svgs/courses/star.svg";
 import money from "../assets/svgs/courses/money.svg";
+import selfstudy from "../assets/svgs/courses/slefstudy.svg";
+import courseImg from "../assets/images/courses/course.png";
+import playButton from "../assets/images/courses/playbutton.png";
 const CourseSelfStudy = () => {
   return (
     <div className="flex flex-col lg:flex-row gap-8 p-6 bg-gray-100 min-h-screen">
@@ -51,7 +54,7 @@ const CourseSelfStudy = () => {
             Sponsored
           </span>
         </div>
-        <div className="mb-6">
+        <div className="mb-6 bg-slate-400 h-[400px]">
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
           <p className="text-gray-600 text-[16px]">
             This Accounting Management Master course is invaluable for those
@@ -81,14 +84,33 @@ const CourseSelfStudy = () => {
       {/* Right Section */}
       <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow">
         <div className="text-gray-600 mb-4">
-          <span className="line-through">$7500</span>
-          <span className="text-green-600 text-xl font-bold ml-2">$5000</span>
+          <div className="relative  h-[423px] w-[432px]">
+          <img src={courseImg} alt="" />
+          <img src={playButton} alt="" className="absolute top-[40%] left-[40%]"/>
+            
+          </div>
+          <div className="flex justify-between items-center">
+            <div>
+            <span className="text-black text-[43px] font-bold ml-2">$5000</span>
+            <span className="line-through text-gray-400 text-[23px]">$7500</span>
+            </div>
+          <div>
+          <span className="flex px-5 justify-center bg-[#FFF5EE] p-3 rounded-3xl gap-2">
+            <img src={time} alt="" width={15} />
+            3d-19h-47m
+          </span>
+          </div>
+          </div>
         </div>
         <div className="mb-4">
-          <h3 className="text-lg font-semibold mb-2">Choose Package & Plan</h3>
+          <h3 className="text-[25px] font-semibold mb-2">Choose Package & Plan</h3>
           <div className="flex gap-4">
-            <button className="w-1/3 py-2 bg-green-100 text-green-600 rounded-lg">
+            <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg">
+              <img src={selfstudy} alt="" />
+              <p>
               Self-Study
+              </p>
+              <p>ON HOUSE TRAINING</p>
             </button>
             <button className="w-1/3 py-2 bg-gray-100 text-gray-600 rounded-lg">
               In-House
