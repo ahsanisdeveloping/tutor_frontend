@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import teacherImg from "../assets/images/register/teacher.png";
 import studentImg from "../assets/images/register/img.png";
+import { useNavigate } from "react-router-dom";
 const RegisterPage = () => {
+  const navigate = useNavigate();
   const [role, setRole] = useState("Student");
 
   return (
@@ -19,7 +21,7 @@ const RegisterPage = () => {
 
           {/* Right Form Section */}
           <div className="md:w-1/2 p-8">
-            <button className="text-white bg-[#074226] p-2 px-5 rounded-3xl font-bold mb-6 absolute left-5">
+            <button className="text-white bg-[#074226] p-2 px-5 rounded-3xl font-bold mb-6 absolute left-5" onClick={()=>navigate('/')}>
               &lt; Back to Website
             </button>
             <h2 className="text-2xl font-bold mb-6 text-white">Register as</h2>

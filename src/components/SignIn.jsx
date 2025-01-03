@@ -1,12 +1,14 @@
 import React from 'react';
 import img from '../assets/images/signup/img.png'
+import { useNavigate } from 'react-router-dom';
 const SignIn = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="bg-white shadow-lg rounded-lg flex overflow-hidden max-w-4xl">
         {/* Left Side - Illustration */}
         <div className="w-1/2 p-8 flex flex-col justify-center items-center bg-white relative">
-          <button className="absolute top-4 left-4 text-sm text-white bg-[#074226] px-4 py-2 rounded-full hover:bg-green-300">
+          <button className="absolute top-4 left-4 text-sm text-white bg-[#074226] px-4 py-2 rounded-full hover:bg-green-300" onClick={()=>navigate('/')}>
             &larr; Back to Website
           </button>
           <img

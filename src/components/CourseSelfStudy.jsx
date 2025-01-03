@@ -5,6 +5,8 @@ import time from "../assets/svgs/courses/clock.svg";
 import rating from "../assets/svgs/courses/star.svg";
 import money from "../assets/svgs/courses/money.svg";
 import selfstudy from "../assets/svgs/courses/slefstudy.svg";
+import live from "../assets/svgs/courses/live.svg";
+import laptop from "../assets/svgs/courses/laptop.svg";
 import courseImg from "../assets/images/courses/course.png";
 import playButton from "../assets/images/courses/playbutton.png";
 const CourseSelfStudy = () => {
@@ -82,7 +84,7 @@ const CourseSelfStudy = () => {
       </div>
 
       {/* Right Section */}
-      <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow">
+      <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow border  border-[#074226]">
         <div className="text-gray-600 mb-4">
           <div className="relative  h-[423px] w-[432px]">
           <img src={courseImg} alt="" />
@@ -105,23 +107,31 @@ const CourseSelfStudy = () => {
         <div className="mb-4">
           <h3 className="text-[25px] font-semibold mb-2">Choose Package & Plan</h3>
           <div className="flex gap-4">
-            <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg">
-              <img src={selfstudy} alt="" />
-              <p>
+            <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5">
+              <img src={selfstudy} alt="" height={50} width={50} className="m-auto"/>
+              <p className="text-[12px]">
               Self-Study
               </p>
-              <p>ON HOUSE TRAINING</p>
+              <p className="text-[9px]">ON HOUSE TRAINING</p>
             </button>
-            <button className="w-1/3 py-2 bg-gray-100 text-gray-600 rounded-lg">
-              In-House
+            <button className="w-1/3 py-2  rounded-lg p-2 px-5">
+              <img src={laptop} alt="" height={50} width={50} className="m-auto"/>
+              <p className="text-[12px]">
+              Self-Study
+              </p>
+              <p className="text-[9px]">ON HOUSE TRAINING</p>
             </button>
-            <button className="w-1/3 py-2 bg-gray-100 text-gray-600 rounded-lg">
-              Live
+            <button className="w-1/3 py-2   rounded-lg p-2 px-5">
+              <img src={live} alt="" height={50} width={50} className="m-auto"/>
+              <p className="text-[12px]">
+              Self-Study
+              </p>
+              <p className="text-[9px]">ON HOUSE TRAINING</p>
             </button>
           </div>
         </div>
         <div className="mb-6">
-          <h3 className="text-lg font-semibold mb-2">Choose Date & Time</h3>
+        <h3 className="text-[25px] font-semibold mb-2">Choose Date & Time</h3>
           <ul className="space-y-2">
             <li className="flex justify-between">
               <span>Riyadh, KSA</span>

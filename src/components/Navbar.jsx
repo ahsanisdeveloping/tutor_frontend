@@ -1,7 +1,9 @@
 import image from "../assets/icons/NavbarLogo.png";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   const {t} = useTranslation("Navbar");
   return (
     <div>
@@ -48,23 +50,23 @@ const Navbar = () => {
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">
-            <img src={image} alt="" className="h-[50px] w-[50px]" />
+            <img src={image} alt="" className="h-[50px] w-[50px]" onClick={()=>navigate("/")} />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="font-bold">{t('home')}</a>
+              <a className="font-bold" onClick={()=>navigate("/")}>{t('home')}</a>
             </li>
             <li>
-              <a className="font-bold">{t('aboutUs')}</a>
+              <a className="font-bold" onClick={()=>navigate("/")}>{t('aboutUs')}</a>
             </li>
             <li>
               <details>
                 <summary className="font-bold">{t('courses').title}</summary>
                 <ul className="p-2">
                   <li>
-                    <a>{t('courses').list.course1}</a>
+                    <a onClick={()=>navigate("/courses")}>{t('courses').list.course1}</a>
                   </li>
                   <li>
                     <a>{t('courses').list.course2}</a>
@@ -77,7 +79,7 @@ const Navbar = () => {
                 <summary className="font-bold">{t('blogs').title}</summary>
                 <ul className="p-2">
                   <li>
-                    <a>{t('blogs').list.blog1}</a>
+                    <a onClick={()=>navigate("/blogs")}>{t('blogs').list.blog1}</a>
                   </li>
                   <li>
                     <a>{t('blogs').list.blog2}</a>
@@ -90,10 +92,10 @@ const Navbar = () => {
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="btn font-bold mx-2 border-[#074226] px-5">{t('signup')}</a>
+              <a className="btn font-bold mx-2 border-[#074226] px-5" onClick={()=>navigate("/signup")}>{t('signup')}</a>
             </li>
             <li>
-              <a className="btn font-bold bg-[#074226] text-white mx-2 px-5">{t('login')}</a>
+              <a className="btn font-bold bg-[#074226] text-white mx-2 px-5" onClick={()=>navigate("/signin")}>{t('login')}</a>
             </li>
           </ul>
           <ul className="menu menu-horizontal px-1">
