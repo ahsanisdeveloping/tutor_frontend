@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
@@ -23,7 +23,6 @@ import BlogsPage from './pages/BlogsPage.jsx';
 import CoursesPage from './pages/CoursesPage.jsx';
 import Navigations from './routes/Navigations.jsx';
 function App() {
-
  return (
   <div >
     {/* <LandingPage/> */}

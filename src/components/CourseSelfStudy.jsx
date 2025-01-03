@@ -56,12 +56,19 @@ const CourseSelfStudy = () => {
             Sponsored
           </span>
         </div>
-        <div className="mb-6 bg-slate-400 h-[400px]">
+        <div className="mb-6  h-[400px] overflow-hidden" >
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
           <p className="text-gray-600 text-[16px]">
-            This Accounting Management Master course is invaluable for those
-            looking to enhance their careers and connect with a network of
-            seasoned financial leaders and consultants...
+          This Accounting Management Master course is invaluable for those looking to enhance their careers and connect with a network of seasoned financial leaders and consultants. The Certified Management Accountant (CMA) certification is highly regarded by top-tier firms; additionally, this course offers significant benefits for organizations aiming to develop their employees' skills.
+          </p>
+          <p>
+          Comprehensive Curriculum: Covering accounting principles, financial statement analysis, and auditing fundamentals. Interactive Learning Tools: Engaging videos, quizzes, and practice exercises for reinforced understanding. Real-World Case Studies: Applying theoretical knowledge to practical scenarios. Dedicated Support: Access to instructors for clarification on key concepts.
+          </p>
+          <p>
+          Comprehensive Curriculum: Covering accounting principles, financial statement analysis, and auditing fundamentals. Interactive Learning Tools: Engaging videos, quizzes, and practice exercises for reinforced understanding. Real-World Case Studies: Applying theoretical knowledge to practical scenarios. Dedicated Support: Access to instructors for clarification on key concepts.
+          </p>
+          <p>
+          Comprehensive Curriculum: Covering accounting principles, financial statement analysis, and auditing fundamentals. Interactive Learning Tools: Engaging videos, quizzes, and practice exercises for reinforced understanding. Real-World Case Studies: Applying theoretical knowledge to practical scenarios. Dedicated Support: Access to instructors for clarification on key concepts.
           </p>
         </div>
         <div>
@@ -86,8 +93,8 @@ const CourseSelfStudy = () => {
       {/* Right Section */}
       <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow border  border-[#074226]">
         <div className="text-gray-600 mb-4">
-          <div className="relative  h-[423px] w-[432px]">
-          <img src={courseImg} alt="" />
+          <div className="relative  h-[423px] w-full">
+          <img src={courseImg} alt="" className="w-full"/>
           <img src={playButton} alt="" className="absolute top-[40%] left-[40%]"/>
             
           </div>

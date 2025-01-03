@@ -5,7 +5,7 @@ import DiscoverPage from "../pages/DiscoverPage";
 import SignInPage from "../pages/SignInPage";
 import SignUpPage from "../pages/SignupPage";
 import CoursesPage from "../pages/CoursesPage";
-const Navigations = () => {
+const   Navigations = () => {
   return <>
         <BrowserRouter>
             <Routes>
