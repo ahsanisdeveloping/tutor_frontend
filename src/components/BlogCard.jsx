@@ -2,7 +2,7 @@ import React from "react";
 import img from "../assets/images/register/student.png";
 const BlogCard = ({ title, time }) => {
   return (
-    <div className="card bg-[#074226] shadow-xl w-[401px] h-[407px] my-5">
+    <div className="card bg-[#074226] shadow-xl  h-[407px] my-5">
       <div className="bg-white relative">
         <img src={img} alt="" className="h-[250px] w-full" />
         <button className="bg-[#074226] rounded-full p-2 absolute top-2 right-2">

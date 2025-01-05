@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import lesson from "../assets/svgs/courses/book.svg";
 import assignment from "../assets/svgs/courses/clipboard.svg";
 import time from "../assets/svgs/courses/clock.svg";
@@ -10,6 +10,47 @@ import laptop from "../assets/svgs/courses/laptop.svg";
 import courseImg from "../assets/images/courses/course.png";
 import playButton from "../assets/images/courses/playbutton.png";
 const CourseSelfStudy = () => {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const toggleSection = (index) => {
+    setActiveSection(activeSection === index ? null : index);
+  };
+  const reviews = [
+    {
+      name: "Emily Chen, CPA Candidate",
+      review:
+        "I was struggling to grasp auditing concepts until I took this course. The instructor's explanations are crystal clear, and their practice exercises are incredibly helpful. I passed my CPA exam on the first try!",
+      rating: 5,
+      image: "https://via.placeholder.com/48",
+    },
+    {
+      name: "Emily Johnson, CPA Candidate",
+      review:
+        "The course helped me develop a deep understanding of auditing principles. The practice exams were spot on!",
+      rating: 5,
+      image: "https://via.placeholder.com/48",
+    },
+    {
+      name: "Sophia Williams, CPA Candidate",
+      review:
+        "Highly recommend this course for anyone preparing for their CPA exams. The explanations and examples are excellent!",
+      rating: 5,
+      image: "https://via.placeholder.com/48",
+    },
+  ];
+  const sections = [
+    {
+      title: "Introduction to Accounting & Auditing",
+      content: [
+        "Definition and importance of accounting and auditing",
+        "Brief history and evolution",
+      ],
+    },
+    { title: "Financial Accounting Fundamentals" },
+    { title: "Auditing Principles and Practices" },
+    { title: "Advanced Topics and Specialized Accounting" },
+    { title: "Capstone Project and Final Assessment" },
+  ];
   return (
     <div className="flex flex-col lg:flex-row gap-8 p-6 bg-gray-100 min-h-screen">
       {/* Left Section */}
@@ -71,25 +112,123 @@ const CourseSelfStudy = () => {
           Comprehensive Curriculum: Covering accounting principles, financial statement analysis, and auditing fundamentals. Interactive Learning Tools: Engaging videos, quizzes, and practice exercises for reinforced understanding. Real-World Case Studies: Applying theoretical knowledge to practical scenarios. Dedicated Support: Access to instructors for clarification on key concepts.
           </p>
         </div>
-        <div>
-          <h2 className="text-lg font-semibold mb-2">Course Content</h2>
-          <ul className="space-y-2">
-            <li className="flex justify-between border-b pb-2">
-              <span>Introduction to Accounting & Auditing</span>
-              <button className="text-green-600">+</button>
-            </li>
-            <li className="flex justify-between border-b pb-2">
-              <span>Financial Accounting Fundamentals</span>
-              <button className="text-green-600">+</button>
-            </li>
-            <li className="flex justify-between border-b pb-2">
-              <span>Auditing Principles and Practices</span>
-              <button className="text-green-600">+</button>
-            </li>
-          </ul>
+        <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-4">
+      <h2 className="text-2xl font-bold mb-4">Course Content</h2>
+      <div className="space-y-2">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className="border rounded-lg overflow-hidden"
+          >
+            <div
+              className="flex justify-between items-center p-4 cursor-pointer bg-gray-100"
+              onClick={() => toggleSection(index)}
+            >
+              <h3 className="text-lg font-medium">{section.title}</h3>
+              {activeSection === index ? (
+                <span className="text-lg">✕</span>
+              ) : (
+                <span className="text-lg">+</span>
+              )}
+            </div>
+            {activeSection === index && section.content && (
+              <ul className="px-6 py-4 bg-white">
+                {section.content.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="text-sm text-gray-600 flex items-start space-x-2 mb-2"
+                  >
+                    <span className="text-yellow-500">•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+      {/* Instructor Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Instructor</h2>
+        <div className="flex items-center">
+          <img
+            src="https://via.placeholder.com/80"
+            alt="Instructor"
+            className="w-20 h-20 rounded-full mr-4"
+          />
+          <div>
+            <h3 className="text-lg font-bold">John S.</h3>
+            <p className="text-sm text-gray-600">
+              Training Advisor
+            </p>
+            <p className="text-sm mt-2">
+              Meet John Smith, a seasoned accounting and auditing professional
+              with over a decade of experience in both teaching and practical
+              applications.
+            </p>
+          </div>
         </div>
       </div>
 
+      {/* Review Section */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-bold mb-4">Review</h2>
+        <div className="flex items-center mb-4">
+          <span className="text-4xl font-bold mr-4">4.9</span>
+          <div className="flex space-x-1">
+            {[...Array(5)].map((_, index) => (
+              <span key={index} className="text-yellow-500 text-xl">★</span>
+            ))}
+          </div>
+        </div>
+        <div className="space-y-2">
+          <div className="flex items-center text-gray-600 text-sm">
+            <div className="w-1/4">5 stars</div>
+            <div className="flex-grow bg-gray-200 h-2 rounded-full">
+              <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "90%" }}></div>
+            </div>
+          </div>
+          <div className="flex items-center text-gray-600 text-sm">
+            <div className="w-1/4">4 stars</div>
+            <div className="flex-grow bg-gray-200 h-2 rounded-full">
+              <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "10%" }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Reviews */}
+      <div>
+        <h2 className="text-2xl font-bold mb-4">Featured Review</h2>
+        <div className="space-y-6">
+          {reviews.map((review, index) => (
+            <div key={index} className="flex items-start space-x-4">
+              <img
+                src={review.image}
+                alt={review.name}
+                className="w-12 h-12 rounded-full"
+              />
+              <div>
+                <h4 className="font-bold">{review.name}</h4>
+                <div className="flex space-x-1 text-yellow-500 text-sm">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <span key={i}>★</span>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-600 mt-2">{review.review}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600">
+          Show More
+        </button>
+      </div>
+    </div>
+      </div>
+      
       {/* Right Section */}
       <div className="w-full lg:w-1/3 bg-white p-6 rounded-lg shadow border  border-[#074226]">
         <div className="text-gray-600 mb-4">
