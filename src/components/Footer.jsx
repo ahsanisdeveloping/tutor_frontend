@@ -4,98 +4,113 @@ import facebook from "../assets/images/footer/fb.png";
 import twitter from "../assets/images/footer/twitter.png";
 import linkedin from "../assets/images/footer/linkedin.png";
 import pinterest from "../assets/images/footer/pntrst.png";
+
 const Footer = () => {
   return (
-    <div className="bg-[#074226] pt-[30px] px-20 tablet:px-4">
-      <div className="flex justify-between">
+    <footer className="bg-[#074226] pt-10 px-6 lg:px-20">
+      {/* Top Section */}
+      <div className="flex flex-wrap justify-between items-center gap-8">
         <div className="flex-1">
-          <h1 className="text-white text-[53px]">Start Your Career</h1>
-          <p className="text-white text-[33px]">
+          <h1 className="text-white text-3xl lg:text-5xl font-bold">
+            Start Your Career
+          </h1>
+          <p className="text-white text-lg lg:text-2xl mt-4">
             Sign up to become an Educator. Join our community of passionate
             teachers!
           </p>
-          <a className="btn font-bold  bg-white px-10 text-[19px] my-10">
+          <a
+            href="#register"
+            className="inline-block mt-6 bg-white text-[#074226] font-bold px-6 py-3 rounded-lg text-lg"
+          >
             Register as Teacher
           </a>
         </div>
-        <div className="w-[350px] h-[350px] flex justify-end items-center">
-          <img src={footersvg} className="w-full h-full object-contain" />
+        <div className="w-40 h-40 lg:w-80 lg:h-80">
+          <img src={footersvg} alt="Start your career illustration" className="w-full h-full object-contain" />
         </div>
       </div>
 
-      <div className="flex tablet:flex-col py-5">
-        <div>
-          <div className="h-[85px] w-[85px]">
-            <img src={footerlogo} alt="" />
+      {/* Middle Section */}
+      <div className="flex flex-wrap justify-between items-start gap-8 py-10">
+        {/* About Section */}
+        <div className="w-full lg:w-auto">
+          <div className="w-16 h-16">
+            <img src={footerlogo} alt="OpenSpace logo" />
           </div>
-          <p className="text-[13px] text-white">
+          <p className="text-white text-sm mt-4">
             Sign up to become an Educator. Join our community of passionate
             teachers!
           </p>
-          <div className="flex gap-2 my-2">
-            <button className="border-white border rounded-full p-1 w-9 h-9 flex items-center justify-center">
-            <img src={facebook} alt="" />
-            </button>
-            <button className="border-white border rounded-full p-1 w-9 h-9 flex items-center justify-center">
-            <img src={twitter} alt="" />
-            </button>
-            <button className="border-white border rounded-full p-1 w-9 h-9 flex items-center justify-center">
-            <img src={pinterest} alt="" />
-            </button>
-            <button className="border-white border rounded-full p-1 w-9 h-9 flex items-center justify-center">
-            <img src={facebook} alt="" />
-            </button>
+          <div className="flex gap-4 mt-4">
+            {[facebook, twitter, pinterest, linkedin].map((icon, index) => (
+              <a
+                key={index}
+                href="#"
+                className="border border-white rounded-full p-2 w-10 h-10 flex items-center justify-center"
+                aria-label={`Link to ${icon}`}
+              >
+                <img src={icon} alt={`Social media icon ${index + 1}`} />
+              </a>
+            ))}
           </div>
         </div>
-        <div className="w-[262px] text-[#fbfbfb]">
-          <div className="flex flex-col my-5 gap-2">
-            <h1 className="text-white">Company</h1>
-            <p className="text-gray-400">Lorem Ispum</p>
-            <p className="text-gray-400">Lorem Ispum</p>
-            <p className="text-gray-400">Lorem Ispum</p>
-            <p className="text-gray-400">Lorem Ispum</p>
-          </div>
+
+        {/* Company Links */}
+        <div className="w-40">
+          <h1 className="text-white text-lg font-bold">Company</h1>
+          <ul className="mt-4 text-gray-400 space-y-2">
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+          </ul>
         </div>
-        <div className="w-[262px] text-[#fbfbfb]">
-          <div className="flex flex-col my-5 gap-2">
-            <h1 className="text-white">Services</h1>
-            <p className="text-gray-400">Lorem Ispum</p>
-            <p className="text-gray-400">Lorem Ispum</p>
-            <p className="text-gray-400">Lorem Ispum</p>
-          </div>
+
+        {/* Services Links */}
+        <div className="w-40">
+          <h1 className="text-white text-lg font-bold">Services</h1>
+          <ul className="mt-4 text-gray-400 space-y-2">
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+            <li>Lorem Ipsum</li>
+          </ul>
         </div>
-        <div className="w-[262px] text-[#fbfbfb]">
-          <div className="flex flex-col my-5 gap-2">
-            <h1 className="text-white">Contact</h1>
-            <p className="text-gray-400">hello@openspace.com</p>
-            <p className="text-gray-400">123 456 78</p>
-            <p className="text-gray-400">Office# 02/04, SA</p>
-          </div>
+
+        {/* Contact Info */}
+        <div className="w-40">
+          <h1 className="text-white text-lg font-bold">Contact</h1>
+          <ul className="mt-4 text-gray-400 space-y-2">
+            <li>Email: hello@openspace.com</li>
+            <li>Phone: 123 456 78</li>
+            <li>Address: Office# 02/04, SA</li>
+          </ul>
         </div>
-        <div>
-          <h1 className="text-white text-3xl">Subscribe</h1>
-          <div class="relative flex h-10 w-full min-w-[300px] max-w-[30rem] bg-white rounded-md my-3">
+
+        {/* Subscription Form */}
+        <div className="w-full lg:w-auto">
+          <h1 className="text-white text-lg font-bold">Subscribe</h1>
+          <form className="mt-4 flex items-center gap-2">
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              className="flex-1 px-4 py-2 rounded-md text-sm text-black border border-white focus:outline-none"
+              required
+            />
             <button
-              class="!absolute right-1 top-1 z-10 select-none rounded bg-[#074226] py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-white transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none peer-placeholder-shown:pointer-events-none peer-placeholder-shown:bg-blue-gray-500 peer-placeholder-shown:opacity-50 peer-placeholder-shown:shadow-none"
-              type="button"
-              data-ripple-light="true"
+              type="submit"
+              className="bg-[#074226] text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-[#05631b]"
             >
               Subscribe
             </button>
-            <input
-              type="email"
-              class="peer h-full w-full rounded-[7px] border border-white bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-black outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-white placeholder-shown:border-t-white focus:border-2 focus:white focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
-              placeholder="Enter your Email"
-              required
-            />
-          </div>
+          </form>
         </div>
       </div>
 
-      <div className="p-5">
-        <p className="text-center text-gray-400">© openspace 2024. All rights reserved</p>
+      {/* Bottom Section */}
+      <div className="text-center py-4 border-t border-gray-500">
+        <p className="text-gray-400">© OpenSpace 2024. All rights reserved.</p>
       </div>
-    </div>
+    </footer>
   );
 };
 
