@@ -54,7 +54,7 @@ const CourseSelfStudy = () => {
     { title: "Capstone Project and Final Assessment" },
   ];
   return (
-    <div className="flex flex-col lg:flex-row gap-8 p-6 bg-gray-100 min-h-screen">
+    <div className="flex flex-col lg:flex-row gap-8 p-6  min-h-screen">
       {/* Left Section */}
 
       <div className="flex-1 bg-white p-6 rounded-lg shadow">
@@ -76,7 +76,7 @@ const CourseSelfStudy = () => {
           including financial statements, accounting standards, and audit
           procedures.
         </p>
-        <div className="flex items-center gap-4 text-sm text-gray-700 mb-6">
+        <div className="flex items-center gap-4 text-sm text-gray-700 mb-6 flex-wrap">
           <span className="flex px-5 justify-center bg-[#FFF5EE] p-3 rounded-3xl gap-2">
             <img src={rating} alt="" width={15} />
             49h content

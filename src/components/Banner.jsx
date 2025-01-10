@@ -68,7 +68,7 @@ const Banner = () => {
 
       {/* Right Section */}
       <div className="lg:w-[50%] w-full flex justify-center">
-        <img src={bannerleft} alt="" className="w-full max-w-sm md:max-w-md lg:max-w-full" />
+        <img src={bannerleft} alt="" className="w-full max-w-sm md:max-w-md lg:max-w-lg" />
       </div>
     </div>
   );

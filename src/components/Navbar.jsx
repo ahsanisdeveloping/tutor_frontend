@@ -36,7 +36,7 @@ const Navbar = () => {
             </button>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-screen p-2 shadow "
             >
               <li>
                 <a onClick={() => navigate("/")}>{t("home")}</a>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 </details>
               </li>
               {/* Sign-Up and Login Buttons for Mobile */}
-              <li>
+              <li className="my-2">
                 <a
                   className="btn font-bold border-[#074226] text-center"
                   onClick={() => navigate("/signup")}
@@ -83,7 +83,7 @@ const Navbar = () => {
                   {t("signup")}
                 </a>
               </li>
-              <li>
+              <li className="my-1">
                 <a
                   className="btn font-bold bg-[#074226] text-white text-center"
                   onClick={() => navigate("/signin")}
@@ -92,11 +92,11 @@ const Navbar = () => {
                 </a>
               </li>
               {/* Language Selector for Mobile */}
-              <li>
+              <li className="my-1">
                 <LanguageSelector />
               </li>
               {/* Theme Button for Mobile */}
-              <li>
+              <li className="my-1">
                 <a className="btn font-bold bg-[#074226] text-white rounded-full">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
