@@ -1,6 +1,8 @@
 // Updated Discover.jsx
 import React, { useState } from "react";
 import alertimg from "../assets/images/discover/alertimg.png";
+import background from "../assets/svgs/discover/bg.svg"
+import courseimg from "../assets/svgs/discover/courseimg.svg"
 const Discover = () => {
    const totalPages = 10; // Total number of pages
   const [currentPage, setCurrentPage] = useState(1); // Current active page
@@ -15,8 +17,9 @@ const Discover = () => {
   return (
     <div className="">
       {/* Header Section */}
-      <header className="bg-base-100 min-h-screen ">
-        <div className="container flex flex-col justify-center items-center mx-auto px-4   py-6 h-[600px]">
+      <header className="bg-base-100 min-h-screen bg-cover bg-center relative" style={{backgroundImage: `url(${background})`}}>
+        <div className="h-full w-full bg-gradient-to-r from-[#fdfaf3] to-[#f8f9f9]">
+        <div className="container flex flex-col justify-center  items-center mx-auto px-4   py-6 h-[600px]">
           <h1 className="text-[46px] w-[640px] font-bold text-center">
             Discover interactive learning{" "}
             <span className="text-gray-400">materials,</span> and tutor
@@ -77,6 +80,7 @@ const Discover = () => {
             </button>
           </div>
         )}
+        </div>
       </header>
       <div className="px-10">
         <h1 className="text-[22px] font-bold ">
@@ -146,9 +150,7 @@ const Discover = () => {
                 >
                   <figure className="relative">
                     <img
-                      src={`https://via.placeholder.com/300x200?text=Course+Image+${
-                        idx + 1
-                      }`}
+                      src={courseimg}
                       alt="Course Thumbnail"
                       className="w-full rounded-2xl"
                     />
