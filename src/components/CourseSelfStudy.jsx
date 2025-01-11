@@ -378,6 +378,7 @@ const CourseSelfStudy = () => {
           </p>
         </div>
       </div>
+      
     </div>
   );
 };

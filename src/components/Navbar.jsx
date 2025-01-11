@@ -2,11 +2,29 @@ import image from "../assets/icons/NavbarLogo.png";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 import { useNavigate } from "react-router-dom";
-
+import { useState } from "react";
 const Navbar = () => {
   const navigate = useNavigate();
   const { t } = useTranslation("Navbar");
+  const [isCourseOpen, setIsCourseOpen] = useState(false);
+  const [isBlogOpen, setIsBlogOpen] = useState(false);
 
+  // Delay handling for hover
+  let timer;
+  const handleCourseMouseEnter = () => {
+    timer = setTimeout(() => setIsCourseOpen(true), 500); // 500ms delay
+  };
+  const handleBlogMouseEnter = () => {
+    timer = setTimeout(() => setIsBlogOpen(true), 500); // 500ms delay
+  };
+  const handleCourseMouseLeave = () => {
+    clearTimeout(timer);
+    setIsCourseOpen(false);
+  };
+  const handleBlogMouseLeave = () => {
+    clearTimeout(timer);
+    setIsBlogOpen(false);
+  };
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -140,36 +158,106 @@ const Navbar = () => {
                 {t("aboutUs")}
               </a>
             </li>
-            <li>
-              <details>
-                <summary className="font-bold">{t("courses").title}</summary>
-                <ul className="p-2">
-                  <li>
+            <div className="relative bottom-[2px] inline-block" onMouseLeave={handleCourseMouseLeave}>
+              {/* Dropdown Trigger */}
+              <button
+                id="dropdownDelayButton"
+                onMouseEnter={handleCourseMouseEnter}
+                className=" hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#074226]"
+                type="button"
+                onClick={() => navigate("/courses")}
+              >
+               <b>{t("courses").title}</b>
+                <svg
+                  className="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              {isCourseOpen && (
+                <div
+                  id="dropdownDelay"
+                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
+                >
+                  <ul
+                    className="py-2 text-sm text-gray-700 "
+                    aria-labelledby="dropdownDelayButton"
+                  >
+                    <li>
                     <a onClick={() => navigate("/courses")}>
                       {t("courses").list.course1}
                     </a>
-                  </li>
-                  <li>
+                    </li>
+                    <li>
                     <a>{t("courses").list.course2}</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details>
-                <summary className="font-bold">{t("blogs").title}</summary>
-                <ul className="p-2">
-                  <li>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <div className="relative bottom-[2px] inline-block" onMouseLeave={handleBlogMouseLeave}>
+              {/* Dropdown Trigger */}
+              <button
+                id="dropdownDelayButton"
+                onMouseEnter={handleBlogMouseEnter}
+                className=" hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#074226]"
+                type="button"
+                onClick={() => navigate("/blogs")}
+              >
+                <b>{t("blogs").title}</b>
+                <svg
+                  className="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              {/* Dropdown Menu */}
+              {isBlogOpen && (
+                <div
+                  id="dropdownDelay"
+                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
+                >
+                  <ul
+                    className="py-2 text-sm text-gray-700"
+                    aria-labelledby="dropdownDelayButton"
+                  >
+                    <li>
                     <a onClick={() => navigate("/blogs")}>
                       {t("blogs").list.blog1}
                     </a>
-                  </li>
-                  <li>
+                    </li>
+                    <li>
                     <a>{t("blogs").list.blog2}</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
+                    </li>
+                    
+                  </ul>
+                </div>
+              )}
+            </div>
           </ul>
         </div>
 

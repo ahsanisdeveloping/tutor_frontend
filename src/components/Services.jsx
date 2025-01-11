@@ -29,7 +29,7 @@ const ConsultingServices = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row items-center bg-[#074226] text-white py-10 px-6 md:px-10 lg:px-20 rounded-lg mt-10">
+      <div className="flex flex-col md:flex-row items-center bg-[#074226] text-white py-10 px-6 md:px-10 lg:px-20 sm:gap-5 rounded-lg mt-10">
         {/* Left Section: Image */}
         <div className="w-full md:w-1/2 mb-6 md:mb-0 flex justify-center">
           <img

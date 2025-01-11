@@ -20,7 +20,7 @@ const Banner = () => {
         {/* Main Headings */}
         <div className="flex flex-col items-center lg:items-start gap-2">
           <div className="flex items-center gap-2 justify-center lg:justify-start">
-            <span className="font-clash text-3xl md:text-[50px]">{t("heading2i")}</span>
+            <span className="font-clash text-3xl md:text-[50px] leading-normal">{t("heading2i")}</span>
             <div className="flex h-[50px]">
               <img src={avatar1} className="border-2 border-white rounded-full" alt="" />
               <img
@@ -35,11 +35,11 @@ const Banner = () => {
               />
             </div>
           </div>
-          <p className="font-clash text-3xl md:text-[50px]">{t("heading2ii")}</p>
+          <p className="font-clash text-3xl md:text-[50px] leading-tight">{t("heading2ii")}</p>
         </div>
 
         {/* Subheading */}
-        <p className="font-clash text-lg md:text-[30px] mt-2">{t("para1")}</p>
+        <p className="font-clash text-lg md:text-[30px] mt-2 leading-tight">{t("para1")}</p>
 
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row gap-2 my-4 justify-center lg:justify-start">
@@ -52,16 +52,16 @@ const Banner = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-[#D1BF8FB8] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-around text-black my-5 w-full lg:w-[402px] gap-4 md:gap-2 mx-auto lg:mx-0">
-          <div className="text-center">
-            <span className="font-bold text-sm md:text-[13px]">{t("morethan")}</span>
-            <p className="font-bold text-4xl md:text-[53px]">500+</p>
-            <p className="font-bold text-sm md:text-[13px]">{t("tutors")}</p>
+        <div className="bg-[#D1BF8FB8] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-around items-center text-black my-5 w-full lg:w-[402px] gap-4 md:gap-2 mx-auto lg:mx-0">
+          <div className="text-left">
+            <span className="font-bold text-sm md:text-[13px] leading-tight ">{t("morethan")}</span>
+            <p className="font-bold text-4xl md:text-[53px] leading-tight">500+</p>
+            <p className="font-bold text-sm md:text-[13px] leading-tight">{t("tutors")}</p>
           </div>
-          <div className="text-center">
-            <p className="font-bold text-sm md:text-[13px]">{t("morethan")}</p>
-            <p className="font-bold text-4xl md:text-[53px]">1500+</p>
-            <p className="font-bold text-sm md:text-[13px]">{t("students")}</p>
+          <div className="text-left">
+            <p className="font-bold text-sm md:text-[13px] leading-tight">{t("morethan")}</p>
+            <p className="font-bold text-4xl md:text-[53px] leading-tight">1500+</p>
+            <p className="font-bold text-sm md:text-[13px] leading-tight">{t("students")}</p>
           </div>
         </div>
       </div>
