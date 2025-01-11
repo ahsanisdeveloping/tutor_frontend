@@ -47,31 +47,31 @@ const CourseSelfStudy = () => {
         "Definition and importance of accounting and auditing",
         "Brief history and evolution",
       ],
-    },
+    },  
     { title: "Financial Accounting Fundamentals" },
     { title: "Auditing Principles and Practices" },
     { title: "Advanced Topics and Specialized Accounting" },
     { title: "Capstone Project and Final Assessment" },
   ];
   return (
-    <div className="flex flex-col lg:flex-row gap-8 p-6  min-h-screen">
+    <div className="flex flex-col p-0  lg:flex-row gap-8 sm:p-6  min-h-screen">
       {/* Left Section */}
 
-      <div className="flex-1 bg-white p-6 rounded-lg shadow">
+      <div className="flex-1 bg-white p-6 rounded-lg ">
         <button className="text-green-700 font-semibold mb-4">Back</button>
 
-        <div className="w-[50%]">
+        <div className="sm:w-[50%]">
           <div className="flex  items-center gap-2">
-            <div className="h-[2px] w-[80px] bg-black"></div>
-            <p className="font-clash text-[18px]   ">
+            <div className="h-[2px] sm:w-[80px] w-[50px]  bg-black"></div>
+            <p className="font-clash text-xl sm:text-[18px]">
               No 1 Platform For Learning.
             </p>
           </div>
         </div>
-        <h1 className="text-[47px] font-bold mb-2">
+        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-bold mb-2">
           Foundations in Accounting and Auditing Principles
         </h1>
-        <p className="text-gray-500 text-[19px] mb-4">
+        <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4">
           Introductory course covering the basics of accounting and auditing,
           including financial statements, accounting standards, and audit
           procedures.
@@ -102,7 +102,7 @@ const CourseSelfStudy = () => {
         </div>
         <div className="mb-6  h-[400px] overflow-hidden">
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
-          <p className="text-gray-600 text-[16px]">
+          <p className="text-gray-600 text-[13px] sm:text-[20px]">
             This Accounting Management Master course is invaluable for those
             looking to enhance their careers and connect with a network of
             seasoned financial leaders and consultants. The Certified Management
@@ -110,7 +110,7 @@ const CourseSelfStudy = () => {
             additionally, this course offers significant benefits for
             organizations aiming to develop their employees' skills.
           </p>
-          <p>
+          <p className="text-gray-600 text-[13px] sm:text-[20px]">
             Comprehensive Curriculum: Covering accounting principles, financial
             statement analysis, and auditing fundamentals. Interactive Learning
             Tools: Engaging videos, quizzes, and practice exercises for
@@ -118,7 +118,7 @@ const CourseSelfStudy = () => {
             theoretical knowledge to practical scenarios. Dedicated Support:
             Access to instructors for clarification on key concepts.
           </p>
-          <p>
+          <p className="text-gray-600 text-[13px] sm:text-[20px]">
             Comprehensive Curriculum: Covering accounting principles, financial
             statement analysis, and auditing fundamentals. Interactive Learning
             Tools: Engaging videos, quizzes, and practice exercises for
@@ -126,7 +126,7 @@ const CourseSelfStudy = () => {
             theoretical knowledge to practical scenarios. Dedicated Support:
             Access to instructors for clarification on key concepts.
           </p>
-          <p>
+          <p className="text-gray-600 text-[13px] sm:text-[20px]">
             Comprehensive Curriculum: Covering accounting principles, financial
             statement analysis, and auditing fundamentals. Interactive Learning
             Tools: Engaging videos, quizzes, and practice exercises for
@@ -135,8 +135,8 @@ const CourseSelfStudy = () => {
             Access to instructors for clarification on key concepts.
           </p>
         </div>
-        <div className="max-w-xl mx-auto bg-white shadow-md rounded-lg p-4">
-          <h2 className="text-2xl font-bold mb-4">Course Content</h2>
+        <div className="max-w-xl  bg-white  rounded-lg p-4  ">
+          <h2 className="sm:text-2xl text-xl font-bold mb-4">Course Content</h2>
           <div className="space-y-2">
             {sections.map((section, index) => (
               <div key={index} className="border rounded-lg overflow-hidden">
@@ -144,7 +144,7 @@ const CourseSelfStudy = () => {
                   className="flex justify-between items-center p-4 cursor-pointer bg-gray-100"
                   onClick={() => toggleSection(index)}
                 >
-                  <h3 className="text-lg font-medium">{section.title}</h3>
+                  <h3 className="sm:text-lg text-sm font-medium">{section.title}</h3>
                   {activeSection === index ? (
                     <span className="text-lg">✕</span>
                   ) : (
@@ -168,10 +168,10 @@ const CourseSelfStudy = () => {
             ))}
           </div>
         </div>
-        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg ">
           {/* Instructor Section */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Instructor</h2>
+            <h2 className="sm:text-3xl text-xl font-bold mb-4">Instructor</h2>
             <div className="flex items-center">
               <img
                 src="https://via.placeholder.com/80"
@@ -179,8 +179,8 @@ const CourseSelfStudy = () => {
                 className="w-20 h-20 rounded-full mr-4"
               />
               <div>
-                <h3 className="text-lg font-bold">John S.</h3>
-                <p className="text-sm text-gray-600">Training Advisor</p>
+                <h3 className="sm:text-2xl text-lg font-bold">John S.</h3>
+                <p className="text-sm sm:text-lg text-gray-600">Training Advisor</p>
                 <p className="text-sm mt-2">
                   Meet John Smith, a seasoned accounting and auditing
                   professional with over a decade of experience in both teaching
@@ -192,9 +192,9 @@ const CourseSelfStudy = () => {
 
           {/* Review Section */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Review</h2>
+            <h2 className="sm:text-3xl text-xl font-bold mb-4">Review</h2>
             <div className="flex items-center mb-4">
-              <span className="text-4xl font-bold mr-4">4.9</span>
+              <span className="sm:text-4xl text-2xl font-bold mr-4">4.9</span>
               <div className="flex space-x-1">
                 {[...Array(5)].map((_, index) => (
                   <span key={index} className="text-yellow-500 text-xl">
@@ -227,7 +227,7 @@ const CourseSelfStudy = () => {
 
           {/* Featured Reviews */}
           <div>
-            <h2 className="text-2xl font-bold mb-4">Featured Review</h2>
+            <h2 className="sm:text-3xl text-xl font-bold mb-4">Featured Review</h2>
             <div className="space-y-6">
               {reviews.map((review, index) => (
                 <div key={index} className="flex items-start space-x-4">
@@ -237,7 +237,7 @@ const CourseSelfStudy = () => {
                     className="w-12 h-12 rounded-full"
                   />
                   <div>
-                    <h4 className="font-bold">{review.name}</h4>
+                    <h4 className="font-bold sm:text-md">{review.name}</h4>
                     <div className="flex space-x-1 text-yellow-500 text-sm">
                       {[...Array(review.rating)].map((_, i) => (
                         <span key={i}>★</span>
@@ -250,7 +250,7 @@ const CourseSelfStudy = () => {
                 </div>
               ))}
             </div>
-            <button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600">
+            <button className="mt-6 px-4 py-2 bg-[#074226] text-white rounded-md shadow-md sm:text-xl">
               Show More
             </button>
           </div>
@@ -341,7 +341,7 @@ const CourseSelfStudy = () => {
               </li>
             </ul>
           </div>
-          <button className="w-full py-3 bg-green-600 text-white rounded-lg">
+          <button className="w-full py-3 bg-[#074226] text-white rounded-lg">
             Add to Cart
           </button>
           <div>
@@ -352,7 +352,7 @@ const CourseSelfStudy = () => {
             <div></div>
           </div>
         </div>
-        <div className=" flex flex-col items-center bg-white  sm:p-8 max-w-lg mx-auto shadow border  border-[#074226] p-6  rounded-lg my-5">
+        <div className=" flex flex-col items-center bg-white  sm:p-8 max-w-lg mx-auto shadow border  sm:border-[#074226] p-6  rounded-lg sm:my-5">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Accredited by
           </h2>
@@ -368,7 +368,7 @@ const CourseSelfStudy = () => {
               className="h-16 object-contain"
             />
           </div>
-          <p className="text-gray-600">
+          <p className="text-gray-600 sm:text-lg">
             We take great pride in collaborating with top-tier organizations
             within the accounting and auditing sectors. Our partnerships are
             designed to enhance your educational journey, ensuring you receive

@@ -36,23 +36,23 @@ const blogs = [
 
 const TrendingBlogs = () => {
   return (
-    <div className="px-20 py-10">
-      <div className="bg-[#DBCFBC] rounded-3xl p-8 shadow-lg flex flex-col lg:flex-row gap-8 h-[560px]">
+    <div className="px-2 sm:px-20 py-10">
+      <div className="bg-[#DBCFBC] rounded-3xl p-8 shadow-lg flex flex-col lg:flex-row gap-8 ">
         <div className="flex-1">
-          <h2 className="text-[55px] font-bold text-black mb-2">
+          <h2 className="text-lg sm:text-[55px] font-bold text-black mb-2 sm:leading-relaxed">
             Featured Blog
           </h2>
-          <h3 className="text-[34px] font-semibold text-[#074226] mb-4">
+          <h3 className="text-xl sm:text-[34px] font-semibold text-[#074226] mb-4 sm:leading-relaxed">
             How to Study efficiently? A complete Guide to get good grades
           </h3>
-          <p className="text-gray-600 mb-6 text-[18px]">
+          <p className="text-gray-600 mb-6 sm:text-[18px] sm:leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor. Sapien, diam, tempus at ornare mi sagittis, diam
             rhoncus pulvinar. Non ut consectetur donec tortor nam scelerisque
             habitant morbi. Pretium.
           </p>
           <div className="flex items-center gap-4 mb-6">
-            <span className="flex p-2 bg-[#FFFFFF8A] rounded-xl gap-1">
+            <span className="flex p-2 bg-[#FFFFFF8A] rounded-xl gap-1 text-sm sm:text-md">
               {" "}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +104,7 @@ const TrendingBlogs = () => {
         </div>
       </div>
       <div className="p-6">
-        <h2 className="text-[53px] font-bold mb-6 text-center py-10">
+        <h2 className="text-2xl sm:text-[53px] font-bold mb-6 text-center py-5 sm:py-10">
           Trending Blogs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -113,12 +113,12 @@ const TrendingBlogs = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 p-6 bg-base-200 rounded-lg shadow-lg">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 p-3  sm:p-6 bg-base-200 rounded-lg shadow-lg">
         <div className="flex-1">
-          <h2 className="text-[39px] font-bold mb-4 text-[#074226]">
+          <h2 className="text-2xl sm:text-[39px] font-bold mb-4 text-[#074226]">
             The Ultimate Guide to Studying Effectively for Top Grades
           </h2>
-          <p className="text-black text-[24px] mb-6">
+          <p className="text-black text-lg  sm:text-[24px] mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem
             gravida eget aliquam, augue in in. Tempor erat sapien commodo nisi
             ipsum, magna. Sapien, diam, tempus at ornare mi sagittis, diam
