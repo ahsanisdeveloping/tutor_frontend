@@ -2,83 +2,9 @@
 import React, { useState } from "react";
 import alertimg from "../assets/images/discover/alertimg.png";
 import background from "../assets/svgs/discover/bg.svg";
-import courseimg from "../assets/svgs/discover/courseimg.svg";
+import { courses } from "../data/courses";
 const Discover = () => {
-  const courses = [
-    {
-      id: 1,
-      logo: courseimg,
-      price: "$5,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 2,
-      logo: courseimg,
-      price: "$7,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 3,
-      logo: courseimg,
-      price: "$9,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 4,
-      logo: courseimg,
-      price: "$5,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 5,
-      logo: courseimg,
-      price: "$7,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 6,
-      logo: courseimg,
-      price: "$9,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 7,
-      logo: courseimg,
-      price: "$5,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 8,
-      logo: courseimg,
-      price: "$7,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    {
-      id: 9,
-      logo: courseimg,
-      price: "$9,000",
-      title: "Certified Professional in Accounting Management",
-      tags: ["Trending", "Flexible", "Live Virtual Training"],
-      buttonText: "Apply Now",
-    },
-    // Repeat or add additional entries as needed
-  ];
+ 
   const totalPages = 10; // Total number of pages
   const [currentPage, setCurrentPage] = useState(1); // Current active page
   const filterTags = [
@@ -106,7 +32,7 @@ const Discover = () => {
     <div className="">
       {/* Header Section */}
       <header
-        className="bg-base-100 min-h-screen bg-cover bg-center relative"
+        className="bg-base-100  bg-cover bg-center relative"
         style={{ backgroundImage: `url(${background})` }}
       >
         <div className="h-full w-full bg-gradient-to-r from-[#fdfaf3] to-[#f8f9f9]">
@@ -175,17 +101,17 @@ const Discover = () => {
         </div>
           
       </header>
-      <div className="sm:px-10 px-5">
-        <h1 className="sm:text-[22px] font-bold  text-lg">
+      <div className="sm:px-10 px-5 sm:pt-10">
+        <h1 className="sm:text-[22px] font-bold  text-lg py-3">
           Results for Accounting and Auditing
         </h1>
       </div>
       {/* Filters and Sorting */}
 
       {/* Main Section */}
-      <main className=" sm:mx-auto sm:px-10 sm:py-6 grid grid-cols-12 gap-2">
+      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-2">
         {/* Sidebar Filters */}
-        <aside className="col-span-2 bg-base-100 p-4 rounded-lg">
+        <aside className="sm:col-span-2 bg-base-100 p-4 rounded-lg">
           <button className="bg-[#074226] w-full text-white flex justify-between p-3 rounded">
             <span>All</span>
             <span>1820+</span>
@@ -210,9 +136,9 @@ const Discover = () => {
         </aside>
 
         {/* Course Cards */}
-        <div className="col-span-10">
-          <div className="mx-auto   flex justify-between items-center">
-            <div className="flex space-x-4">
+        <div className="sm:col-span-10">
+          <div className="sm:mx-auto   flex flex-col sm:flex-row sm:justify-between sm:items-center">
+            <div className="flex flex-col sm:flex-row sm:space-x-4">
               <select className="select font-bold">
                 <option>Self-Study</option>
                 <option>Price</option>
@@ -224,12 +150,12 @@ const Discover = () => {
                 <option>Popularity</option>
               </select>
             </div>
-            <div className="bg-[#EDE8DA] p-[8px] px-3 rounded-2xl flex gap-1 overflow-hidden flex-nowrap">
+            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-hidden sm:flex-nowrap flex ">
               {filterTags.map((tag) => (
                 <button
                   className={`bg-white rounded-2xl p-1 px-5 text-[13px] flex-shrink-0 ${
                     selectedTag === tag
-                      ? "bg-[#074227] text-white" // Selected button styling
+                      ? "bg-[#074226] text-white" // Selected button styling
                       : "bg-white text-black" // Default button styling
                   }`}
                   onClick={() => {
@@ -242,7 +168,7 @@ const Discover = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3">
             {courses.map((course) => (
               <div key={course.id} className="border p-4 rounded-lg shadow-md">
                 {/* Logo */}
@@ -297,8 +223,8 @@ const Discover = () => {
       </main>
 
       {/* Pagination */}
-      <footer className="bg-base-100 py-4 flex justify-end px-10 items-center">
-        <div className="btn-group flex">
+      <footer className="bg-base-100 py-4 flex sm:justify-end sm:px-10 items-center">
+        <div className="btn-group flex flex-wrap">
           {/* Previous Double Arrow */}
           <button
             className={`btn btn-outline ${
