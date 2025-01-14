@@ -4,6 +4,7 @@ import assignment from "../assets/svgs/courses/clipboard.svg";
 import time from "../assets/svgs/courses/clock.svg";
 import rating from "../assets/svgs/courses/star.svg";
 import money from "../assets/svgs/courses/money.svg";
+import lang from "../assets/svgs/courses/lang.svg";
 import selfstudy from "../assets/svgs/courses/slefstudy.svg";
 import live from "../assets/svgs/courses/live.svg";
 import laptop from "../assets/svgs/courses/laptop.svg";
@@ -17,6 +18,9 @@ const CourseSelfStudy = () => {
   const toggleSection = (index) => {
     setActiveSection(activeSection === index ? null : index);
   };
+  const keyTakeaways = [
+    
+  ]
   const reviews = [
     {
       name: "Emily Chen, CPA Candidate",
@@ -47,7 +51,7 @@ const CourseSelfStudy = () => {
         "Definition and importance of accounting and auditing",
         "Brief history and evolution",
       ],
-    },  
+    },
     { title: "Financial Accounting Fundamentals" },
     { title: "Auditing Principles and Practices" },
     { title: "Advanced Topics and Specialized Accounting" },
@@ -58,7 +62,12 @@ const CourseSelfStudy = () => {
       {/* Left Section */}
 
       <div className="flex-1 bg-white p-6 rounded-lg ">
-        <button className="text-green-700 font-semibold mb-4">Back</button>
+        <button className="flex items-center justify-between gap-1 text-white bg-[#074226] font-semibold mb-4 px-3 pr-4 p-2 rounded-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 text-white">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+          </svg>
+
+          Back</button>
 
         <div className="sm:w-[50%]">
           <div className="flex  items-center gap-2">
@@ -77,28 +86,23 @@ const CourseSelfStudy = () => {
           procedures.
         </p>
         <div className="flex items-center gap-4 text-sm text-gray-700 mb-6 flex-wrap">
-          <span className="flex px-5 justify-center bg-[#FFF5EE] p-3 rounded-3xl gap-2">
-            <img src={rating} alt="" width={15} />
-            49h content
-          </span>
+
           <span className=" flex  justify-center bg-[#FFF5EE] p-3 px-5 rounded-3xl gap-2">
             <img src={lesson} alt="" width={15} />
             Lesson 50
-          </span>
-          <span className="flex px-5 justify-center bg-[#FFF5EE] p-3 rounded-3xl gap-2">
-            <img src={assignment} alt="" width={15} />
-            Assignment 04
           </span>
           <span className="flex px-5 justify-center bg-[#FFF5EE] p-3 rounded-3xl gap-2">
             {" "}
             <img src={time} alt="" width={15} />
             18h 19m
           </span>
-          <span className="flex px-5 justify-center bg-[#43B6FD] p-3 rounded-3xl gap-2 text-white">
-            {" "}
-            <img src={money} alt="" width={15} />
-            Sponsored
+          <span className="flex px-5 justify-center bg-[#FFF5EE] p-3 rounded-3xl gap-2">
+            <img src={lang} alt="" width={15} />
+            English
           </span>
+
+
+
         </div>
         <div className="mb-6  h-[400px] overflow-hidden">
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
@@ -134,6 +138,39 @@ const CourseSelfStudy = () => {
             theoretical knowledge to practical scenarios. Dedicated Support:
             Access to instructors for clarification on key concepts.
           </p>
+        </div>
+        <div className="bg-green-300">
+          <h1 className="text-xl sm:text-[38px] font-semibold">Key Takeaways</h1>
+          <div className="flex items-center gap-5 p-5">
+            <div className="p-5"><span className="text-3xl">1</span></div>
+            <div className="flex-1">
+              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-5 p-5">
+            <div className="p-5"><span className="text-3xl">1</span></div>
+            <div className="flex-1">
+              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-5 p-5">
+            <div className="p-5"><span className="text-3xl">1</span></div>
+            <div className="flex-1">
+              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-5 p-5">
+            <div className="p-5"><span className="text-3xl">1</span></div>
+            <div className="flex-1">
+              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-5 p-5">
+            <div className="p-5"><span className="text-3xl">1</span></div>
+            <div className="flex-1">
+              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
+            </div>
+          </div>
         </div>
         <div className="max-w-xl  bg-white  rounded-lg p-4  ">
           <h2 className="sm:text-2xl text-xl font-bold mb-4">Course Content</h2>
@@ -378,7 +415,7 @@ const CourseSelfStudy = () => {
           </p>
         </div>
       </div>
-      
+
     </div>
   );
 };
