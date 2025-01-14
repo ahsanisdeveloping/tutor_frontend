@@ -19,8 +19,28 @@ const CourseSelfStudy = () => {
     setActiveSection(activeSection === index ? null : index);
   };
   const keyTakeaways = [
-    
-  ]
+    {
+      id: 1,
+      content: "A different look at IT as a 'business enabler', and how to converge it with business goals and objectives.",
+    },
+    {
+      id: 2,
+      content: "Trainees will become aware of a set of topics and knowledge areas in IT governance and its operational management.",
+    },
+    {
+      id: 3,
+      content: "Realise the key roles and responsibilities in managing IT in the organization, and become able to design the needed structures for successful and secured IT.",
+    },
+    {
+      id: 4,
+      content: "Integrate contemporary managerial concepts and theories to the continuous improvement in IT function at organization level.",
+    },
+    {
+      id: 5,
+      content: "Learn how to prioritise and launch IT projects, and integrate it to the business strategy successfully.",
+    },
+  ];
+
   const reviews = [
     {
       name: "Emily Chen, CPA Candidate",
@@ -139,38 +159,21 @@ const CourseSelfStudy = () => {
             Access to instructors for clarification on key concepts.
           </p>
         </div>
-        <div className="bg-green-300">
-          <h1 className="text-xl sm:text-[38px] font-semibold">Key Takeaways</h1>
-          <div className="flex items-center gap-5 p-5">
-            <div className="p-5"><span className="text-3xl">1</span></div>
-            <div className="flex-1">
-              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
-            </div>
+        <div className="">
+          <h1 className="text-xl sm:text-[38px] font-semibold p-5 ">Key Takeaways</h1>
+          <div className="flex flex-col gap-2 justify-evenly items-center p-2">
+            {keyTakeaways.map((point) => (
+              <div className="flex items-center gap-5 border-b border-gray-300 ">
+
+                <div className="p-5"><span className="text-3xl">{point.id}</span></div>
+                <div className="flex-1">
+                  <span className="text-lg leading-tight">{point.content}</span>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex items-center gap-5 p-5">
-            <div className="p-5"><span className="text-3xl">1</span></div>
-            <div className="flex-1">
-              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-5 p-5">
-            <div className="p-5"><span className="text-3xl">1</span></div>
-            <div className="flex-1">
-              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-5 p-5">
-            <div className="p-5"><span className="text-3xl">1</span></div>
-            <div className="flex-1">
-              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-5 p-5">
-            <div className="p-5"><span className="text-3xl">1</span></div>
-            <div className="flex-1">
-              <span className="text-lg leading-tight">A different look at IT as a “business enabler”, and how to converge it with business goals and objectives.</span>
-            </div>
-          </div>
+
+
         </div>
         <div className="max-w-xl  bg-white  rounded-lg p-4  ">
           <h2 className="sm:text-2xl text-xl font-bold mb-4">Course Content</h2>
@@ -206,91 +209,7 @@ const CourseSelfStudy = () => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg ">
-          {/* Instructor Section */}
-          <div className="mb-8">
-            <h2 className="sm:text-3xl text-xl font-bold mb-4">Instructor</h2>
-            <div className="flex items-center">
-              <img
-                src="https://via.placeholder.com/80"
-                alt="Instructor"
-                className="w-20 h-20 rounded-full mr-4"
-              />
-              <div>
-                <h3 className="sm:text-2xl text-lg font-bold">John S.</h3>
-                <p className="text-sm sm:text-lg text-gray-600">Training Advisor</p>
-                <p className="text-sm mt-2">
-                  Meet John Smith, a seasoned accounting and auditing
-                  professional with over a decade of experience in both teaching
-                  and practical applications.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Review Section */}
-          <div className="mb-8">
-            <h2 className="sm:text-3xl text-xl font-bold mb-4">Review</h2>
-            <div className="flex items-center mb-4">
-              <span className="sm:text-4xl text-2xl font-bold mr-4">4.9</span>
-              <div className="flex space-x-1">
-                {[...Array(5)].map((_, index) => (
-                  <span key={index} className="text-yellow-500 text-xl">
-                    ★
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center text-gray-600 text-sm">
-                <div className="w-1/4">5 stars</div>
-                <div className="flex-grow bg-gray-200 h-2 rounded-full">
-                  <div
-                    className="bg-yellow-500 h-2 rounded-full"
-                    style={{ width: "90%" }}
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center text-gray-600 text-sm">
-                <div className="w-1/4">4 stars</div>
-                <div className="flex-grow bg-gray-200 h-2 rounded-full">
-                  <div
-                    className="bg-yellow-500 h-2 rounded-full"
-                    style={{ width: "10%" }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Featured Reviews */}
-          <div>
-            <h2 className="sm:text-3xl text-xl font-bold mb-4">Featured Review</h2>
-            <div className="space-y-6">
-              {reviews.map((review, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <img
-                    src={review.image}
-                    alt={review.name}
-                    className="w-12 h-12 rounded-full"
-                  />
-                  <div>
-                    <h4 className="font-bold sm:text-md">{review.name}</h4>
-                    <div className="flex space-x-1 text-yellow-500 text-sm">
-                      {[...Array(review.rating)].map((_, i) => (
-                        <span key={i}>★</span>
-                      ))}
-                    </div>
-                    <p className="text-sm text-gray-600 mt-2">
-                      {review.review}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <button className="mt-6 px-4 py-2 bg-[#074226] text-white rounded-md shadow-md sm:text-xl">
-              Show More
-            </button>
-          </div>
+            <h1>Select Course Type</h1>
         </div>
       </div>
 
@@ -405,13 +324,10 @@ const CourseSelfStudy = () => {
               className="h-16 object-contain"
             />
           </div>
-          <p className="text-gray-600 sm:text-lg">
-            We take great pride in collaborating with top-tier organizations
-            within the accounting and auditing sectors. Our partnerships are
-            designed to enhance your educational journey, ensuring you receive
-            the finest learning experience possible. With the support of our
-            esteemed sponsors, we are committed to our mission of delivering
-            high-quality education.
+
+          <p className="text-gray-600 sm:text-md">
+            <span className="text-gray-600 sm:text-md">OpenSpace - Professional Development Institute</span>
+            OpenSpace is the leading corporate training and EdTech company in the EMEA region, with the most comprehensive learning and development solutions in all strategic corporate functions, including Corporate Finance, HR, Procurement and SCM, Technology, Quality, Operations and Engineering. Through instructor-led sessions, in-company training, and coaching, our faculty of experts deliver over 1200+ programs annually, while 25,000+ professionals are equipped with up-to-date relevant education and the latest tech solutions across the EMEA region. We help our valued clients with a wide range of services, including Training Needs Analysis, Competency Development and Assessment, and custom-built e-Learning solutions that cater to specific industries and knowledge areas. OpenSpace mission remains boosting competitiveness of our clients worldwide through continuous learning, while we strive to achieve our vision of becoming the best quality corporate training and EdTech Company in the EMEA and the world. Whether our clients are facing difficulties re-organising their brand, equipping their workforce with an extra set of skills or aiming to assess competencies within an existing structure, our development planning is a great solution. OpenSpace mission is to help our worldwide clients boost their competitiveness by improving the competency levels of their employees, through top quality training and development solutions delivered by unrivaled global experts and facilitated by the best training managers in the industry.
           </p>
         </div>
       </div>
