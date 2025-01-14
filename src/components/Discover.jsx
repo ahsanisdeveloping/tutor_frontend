@@ -1,5 +1,5 @@
 // Updated Discover.jsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import alertimg from "../assets/images/discover/alertimg.png";
 import background from "../assets/svgs/discover/bg.svg";
 import { courses } from "../data/courses";
@@ -17,7 +17,7 @@ const Discover = () => {
     "Business Management Strategy",
   ];
   const [selectedTag, setSelectedTag] = useState(filterTags[0]);
-
+  const [selectBannerButton,setSelectedBannerButton] = useState("Executive Education")
   // Handler to change the page
   const changePage = (page) => {
     if (page >= 1 && page <= totalPages) {
@@ -28,6 +28,9 @@ const Discover = () => {
   const handleTagClick = (tag) => {
     setSelectedTag(tag);
   };
+  const handleBannerButton = (btn) => {
+    setSelectedBannerButton(btn)
+  }
   return (
     <div className="">
       {/* Header Section */}
@@ -41,29 +44,9 @@ const Discover = () => {
               Discover interactive learning{" "}
               <span className="text-gray-400">materials,</span> and tutor
             </h1>
-            <div className="flex sm:w-[600px] relative justify-center mt-4">
-              <button className="absolute sm:left-[100px] sm:top-3 left-5 top-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="size-6 "
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                  />
-                </svg>
-              </button>
-
-              <input
-                type="text"
-                placeholder="Search for tutors, courses, or materials..."
-                className="input input-bordered w-full max-w-md sm:px-16 px-16 pr-5"
-              />
+            <div className="flex flex-col sm:flex-row sm:gap-5 sm:px-5 relative justify-center mt-4 bg-white rounded-badge sm:rounded-full p-2 gap-2">
+             <button className={`${selectBannerButton == "Professional Certificate"?"bg-[#074226] text-white":""} sm:p-2 sm:px-5 rounded-full  px-3 p-2`} onClick={()=>{handleBannerButton("Professional Certificate")}}>Professional Certificate</button>
+             <button className={`${selectBannerButton == "Executive Education"?"bg-[#074226] text-white":""} sm:p-2 sm:px-5 rounded-full px-3 p-2`} onClick={()=>{handleBannerButton("Executive Education")}}>Executive Education</button>
             </div>
           </div>
           {showAlert && (
@@ -153,7 +136,7 @@ const Discover = () => {
             <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-hidden sm:flex-nowrap flex ">
               {filterTags.map((tag) => (
                 <button
-                  className={`bg-white rounded-2xl p-1 px-5 text-[13px] flex-shrink-0 ${
+                  className={` rounded-2xl p-1 px-5 text-[13px] flex-shrink-0 ${
                     selectedTag === tag
                       ? "bg-[#074226] text-white" // Selected button styling
                       : "bg-white text-black" // Default button styling
