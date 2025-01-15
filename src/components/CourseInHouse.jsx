@@ -14,10 +14,9 @@ import courseImg from "../assets/images/courses/course.png";
 import playButton from "../assets/images/courses/playbutton.png";
 import { courses } from "../data/courses";
 import full from "../assets/svgs/courses/full.svg"
-const CourseSelfStudy = ({handleToggleCourses}) => {
+const CourseInHouse = ({handleToggleCourses}) => {
   const trimCourses = courses.slice(0, 4);
   const [activeSection, setActiveSection] = useState(null);
-
   const toggleSection = (index) => {
     setActiveSection(activeSection === index ? null : index);
   };
@@ -317,7 +316,7 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
               Choose Package & Plan
             </h3>
             <div className="flex gap-4">
-              <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("self-study")}>
+              <button className=" w-1/3 py-2  rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("self-study")}>
                 <img
                   src={selfstudy}
                   alt=""
@@ -328,7 +327,7 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
                 <p className="text-[12px]">Self-Study</p>
                 <p className="text-[9px]">ON HOUSE TRAINING</p>
               </button>
-              <button className="w-1/3 py-2  rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("in-house")}>
+              <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("in-house")}>
                 <img
                   src={laptop}
                   alt=""
@@ -434,4 +433,4 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
   );
 };
 
-export default CourseSelfStudy;
+export default CourseInHouse;
