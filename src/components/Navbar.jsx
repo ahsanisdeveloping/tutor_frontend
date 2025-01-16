@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import CoursesModalNav from "./CoursesModalNav"
+import CoursesModalNav from "./CoursesModalNav";
 const Navbar = () => {
   const navigate = useNavigate();
   const { t } = useTranslation("Navbar");
@@ -58,45 +58,40 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-screen p-2 shadow "
             >
               <li>
-                <a onClick={() => navigate("/")}>{t("home")}</a>
+                <a onClick={() => navigate("/")} className="text-2xl border-b border-gray-200 rounded-none py-4">{t("home")}</a>
               </li>
               <li>
-                <a onClick={() => navigate("/")}>{t("aboutUs")}</a>
+                <a onClick={() => navigate("/")} className="text-2xl border-b border-gray-200 rounded-none py-4">{t("aboutUs")}</a>
               </li>
               <li>
-                <details>
-                  <summary>{t("courses").title}</summary>
-                  <ul className="p-2">
-                    <li>
-                      <a onClick={() => navigate("/courses")}>
-                        {t("courses").list.course1}
-                      </a>
-                    </li>
-                    <li>
-                      <a>{t("courses").list.course2}</a>
-                    </li>
-                  </ul>
-                </details>
+                {/* Open the modal using document.getElementById('ID').showModal() method */}
+                <li
+                  className="text-2xl border-b border-gray-200 rounded-none py-4"
+                  onClick={() =>
+                    document.getElementById("my_modal_1").showModal()
+                  }
+                >
+                  Courses
+                </li>
+                <dialog id="my_modal_1" className="modal">
+                  <div className="modal-box w-full">
+                    <CoursesModalNav/>
+                    <div className="modal-action mx-auto">
+                      <form method="dialog">
+                        {/* if there is a button in form, it will close the modal */}
+                        <button className="btn bg-[#074226] text-white">Close</button>
+                      </form>
+                    </div>
+                  </div>
+                </dialog>
               </li>
               <li>
-                <details>
-                  <summary>{t("blogs").title}</summary>
-                  <ul className="p-2">
-                    <li>
-                      <a onClick={() => navigate("/blogs")}>
-                        {t("blogs").list.blog1}
-                      </a>
-                    </li>
-                    <li>
-                      <a>{t("blogs").list.blog2}</a>
-                    </li>
-                  </ul>
-                </details>
+                <a onClick={() => navigate("/")} className="text-2xl border-b border-gray-200 rounded-none py-4">{t("blogs").title}</a>
               </li>
               {/* Sign-Up and Login Buttons for Mobile */}
               <li className="my-2">
                 <a
-                  className="btn font-bold border-[#074226] text-center"
+                  className="btn font-bold border-[#074226] text-center text-2xl"
                   onClick={() => navigate("/signup")}
                 >
                   {t("signup")}
@@ -104,14 +99,14 @@ const Navbar = () => {
               </li>
               <li className="my-1">
                 <a
-                  className="btn font-bold bg-[#074226] text-white text-center"
+                  className="btn font-bold bg-[#074226] text-white text-center text-2xl"
                   onClick={() => navigate("/signin")}
                 >
                   {t("login")}
                 </a>
               </li>
               {/* Language Selector for Mobile */}
-              <li className="my-1">
+              <li className="my-1 ">
                 <LanguageSelector />
               </li>
               {/* Theme Button for Mobile */}
@@ -159,16 +154,18 @@ const Navbar = () => {
                 {t("aboutUs")}
               </a>
             </li>
-            <div className="relative bottom-[2px] inline-block" onMouseLeave={handleCourseMouseLeave}>
+            <div
+              className="relative bottom-[2px] inline-block"
+              onMouseLeave={handleCourseMouseLeave}
+            >
               {/* Dropdown Trigger */}
               <button
                 id="dropdownDelayButton"
                 onMouseEnter={handleCourseMouseEnter}
                 className=" hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#074226]"
                 type="button"
-                
               >
-               <b>{t("courses").title}</b>
+                <b>{t("courses").title}</b>
                 <svg
                   className="w-2.5 h-2.5 ms-3"
                   aria-hidden="true"
@@ -192,12 +189,15 @@ const Navbar = () => {
                   id="dropdownDelay"
                   className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow left-[-500px] "
                 >
-                 <CoursesModalNav/>
+                  <CoursesModalNav />
                 </div>
               )}
             </div>
 
-            <div className="relative bottom-[2px] inline-block" onMouseLeave={handleBlogMouseLeave}>
+            <div
+              className="relative bottom-[2px] inline-block"
+              onMouseLeave={handleBlogMouseLeave}
+            >
               {/* Dropdown Trigger */}
               <button
                 id="dropdownDelayButton"
@@ -207,11 +207,7 @@ const Navbar = () => {
                 onClick={() => navigate("/blogs")}
               >
                 <b>{t("blogs").title}</b>
-                
               </button>
-
-             
-             
             </div>
           </ul>
         </div>

@@ -90,11 +90,11 @@ const TrainingAndConsulting = () => {
   ];
 
   return (
-    <div className="bg-base-100 p-1 md:p-6 rounded-lg shadow-lg">
-      <div className="flex flex-col flex-wrap gap-3 justify-start  h-[460px] w-[920px]">
+    <div className="bg-base-100 sm:p-1 md:p-6 rounded-lg shadow-lg">
+      <div className="flex flex-col sm:flex-wrap gap-1 sm:gap-3 justify-start  sm:h-[460px] sm:w-[920px]">
         <h1 className="pb-2 text-[22px]">Corporate Level Training</h1>
         {corporateData.map((item) => (
-          <button className="w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-2 text-left hover:bg-gray-200" onClick={()=>navigate('/discover')} >
+          <button className="sm:w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-2 text-left hover:bg-gray-200" onClick={()=>navigate('/discover')} >
             <div>
               <img src={item.icon} alt=""  height="40px" width="50px" />
             </div>
@@ -106,7 +106,7 @@ const TrainingAndConsulting = () => {
         ))}
         <h1 className="pb-2 text-[22px]">Consulting Service</h1>
         {consultingData.map((item) => (
-            <button className="w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-2 text-left hover:bg-gray-200" onClick={()=>navigate('/discover')} >
+            <button className="sm:w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-2 text-left hover:bg-gray-200" onClick={()=>navigate('/discover')} >
             <div>
               <img src={item.icon} alt=""  height="40px" width="50px" />
             </div>
