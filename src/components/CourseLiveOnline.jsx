@@ -7,6 +7,8 @@ import money from "../assets/svgs/courses/money.svg";
 import lang from "../assets/svgs/courses/lang.svg";
 import selfstudy from "../assets/svgs/courses/slefstudy.svg";
 import live from "../assets/svgs/courses/live.svg";
+import livewhite from "../assets/svgs/courses/livewhite.svg";
+import selfgray from "../assets/svgs/courses/selfgray.jpg";
 import laptop from "../assets/svgs/courses/laptop.svg";
 import accreditation1 from "../assets/svgs/courses/accreditation1.svg";
 import accreditation2 from "../assets/svgs/courses/accreditation2.svg";
@@ -307,7 +309,7 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
               <div>
                 <span className="flex px-5 justify-center bg-red-500 p-3 rounded-3xl gap-2 text-white">
                   <img src={full} alt="" width={15} />
-                  Full
+                  5 Days Left !
                 </span>
               </div>
             </div>
@@ -319,7 +321,7 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
             <div className="flex gap-4">
               <button className=" w-1/3 py-2  rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("self-study")}>
                 <img
-                  src={selfstudy}
+                  src={selfgray}
                   alt=""
                   height={50}
                   width={50}
@@ -341,14 +343,14 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
               </button>
               <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("live-online")}>
                 <img
-                  src={live}
+                  src={livewhite}
                   alt=""
                   height={50}
                   width={50}
                   className="m-auto"
                 />
-                <p className="text-[12px]">Live Online</p>
-                <p className="text-[9px]">Live Online Class</p>
+                <p className="text-[12px] text-white">Live Online</p>
+                <p className="text-[9px] text-white">Live Online Class</p>
               </button>
             </div>
           </div>

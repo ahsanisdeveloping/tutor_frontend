@@ -6,8 +6,10 @@ import rating from "../assets/svgs/courses/star.svg";
 import money from "../assets/svgs/courses/money.svg";
 import lang from "../assets/svgs/courses/lang.svg";
 import selfstudy from "../assets/svgs/courses/slefstudy.svg";
+import selfgray from "../assets/svgs/courses/selfgray.jpg";
 import live from "../assets/svgs/courses/live.svg";
 import laptop from "../assets/svgs/courses/laptop.svg";
+import laptopwhite from "../assets/svgs/courses/laptopwhite.svg";
 import accreditation1 from "../assets/svgs/courses/accreditation1.svg";
 import accreditation2 from "../assets/svgs/courses/accreditation2.svg";
 import courseImg from "../assets/images/courses/course.png";
@@ -318,7 +320,7 @@ const CourseInHouse = ({handleToggleCourses}) => {
             <div className="flex gap-4">
               <button className=" w-1/3 py-2  rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("self-study")}>
                 <img
-                  src={selfstudy}
+                  src={selfgray}
                   alt=""
                   height={50}
                   width={50}
@@ -329,14 +331,14 @@ const CourseInHouse = ({handleToggleCourses}) => {
               </button>
               <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("in-house")}>
                 <img
-                  src={laptop}
+                  src={laptopwhite}
                   alt=""
                   height={50}
                   width={50}
                   className="m-auto"
                 />
-                <p className="text-[12px]">In-House Training</p>
-                <p className="text-[9px]">In House Training</p>
+                <p className="text-[12px] text-white">In-House Training</p>
+                <p className="text-[9px] text-white">In House Training</p>
               </button>
               <button className="w-1/3 py-2   rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("live-online")}>
                 <img

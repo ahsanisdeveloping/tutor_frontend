@@ -233,7 +233,7 @@ const Navbar = () => {
             </li>
           </ul>
           <ul className="menu menu-horizontal px-1 items-center">
-            <a className="btn font-bold bg-[#074226] text-white rounded-full">
+            <a className="btn font-bold bg-[#074226] text-white rounded-full mr-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

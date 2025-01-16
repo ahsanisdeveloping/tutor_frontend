@@ -32,7 +32,7 @@ const Discover = () => {
     setSelectedBannerButton(btn)
   }
   return (
-    <div className="">
+    <div className="bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
       {/* Header Section */}
       <header
         className="bg-base-100  bg-cover bg-center relative"
@@ -84,7 +84,7 @@ const Discover = () => {
         </div>
           
       </header>
-      <div className="sm:px-10 px-5 sm:pt-10">
+      <div className="sm:px-10 px-5 sm:pt-10 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
         <h1 className="sm:text-[22px] font-bold  text-lg py-3">
           Results for Accounting and Auditing
         </h1>
@@ -92,27 +92,27 @@ const Discover = () => {
       {/* Filters and Sorting */}
 
       {/* Main Section */}
-      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-2">
+      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-2 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
         {/* Sidebar Filters */}
-        <aside className="sm:col-span-2 bg-base-100 p-4 rounded-lg">
+        <aside className="sm:col-span-2 p-4 rounded-lg">
           <button className="bg-[#074226] w-full text-white flex justify-between p-3 rounded">
             <span>All</span>
             <span>1820+</span>
           </button>
 
-          <button className=" w-full flex justify-between p-3 rounded">
+          <button className=" w-full flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
             <span>1820+</span>
           </button>
-          <button className=" w-full  flex justify-between p-3 rounded">
+          <button className=" w-full  flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
             <span>1820+</span>
           </button>
-          <button className=" w-full  flex justify-between p-3 rounded">
+          <button className=" w-full  flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
             <span>1820+</span>
           </button>
-          <button className="w-full  flex justify-between p-3 rounded">
+          <button className="w-full  flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
             <span>1820+</span>
           </button>
@@ -133,7 +133,7 @@ const Discover = () => {
                 <option>Popularity</option>
               </select>
             </div>
-            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-hidden sm:flex-nowrap flex ">
+            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex ">
               {filterTags.map((tag) => (
                 <button
                   className={` rounded-2xl p-1 px-5 text-[13px] flex-shrink-0 ${
@@ -151,9 +151,9 @@ const Discover = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3">
+          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3 my-2">
             {courses.map((course) => (
-              <div key={course.id} className="border p-4 rounded-lg shadow-md">
+              <div key={course.id} className="border p-4 rounded-lg shadow-md bg-white">
                 {/* Logo */}
                 <div className="font-bold text-lg mb-2">
                   <img src={course.logo} alt="" />
@@ -206,7 +206,7 @@ const Discover = () => {
       </main>
 
       {/* Pagination */}
-      <footer className="bg-base-100 py-4 flex sm:justify-end sm:px-10 items-center">
+      <footer className=" py-4 flex sm:justify-end sm:px-10 items-center">
         <div className="btn-group flex flex-wrap">
           {/* Previous Double Arrow */}
           <button

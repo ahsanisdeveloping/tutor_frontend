@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import lesson from "../assets/svgs/courses/book.svg";
 import assignment from "../assets/svgs/courses/clipboard.svg";
 import time from "../assets/svgs/courses/clock.svg";
+import book from "../assets/svgs/courses/book.svg";
+import meter from "../assets/svgs/courses/meter.svg";
 import rating from "../assets/svgs/courses/star.svg";
 import money from "../assets/svgs/courses/money.svg";
 import lang from "../assets/svgs/courses/lang.svg";
@@ -13,13 +15,21 @@ import accreditation2 from "../assets/svgs/courses/accreditation2.svg";
 import courseImg from "../assets/images/courses/course.png";
 import playButton from "../assets/images/courses/playbutton.png";
 import { courses } from "../data/courses";
-import full from "../assets/svgs/courses/full.svg"
-const CourseSelfStudy = ({handleToggleCourses}) => {
+import full from "../assets/svgs/courses/full.svg";
+const CourseSelfStudy = ({ handleToggleCourses }) => {
   const trimCourses = courses.slice(0, 4);
+
   const [activeSection, setActiveSection] = useState(null);
 
   const toggleSection = (index) => {
     setActiveSection(activeSection === index ? null : index);
+  };
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const handleSelect = (id) => {
+    setSelectedItems((prev) =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
   };
   const keyTakeaways = [
     {
@@ -48,7 +58,12 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
         "Learn how to prioritise and launch IT projects, and integrate it to the business strategy successfully.",
     },
   ];
-
+  const products = [
+    { id: 1, label: "Level II CFA® Program Live Online", price: 264 },
+    { id: 2, label: "CFA Level I SchweserNotes™ & QuickSheet", price: 144 },
+    { id: 3, label: "CFA Level I SchweserNotes™ Audio MP3", price: 54 },
+    { id: 4, label: "CFA Level III Flashcards Set (Add On)", price: 24 },
+  ];
   const reviews = [
     {
       name: "Emily Chen, CPA Candidate",
@@ -192,7 +207,9 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
           </div>
         </div>
         <div className="max-w-xl  bg-white  rounded-lg sm:p-4  ">
-          <h2 className="text-xl sm:text-[38px] font-semibold mb-4 sm:my-5">Course Content</h2>
+          <h2 className="text-xl sm:text-[38px] font-semibold mb-4 sm:my-5">
+            Course Content
+          </h2>
           <div className="space-y-2">
             {sections.map((section, index) => (
               <div key={index} className="border rounded-lg overflow-hidden">
@@ -227,7 +244,9 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto bg-white sm:p-6 rounded-lg ">
-          <h1 className="text-xl sm:text-[38px] font-semibold sm:my-5 my-2">Select Course Type</h1>
+          <h1 className="text-xl sm:text-[38px] font-semibold sm:my-5 my-2">
+            Select Course Type
+          </h1>
           <div className="grid sm:grid-cols-2 sm:gap-6 gap-3">
             {trimCourses.map((course) => (
               <div key={course.id} className="border p-4 rounded-lg shadow-md">
@@ -296,12 +315,14 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
             </div>
             <div className="flex justify-between items-center flex-wrap">
               <div className="flex flex-wrap items-end">
-                <span className="text-black text-[43px] font-semibold ml-2">SUR</span>
                 <span className="text-black text-[43px] font-semibold ml-2">
-                  $2,648 
+                  SUR
+                </span>
+                <span className="text-black text-[43px] font-semibold ml-2">
+                  $2,648
                 </span>
                 <span className="line-through text-gray-400 text-[23px] ml-2">
-                   $6570
+                  $6570
                 </span>
               </div>
               <div>
@@ -317,7 +338,10 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
               Choose Package & Plan
             </h3>
             <div className="flex gap-4">
-              <button className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("self-study")}>
+              <button
+                className="w-1/3 py-2 bg-[#074226] text-white rounded-lg p-2 px-5"
+                onClick={() => handleToggleCourses("self-study")}
+              >
                 <img
                   src={selfstudy}
                   alt=""
@@ -328,7 +352,10 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
                 <p className="text-[12px]">Self-Study</p>
                 <p className="text-[9px]">ON HOUSE TRAINING</p>
               </button>
-              <button className="w-1/3 py-2  rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("in-house")}>
+              <button
+                className="w-1/3 py-2  rounded-lg p-2 px-5"
+                onClick={() => handleToggleCourses("in-house")}
+              >
                 <img
                   src={laptop}
                   alt=""
@@ -339,7 +366,10 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
                 <p className="text-[12px]">In-House Training</p>
                 <p className="text-[9px]">In House Training</p>
               </button>
-              <button className="w-1/3 py-2   rounded-lg p-2 px-5" onClick={()=>handleToggleCourses("live-online")}>
+              <button
+                className="w-1/3 py-2   rounded-lg p-2 px-5"
+                onClick={() => handleToggleCourses("live-online")}
+              >
                 <img
                   src={live}
                   alt=""
@@ -352,35 +382,57 @@ const CourseSelfStudy = ({handleToggleCourses}) => {
               </button>
             </div>
           </div>
-          <div className="mb-6">
-            <h3 className="text-[25px] font-semibold mb-2">
-              Choose Date & Time
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-4 text-xs">
-              <div className="flex justify-between items-center gap-2 border-gray-400 border p-3 rounded-lg "> 
-                <span>Riyadh, KSA</span>
-                <span>23-27, 2025</span>
-              </div>
-              <div className="flex justify-between items-center gap-2 border-gray-400 border p-3 rounded-lg"> 
-                <span>Riyadh, KSA</span>
-                <span>12-27, 2025</span>
-              </div><div className="flex justify-between items-center gap-2 border-gray-400 border p-3 rounded-lg"> 
-                <span>Kuwait City, Kuwait</span>
-                <span>27-01, 2025</span>
-              </div><div className="flex justify-between items-center gap-2 border-gray-400 border p-3 rounded-lg"> 
-                <span>Barcelona, Spain</span>
-                <span>Jul 07-11, 2025</span>
-              </div><div className="flex justify-between items-center gap-2 border-gray-400 border p-3 rounded-lg"> 
-                <span>Abu Dhabi, UAE</span>
-                <span>25-29, 2025</span>
-              </div><div className="flex justify-between items-center gap-2 border-gray-400 border p-3 rounded-lg"> 
-                <span>Suggest a Date & Location</span>
-              </div>
-            </div>
+
+          <div className="space-y-4">
+            {products.map(({ id, label, price }) => (
+              <label
+                key={id}
+                className="flex items-center justify-between p-4 px-2 border rounded-lg cursor-pointer hover:bg-gray-100"
+              >
+                <div className="flex items-center space-x-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedItems.includes(id)}
+                    onChange={() => handleSelect(id)}
+                    className="checkbox checkbox-sm"
+                  />
+                  <span>{label}</span>
+                </div>
+                <span className=" font-semibold">+SUR ${price}</span>
+              </label>
+            ))}
           </div>
-          <button className="w-full py-3 bg-[#074226] text-white rounded-lg">
+          <button className="w-full py-3 bg-[#074226] text-white rounded-full my-3">
             Add to Cart
           </button>
+          <div className="space-y-4">
+      {/* Lectures */}
+      <div className="flex justify-between items-center border-b pb-2 my-3">
+        <span className="text-gray-700">Lectures</span>
+        <span className="flex items-center space-x-1 bg-[#FFF5EE] text-[#CEB07E] px-2 py-1 rounded-full text-sm">
+          <img src={book} alt="" />
+          <span>50</span>
+        </span>
+      </div>
+
+      {/* Skill Level */}
+      <div className="flex justify-between items-center border-b pb-2">
+        <span className="text-gray-700">Skill Level</span>
+        <span className="flex items-center space-x-1 bg-[#FFF5EE] text-[#CEB07E] px-2 py-1 rounded-full text-sm">
+          <img src={meter} alt="" />
+          <span>Basic</span>
+        </span>
+      </div>
+
+      {/* Language */}
+      <div className="flex justify-between items-center">
+        <span className="text-gray-700">Language</span>
+        <span className="flex items-center space-x-1 bg-[#FFF5EE] text-[#CEB07E] px-2 py-1 rounded-full text-sm">
+          <img src={lang} alt="" />
+          <span>English</span>
+        </span>
+      </div>
+    </div>
         </div>
         <div className=" flex flex-col items-center bg-white  sm:p-8 max-w-lg mx-auto shadow border  sm:border-[#074226] p-6  rounded-lg sm:my-5">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
