@@ -38,7 +38,7 @@ const Discover = () => {
         className="bg-base-100  bg-cover bg-center relative"
         style={{ backgroundImage: `url(${background})` }}
       >
-        <div className="h-full w-full bg-gradient-to-r from-[#fdfaf3] to-[#f8f9f9]">
+        <div className="h-full w-full bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
           <div className="container flex flex-col justify-center  items-center mx-auto px-4   py-6 h-[60vh] sm:h-[600px]">
             <h1 className="sm:text-[46px] sm:w-[640px] font-bold text-center">
               Discover interactive learning{" "}

@@ -166,7 +166,7 @@ const Navbar = () => {
                 onMouseEnter={handleCourseMouseEnter}
                 className=" hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#074226]"
                 type="button"
-                onClick={() => navigate("/courses")}
+                
               >
                <b>{t("courses").title}</b>
                 <svg
@@ -207,45 +207,11 @@ const Navbar = () => {
                 onClick={() => navigate("/blogs")}
               >
                 <b>{t("blogs").title}</b>
-                <svg
-                  className="w-2.5 h-2.5 ms-3"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 10 6"
-                >
-                  <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m1 1 4 4 4-4"
-                  />
-                </svg>
+                
               </button>
 
-              {/* Dropdown Menu */}
-              {isBlogOpen && (
-                <div
-                  id="dropdownDelay"
-                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
-                >
-                  <ul
-                    className="py-2 text-sm text-gray-700"
-                    aria-labelledby="dropdownDelayButton"
-                  >
-                    <li>
-                    <a onClick={() => navigate("/blogs")}>
-                      {t("blogs").list.blog1}
-                    </a>
-                    </li>
-                    <li>
-                    <a>{t("blogs").list.blog2}</a>
-                    </li>
-                    
-                  </ul>
-                </div>
-              )}
+             
+             
             </div>
           </ul>
         </div>
