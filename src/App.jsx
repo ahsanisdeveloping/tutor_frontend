@@ -22,6 +22,8 @@ import SignInPage from './pages/SignInPage.jsx';
 import BlogsPage from './pages/BlogsPage.jsx';
 import CoursesPage from './pages/CoursesPage.jsx';
 import Navigations from './routes/Navigations.jsx';
+import CoursesModalNav from './components/CoursesModalNav.jsx';
+// import Test from './components/Test.jsx';
 function App() {
  return (
   <div >
@@ -33,6 +35,7 @@ function App() {
     {/* <BlogsPage/> */}
     {/* <CoursesPage/> */}
     <Navigations/>
+    {/* <CoursesModalNav/> */}
     </div>
  );
 }

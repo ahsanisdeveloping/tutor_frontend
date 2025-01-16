@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import CoursesModalNav from "./CoursesModalNav"
 const Navbar = () => {
   const navigate = useNavigate();
   const { t } = useTranslation("Navbar");
@@ -189,21 +190,9 @@ const Navbar = () => {
               {isCourseOpen && (
                 <div
                   id="dropdownDelay"
-                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 "
+                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow left-[-500px] "
                 >
-                  <ul
-                    className="py-2 text-sm text-gray-700 "
-                    aria-labelledby="dropdownDelayButton"
-                  >
-                    <li>
-                    <a onClick={() => navigate("/courses")}>
-                      {t("courses").list.course1}
-                    </a>
-                    </li>
-                    <li>
-                    <a>{t("courses").list.course2}</a>
-                    </li>
-                  </ul>
+                 <CoursesModalNav/>
                 </div>
               )}
             </div>
