@@ -3,11 +3,11 @@ import video from "../assets/images/learningsolution/video.png"
 const LearningSolution = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-10">
-      <h1 className="text-4xl font-bold text-center mb-10">
+      <h1 className="text-4xl font-semibold text-center mb-10 font-clash">
         Compete Learning Solution
       </h1>
 
-      <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6">
+      <div className="max-w-6xl mx-auto bg-white rounded-lg shadow-md p-6 font-nunito">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Time Table */}
           <div className="bg-gray-100 p-4 rounded-lg shadow-sm">

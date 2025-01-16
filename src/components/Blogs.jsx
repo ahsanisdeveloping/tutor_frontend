@@ -36,10 +36,10 @@ const blogs = [
 
 const TrendingBlogs = () => {
   return (
-    <div className="px-2 sm:px-20 py-10">
+    <div className="px-2 sm:px-20 py-10 font-clash">
       <div className="bg-[#DBCFBC] rounded-3xl p-8 shadow-lg flex flex-col lg:flex-row gap-8 ">
         <div className="flex-1">
-          <h2 className="text-lg sm:text-[55px] font-bold text-black mb-2 sm:leading-relaxed">
+          <h2 className="text-lg sm:text-[55px] font-semibold font-clash text-black mb-2 sm:leading-relaxed">
             Featured Blog
           </h2>
           <h3 className="text-xl sm:text-[34px] font-semibold text-[#074226] mb-4 sm:leading-relaxed">
@@ -104,7 +104,7 @@ const TrendingBlogs = () => {
         </div>
       </div>
       <div className="p-6">
-        <h2 className="text-2xl sm:text-[53px] font-bold mb-6 text-center py-5 sm:py-10">
+        <h2 className="text-2xl sm:text-[53px] font-semibold mb-6 text-center py-5 sm:py-10">
           Trending Blogs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -115,7 +115,7 @@ const TrendingBlogs = () => {
       </div>
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-6 p-3  sm:p-6 bg-base-200 rounded-lg shadow-lg">
         <div className="flex-1">
-          <h2 className="text-2xl sm:text-[39px] font-bold mb-4 text-[#074226]">
+          <h2 className="text-2xl sm:text-[39px] font-semibold mb-4 text-[#074226]">
             The Ultimate Guide to Studying Effectively for Top Grades
           </h2>
           <p className="text-black text-lg  sm:text-[24px] mb-6">

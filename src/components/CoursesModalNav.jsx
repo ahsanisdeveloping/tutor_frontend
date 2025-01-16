@@ -90,7 +90,7 @@ const TrainingAndConsulting = () => {
   ];
 
   return (
-    <div className="bg-base-100 sm:p-1 md:p-6 rounded-lg shadow-lg">
+    <div className="bg-base-100 sm:p-1 md:p-6 rounded-lg shadow-lg font-nunito">
       <div className="flex flex-col sm:flex-wrap gap-1 sm:gap-3 justify-start  sm:h-[460px] sm:w-[920px]">
         <h1 className="pb-2 text-[22px]">Corporate Level Training</h1>
         {corporateData.map((item) => (

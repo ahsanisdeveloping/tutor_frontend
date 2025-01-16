@@ -50,10 +50,10 @@ const SatisfactionSection = () => {
   return (
     <div className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto text-left px-4">
-        <h2 className="text-5xl font-bold mb-8 text-center py-10">
+        <h2 className="text-5xl font-semibold mb-8 text-center py-10 font-clash">
           {t("title")}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-nunito">
           {items.map((item, index) => (
             <div
               key={index}
@@ -61,7 +61,7 @@ const SatisfactionSection = () => {
             >
               <img className="text-4xl mr-4" src={item.icon}/>
               <div>
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                <h3 className="font-semibold text-lg mb-2 ">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
             </div>

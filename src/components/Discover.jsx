@@ -40,7 +40,7 @@ const Discover = () => {
       >
         <div className="h-full w-full bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
           <div className="container flex flex-col justify-center  items-center mx-auto px-4   py-6 h-[60vh] sm:h-[600px]">
-            <h1 className="sm:text-[46px] sm:w-[640px] font-bold text-center">
+            <h1 className="sm:text-[46px] sm:w-[640px] font-medium text-center font-clash">
               Discover interactive learning{" "}
               <span className="text-gray-400">materials,</span> and tutor
             </h1>

@@ -6,11 +6,11 @@ const ConsultingServices = () => {
     <div className="bg-white px-6 lg:px-20 py-10">
       {/* Heading Section */}
       <div className="text-center py-6">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-10">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold mb-10 font-clash">
           Why you should choose our consulting services?
         </h1>
         {/* Buttons Section */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
+        <div className="flex flex-wrap justify-center gap-4 mt-6 font-nunito">
           {["Strategy", "Coaching", "Skills", "Career", "Learning", "Exams", "Training"].map(
             (item, index) => (
               <button
@@ -39,23 +39,23 @@ const ConsultingServices = () => {
           />
         </div>
         {/* Right Section: Text */}
-        <div className="w-full md:w-1/2 text-center md:text-left">
-          <h2 className="text-2xl md:text-3xl font-semibold">
+        <div className="w-full md:w-1/2 text-center md:text-left ">
+          <h2 className="text-2xl md:text-3xl font-semibold font-clash">
             Harnessing the Power of{" "}
             <span className="text-yellow-400">Client Anticipation</span> for
             Lasting Satisfaction and Loyalty
           </h2>
           <ul className="mt-6 space-y-4 text-base md:text-lg">
             <li className="flex items-start">
-              <span className="text-yellow-400 mr-2">✔</span>
+              <span className="text-yellow-400 mr-2 font-nunito">✔</span>
               We listen to understand your unique challenges and goals.
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-400 mr-2">✔</span>
+              <span className="text-yellow-400 mr-2 font-nunito">✔</span>
               We anticipate your needs and proactively address them.
             </li>
             <li className="flex items-start">
-              <span className="text-yellow-400 mr-2">✔</span>
+              <span className="text-yellow-400 mr-2 font-nunito">✔</span>
               We build trust through open communication and collaboration.
             </li>
           </ul>

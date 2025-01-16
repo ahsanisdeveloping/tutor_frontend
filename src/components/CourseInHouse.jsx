@@ -87,7 +87,7 @@ const CourseInHouse = ({handleToggleCourses}) => {
     { title: "Capstone Project and Final Assessment" },
   ];
   return (
-    <div className="flex flex-col p-0  lg:flex-row gap-8 sm:p-6  min-h-screen">
+    <div className="flex flex-col p-0  lg:flex-row gap-8 sm:p-6  min-h-screen font-nunito">
       {/* Left Section */}
 
       <div className="flex-1 bg-white sm:p-6 rounded-lg p-3 ">
@@ -117,7 +117,7 @@ const CourseInHouse = ({handleToggleCourses}) => {
             </p>
           </div>
         </div>
-        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-bold mb-2">
+        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-semibold mb-2 font-clash">
           Foundations in Accounting and Auditing Principles
         </h1>
         <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4">

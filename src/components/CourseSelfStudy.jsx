@@ -101,7 +101,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
     { title: "Capstone Project and Final Assessment" },
   ];
   return (
-    <div className="flex flex-col p-0  lg:flex-row gap-8 sm:p-6  min-h-screen">
+    <div className="flex flex-col p-0  lg:flex-row gap-8 sm:p-6  min-h-screen font-nunito">
       {/* Left Section */}
 
       <div className="flex-1 bg-white sm:p-6 rounded-lg p-3 ">
@@ -131,10 +131,10 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
             </p>
           </div>
         </div>
-        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-bold mb-2">
+        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-semibold mb-2 font-clash">
           Foundations in Accounting and Auditing Principles
         </h1>
-        <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4">
+        <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4 font-nunito font-medium">
           Introductory course covering the basics of accounting and auditing,
           including financial statements, accounting standards, and audit
           procedures.
@@ -154,7 +154,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
             English
           </span>
         </div>
-        <div className="mb-6  h-[400px] overflow-hidden">
+        <div className="mb-6  h-[400px] overflow-hidden font-nunito">
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
           <p className="text-gray-600 text-[13px] sm:text-[20px]">
             This Accounting Management Master course is invaluable for those

@@ -20,7 +20,7 @@ const Banner = () => {
         {/* Main Headings */}
         <div className="flex flex-col items-center lg:items-start gap-2">
           <div className="flex items-center gap-2 justify-center lg:justify-start">
-            <span className="font-clash text-3xl md:text-[50px] leading-normal">{t("heading2i")}</span>
+            <span className="font-clash font-semibold text-3xl md:text-[50px] leading-normal">{t("heading2i")}</span>
             <div className="flex h-[50px]">
               <img src={avatar1} className="border-2 border-white rounded-full" alt="" />
               <img
@@ -35,24 +35,24 @@ const Banner = () => {
               />
             </div>
           </div>
-          <p className="font-clash text-3xl md:text-[50px] leading-tight">{t("heading2ii")}</p>
+          <p className="font-clash font-semibold text-3xl md:text-[50px] leading-tight">{t("heading2ii")}</p>
         </div>
 
         {/* Subheading */}
-        <p className="font-clash text-lg md:text-[30px] mt-2 leading-tight">{t("para1")}</p>
+        <p className="font-clash font-medium text-lg md:text-[30px] mt-2 leading-tight">{t("para1")}</p>
 
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row gap-2 my-4 justify-center lg:justify-start">
-          <button className="btn font-bold bg-[#074226] h-[50px] md:h-[60px] text-white px-8 md:px-10">
+          <button className="font-nunito font-normal btn  bg-[#074226] h-[50px] md:h-[60px] text-white px-8 md:px-10 sm:text-xl">
             {t("getstarted")}
           </button>
-          <button className="btn font-bold h-[50px] md:h-[60px] border-[#074226] px-8 md:px-10">
+          <button className="sm:text-xl font-nunito font-normal btn  h-[50px] md:h-[60px] border-[#074226] px-8 md:px-10">
             {t("learnmore")}
           </button>
         </div>
 
         {/* Stats Section */}
-        <div className="bg-[#D1BF8FB8] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-around items-center text-black my-5 w-full lg:w-[402px] gap-4 md:gap-2 mx-auto lg:mx-0">
+        <div className="bg-[#D1BF8FB8] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-around items-center text-black my-5 w-full lg:w-[402px] gap-4 md:gap-2 mx-auto lg:mx-0 font-nunito">
           <div className="text-left">
             <span className="font-bold text-sm md:text-[13px] leading-tight ">{t("morethan")}</span>
             <p className="font-bold text-4xl md:text-[53px] leading-tight">500+</p>

@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        clash: ["Clash Display", "sans-serif"], // Add font alias
+        clash: ['Clash Display', 'sans-serif'], // Add font alias
+        nunito: ['Nunito', 'sans-serif'],
       },
     },
   },

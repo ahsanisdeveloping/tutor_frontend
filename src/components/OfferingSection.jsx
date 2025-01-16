@@ -8,10 +8,10 @@ const OfferingSection = () => {
   return (
     <div className="bg-gray-50 py-12">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-5xl font-bold mb-8 py-10">{t("title")}</h2>
+        <h2 className="text-5xl font-semibold mb-8 py-10 font-clash ">{t("title")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* First Section */}
-          <div className="bg-teal-200 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <div className="bg-teal-200 p-6 rounded-lg shadow-lg hover:shadow-xl transition font-nunito font-normal">
             <div className="flex flex-col items-center mb-4">
               <div
                 className="bg-[#B3F2F6] rounded-full p-5"

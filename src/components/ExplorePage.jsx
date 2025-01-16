@@ -42,13 +42,13 @@ const CourseCategories = () => {
   return (
     <div className="bg-gray-100 py-20 bg-gradient-to-r from-pink-100 to-blue-100">
       <div className="max-w-6xl mx-auto text-center py-5">
-        <h2 className="text-3xl font-bold mb-6">{t("title")}</h2>
+        <h2 className="text-3xl font-semibold mb-6 font-clash">{t("title")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {categories &&
             categories.map((category, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-4 bg-white shadow rounded-lg hover:cursor-pointer hover:shadow-lg transition"
+                className="flex items-center justify-center p-4 bg-white shadow rounded-lg hover:cursor-pointer hover:shadow-lg transition font-nunito"
                 onClick={()=>navigate("/discover")}
               >
                 <img
