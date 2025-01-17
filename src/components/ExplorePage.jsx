@@ -43,7 +43,7 @@ const CourseCategories = () => {
     <div className="bg-gray-100 py-20 bg-gradient-to-r from-pink-100 to-blue-100">
       <div className="max-w-6xl mx-auto text-center py-5">
         <h2 className="text-3xl font-semibold mb-6 font-clash">{t("title")}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 p-4 sm:p-0">
           {categories &&
             categories.map((category, index) => (
               <div

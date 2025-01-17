@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const CoursesPage = () => {
-    const [courseComponent,setCourseComponent] = useState("live-online");
+    const [courseComponent,setCourseComponent] = useState("self-study");
     const handleToggleCourses = (comp) => {
         setCourseComponent(comp);
     }

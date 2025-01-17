@@ -16,7 +16,9 @@ import courseImg from "../assets/images/courses/course.png";
 import playButton from "../assets/images/courses/playbutton.png";
 import { courses } from "../data/courses";
 import full from "../assets/svgs/courses/full.svg"
+import { useNavigate } from "react-router-dom";
 const CourseInHouse = ({handleToggleCourses}) => {
+  const navigate = useNavigate();
   const trimCourses = courses.slice(0, 4);
   const [activeSection, setActiveSection] = useState(null);
   const toggleSection = (index) => {
@@ -91,7 +93,7 @@ const CourseInHouse = ({handleToggleCourses}) => {
       {/* Left Section */}
 
       <div className="flex-1 bg-white sm:p-6 rounded-lg p-3 ">
-        <button className="flex items-center justify-between gap-1 text-white bg-[#074226] font-semibold mb-4 px-3 pr-4 p-2 rounded-badge">
+        <button className="flex items-center justify-between gap-1 text-white bg-[#074226] font-semibold mb-4 px-3 pr-4 p-2 rounded-badge" onClick={() => navigate("/discover")}>  
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

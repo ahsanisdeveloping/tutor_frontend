@@ -13,7 +13,7 @@ const Navbar = () => {
   // Delay handling for hover
   let timer;
   const handleCourseMouseEnter = () => {
-    timer = setTimeout(() => setIsCourseOpen(true), 500); // 500ms delay
+    timer = setTimeout(() => setIsCourseOpen(true),300); // 500ms delay
   };
   const handleBlogMouseEnter = () => {
     timer = setTimeout(() => setIsBlogOpen(true), 500); // 500ms delay
@@ -143,14 +143,14 @@ const Navbar = () => {
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a className="font-bold" onClick={() => navigate("/")}>
+          <ul className="menu menu-horizontal px-1 gap-5">
+            <li className="">
+              <a className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0"  onClick={() => navigate("/")}>
                 {t("home")}
               </a>
             </li>
             <li>
-              <a className="font-bold" onClick={() => navigate("/")}>
+              <a className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0" onClick={() => navigate("/")}>
                 {t("aboutUs")}
               </a>
             </li>
@@ -162,12 +162,12 @@ const Navbar = () => {
               <button
                 id="dropdownDelayButton"
                 onMouseEnter={handleCourseMouseEnter}
-                className=" hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#074226]"
+                className=" hover:bg-gray-200    font-medium  text-sm  py-2.5 text-center inline-flex items-center  hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 group"
                 type="button"
               >
                 <b>{t("courses").title}</b>
                 <svg
-                  className="w-2.5 h-2.5 ms-3"
+                  className="w-2.5 h-2.5 ms-3 group-hover:rotate-180 transition-all"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -193,22 +193,12 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-
-            <div
-              className="relative bottom-[2px] inline-block"
-              onMouseLeave={handleBlogMouseLeave}
-            >
-              {/* Dropdown Trigger */}
-              <button
-                id="dropdownDelayButton"
-                onMouseEnter={handleBlogMouseEnter}
-                className=" hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#074226]"
-                type="button"
-                onClick={() => navigate("/blogs")}
-              >
-                <b>{t("blogs").title}</b>
-              </button>
-            </div>
+            <li className="">
+              <a className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0"  onClick={() => navigate("/blogs")}>
+              {t("blogs").title}
+              </a>
+            </li>
+           
           </ul>
         </div>
 

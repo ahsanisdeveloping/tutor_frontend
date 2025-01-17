@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import alertimg from "../assets/images/discover/alertimg.png";
 import background from "../assets/svgs/discover/bg.svg";
 import { courses } from "../data/courses";
+import { useNavigate } from "react-router-dom";
 const Discover = () => {
- 
+  const navigate = useNavigate();   
   const totalPages = 10; // Total number of pages
   const [currentPage, setCurrentPage] = useState(1); // Current active page
   const filterTags = [
@@ -40,7 +41,7 @@ const Discover = () => {
       >
         <div className="h-full w-full bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
           <div className="container flex flex-col justify-center  items-center mx-auto px-4   py-6 h-[60vh] sm:h-[600px]">
-            <h1 className="sm:text-[46px] sm:w-[640px] font-medium text-center font-clash">
+            <h1 className="sm:text-[46px] sm:w-[640px] sm:font-medium text-center font-clash text-2xl font-semibold my-3 sm:my-2 leading-tight">
               Discover interactive learning{" "}
               <span className="text-gray-400">materials,</span> and tutor
             </h1>
@@ -94,27 +95,27 @@ const Discover = () => {
       {/* Main Section */}
       <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-2 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
         {/* Sidebar Filters */}
-        <aside className="sm:col-span-2 p-4 rounded-lg">
-          <button className="bg-[#074226] w-full text-white flex justify-between p-3 rounded">
-            <span>All</span>
-            <span>1820+</span>
+        <aside className="sm:col-span-2 sm:p-0 p-3  rounded-lg font-semibold">
+          <button className="bg-[#074226] w-full text-white flex justify-between p-3 rounded text-left sm:text-md">
+            <span>Filter Courses by Domain</span>
+            <span>15</span>
           </button>
 
           <button className=" w-full flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
-            <span>1820+</span>
+            <span>87+</span>
           </button>
           <button className=" w-full  flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
-            <span>1820+</span>
+            <span>43+</span>
           </button>
           <button className=" w-full  flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
-            <span>1820+</span>
+            <span>53+</span>
           </button>
           <button className="w-full  flex justify-between p-3 rounded my-2">
             <span>Field for filter</span>
-            <span>1820+</span>
+            <span>73+</span>
           </button>
         </aside>
 
@@ -122,15 +123,11 @@ const Discover = () => {
         <div className="sm:col-span-10">
           <div className="sm:mx-auto   flex flex-col sm:flex-row sm:justify-between sm:items-center">
             <div className="flex flex-col sm:flex-row sm:space-x-4">
-              <select className="select font-bold">
+              <select className="select font-bold my-2 sm:my-0 bg-transparent">
                 <option>Self-Study</option>
-                <option>Price</option>
-                <option>Popularity</option>
               </select>
-              <select className="select font-bold">
+              <select className="select font-bold my-2 sm:my-0 bg-transparent">
                 <option>Sponsored</option>
-                <option>Price</option>
-                <option>Popularity</option>
               </select>
             </div>
             <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex ">
@@ -151,12 +148,12 @@ const Discover = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3 my-2">
+          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3 my-2 px-3 sm:px-0">
             {courses.map((course) => (
-              <div key={course.id} className="border p-4 rounded-lg shadow-md bg-white">
+              <div key={course.id} className="border p-4 rounded-lg shadow-md bg-white max-w-[400px]" onClick={()=>navigate(`/courses`)}>
                 {/* Logo */}
-                <div className="font-bold text-lg mb-2">
-                  <img src={course.logo} alt="" />
+                <div className="font-bold text-lg mb-2 ">
+                  <img src={course.logo} alt="" className="w-[100%] "/>
                 </div>
                 {/* Price */}
                 <div className="flex items-center gap-1">
@@ -167,11 +164,11 @@ const Discover = () => {
                 {/* Title */}
                 <h3 className="text-md font-medium my-2">{course.title}</h3>
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4 justify-center">
+                <div className="flex flex-wrap gap-2 mb-4 justify-around w-full">
                   {course.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="text-xs border border-[#CEB07E] text-[#CEB07E] py-1 px-2 rounded-full"
+                      className="text-xs sm:text-sm border border-[#CEB07E] text-[#CEB07E] py-1 px-2 sm:px-3 rounded-full"
                     >
                       {tag}
                     </span>
