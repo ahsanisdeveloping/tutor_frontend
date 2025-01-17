@@ -5,9 +5,12 @@ import background from "../assets/svgs/discover/bg.svg";
 import { courses } from "../data/courses";
 import { useNavigate } from "react-router-dom";
 const Discover = () => {
+  
   const navigate = useNavigate();   
   const totalPages = 10; // Total number of pages
   const [currentPage, setCurrentPage] = useState(1); // Current active page
+  const [categories, setCategories] = useState(null);
+  
   const filterTags = [
     "Popular",
     "AI & Digital Transformation",
@@ -32,6 +35,33 @@ const Discover = () => {
   const handleBannerButton = (btn) => {
     setSelectedBannerButton(btn)
   }
+  
+  const fetchCategories = async () => {
+    try {
+      const response = await fetch(
+        "http://92.205.62.64:5254/api/Lookup/GetCourseCategories"
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      if (data && data.result) {
+        setCategories(data.result); 
+       
+      } else {
+        console.error("Data or result is missing:", data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch courses:", error.message);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategories();
+  }, []);
   return (
     <div className="bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
       {/* Header Section */}
@@ -123,11 +153,18 @@ const Discover = () => {
         <div className="sm:col-span-10">
           <div className="sm:mx-auto   flex flex-col sm:flex-row sm:justify-between sm:items-center">
             <div className="flex flex-col sm:flex-row sm:space-x-4">
-              <select className="select font-bold my-2 sm:my-0 bg-transparent">
+              <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px]">
                 <option>Self-Study</option>
+                <option>In-House Training</option>
+                <option>Live-Online Class</option>
               </select>
-              <select className="select font-bold my-2 sm:my-0 bg-transparent">
+              <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px]">
                 <option>Sponsored</option>
+                {
+                  categories && categories.map((category) => (
+                    <option>{category.title}</option>
+                  ))
+                }
               </select>
             </div>
             <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex ">

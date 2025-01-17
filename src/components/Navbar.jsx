@@ -55,10 +55,10 @@ const Navbar = () => {
             </button>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-screen p-2 shadow "
+              className="  menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-screen p-2 shadow "
             >
               <li>
-                <a onClick={() => navigate("/")} className="text-2xl border-b border-gray-200 rounded-none py-4">{t("home")}</a>
+                <a onClick={() => navigate("/")} className="text-2xl border-b border-gray-200 rounded-none py-4 ">{t("home")}</a>
               </li>
               <li>
                 <a onClick={() => navigate("/")} className="text-2xl border-b border-gray-200 rounded-none py-4">{t("aboutUs")}</a>
@@ -145,7 +145,7 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-5">
             <li className="">
-              <a className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0"  onClick={() => navigate("/")}>
+              <a className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 "  onClick={() => navigate("/")}>
                 {t("home")}
               </a>
             </li>
