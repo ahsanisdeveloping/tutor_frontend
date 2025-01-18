@@ -25,7 +25,7 @@ const Footer = () => {
             Register as Teacher
           </a>
         </div>
-        <div className="w-40 h-40 lg:w-80 lg:h-80">
+        <div className="w-40 h-40 lg:w-80 lg:h-80 hidden sm:block">
           <img src={footersvg} alt="Start your career illustration" className="w-full h-full object-contain" />
         </div>
       </div>

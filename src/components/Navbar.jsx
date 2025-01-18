@@ -33,7 +33,7 @@ const Navbar = () => {
     setIsBlogOpen(false);
   };
   return (
-    <div>
+    <div className="">
       {/* // Mobile Navbar */}
       <div className=" w-full sm:hidden flex justify-between py-2">
         <a className="btn btn-ghost text-xl  sm:hidden">
@@ -210,7 +210,7 @@ const Navbar = () => {
 
         {/* Navbar Center */}
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-5">
+          <ul className="menu menu-horizontal px-1 gap-8 text-[19px]">
             <li className="">
               <a
                 className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 "
@@ -235,10 +235,10 @@ const Navbar = () => {
               <button
                 id="dropdownDelayButton"
                 onMouseEnter={handleCourseMouseEnter}
-                className=" hover:bg-gray-200    font-medium  text-sm  py-2.5 text-center inline-flex items-center  hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 group"
+                className=" hover:bg-gray-200    font-medium  text-sm  py-2.5 text-center inline-flex items-center  hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 group "
                 type="button"
               >
-                <b>{t("courses").title}</b>
+                <b className="text-[19px]">{t("courses").title}</b>
                 <svg
                   className="w-2.5 h-2.5 ms-3 group-hover:rotate-180 transition-all"
                   aria-hidden="true"
@@ -278,11 +278,12 @@ const Navbar = () => {
         </div>
 
         {/* Navbar End */}
-        <div className="navbar-end hidden lg:flex items-center space-x-2">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-end hidden lg:flex items-center space-x-1 flex-nowrap">
+          <ul className="menu menu-horizontal px-1 sm:flex sm:flex-nowrap gap-2 mx-5">
+
             <li>
               <a
-                className="btn font-bold mx-2 border-[#074226] px-5"
+                className="border border-[#074226] font-bold py-2 px-9"
                 onClick={() => navigate("/signup")}
               >
                 {t("signup")}
@@ -290,14 +291,14 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                className="btn font-bold bg-[#074226] text-white mx-2 px-5"
+                className="border border-[#074226]  font-bold bg-[#074226] text-white px-9 py-2 "
                 onClick={() => navigate("/signin")}
               >
                 {t("login")}
               </a>
             </li>
           </ul>
-          <ul className="menu menu-horizontal px-1 items-center">
+          <ul className="menu menu-horizontal px-1 items-center sm:flex sm:flex-nowrap">
             <a className="btn font-bold bg-[#074226] text-white rounded-full mr-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

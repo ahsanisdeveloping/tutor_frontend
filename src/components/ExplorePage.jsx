@@ -41,9 +41,9 @@ const CourseCategories = () => {
     fetchCategories();
   }, []);
   return (
-    <div style={{ backgroundImage: `url(${bg})` }} className={`bg-cover`}>
-      <div className="max-w-6xl mx-auto text-center py-5 sm:px-5">
-        <h2 className="text-3xl font-semibold mb-6 font-clash">{t("title")}</h2>
+    <div style={{ backgroundImage: `url(${bg})` }} className={`bg-cover sm:py-12`}>
+      <div className="max-w-6xl mx-auto text-center py-5 sm: sm:px-5">
+        <h2 className="text-3xl sm:py-8 sm:text-[52px] font-[500] mb-6 font-clash">{t("title")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 p-4 sm:p-0">
           {categories &&
             categories.map((category, index) => (
@@ -63,14 +63,14 @@ const CourseCategories = () => {
             ))}
         </div>
         <button
-          className="px-6 pr-8 py-3 bg-[#074226] text-white font-medium rounded  relative hover:cursor-auto"
+          className="px-6 pr-8 py-3 bg-[#074226] text-white font-medium rounded  relative hover:cursor-auto sm:px-10 sm:pr-16"
           onClick={() => {
             navigate("/discover");
           }}
         >
           {t("exploreMore")}
           <img
-            className="text-2xl mr-3 absolute right-0 top-[18px]"
+            className="text-2xl mr-3 absolute right-0 sm:right-5 top-[18px]"
             src={explore}
           />
         </button>

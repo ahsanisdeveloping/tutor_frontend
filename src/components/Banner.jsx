@@ -20,9 +20,15 @@ const Banner = () => {
         {/* Main Headings */}
         <div className="flex flex-col items-center lg:items-start gap-2">
           <div className="flex items-center gap-2 justify-center lg:justify-start">
-            <span className="font-clash font-semibold text-3xl md:text-[50px] leading-normal">{t("heading2i")}</span>
-            <div className="flex h-[50px]">
-              <img src={avatar1} className="border-2 border-white rounded-full" alt="" />
+            <span className="font-clash font-[600] text-5xl md:text-[65px]  word-spacing-wide">
+              {t("heading2i")}
+            </span>
+            <div className="sm:flex h-[50px] hidden">
+              <img
+                src={avatar1}
+                className="border-2 border-white rounded-full"
+                alt=""
+              />
               <img
                 src={avatar2}
                 className="border-2 border-white rounded-full relative left-[-10px]"
@@ -35,40 +41,74 @@ const Banner = () => {
               />
             </div>
           </div>
-          <p className="font-clash font-semibold text-3xl md:text-[50px] leading-tight">{t("heading2ii")}</p>
+          <p className="font-clash font-[600] text-4xl md:text-[65px]  sm:leading-tight">
+            {t("heading2ii")}
+          </p>
         </div>
 
         {/* Subheading */}
-        <p className="font-clash font-medium text-lg md:text-[30px] mt-2 leading-tight">{t("para1")}</p>
+        <p className="font-clash font-medium text-lg md:text-[19px] md:w-[500px] mt-2 leading-tight">
+          {t("para1")}
+        </p>
 
         {/* Buttons */}
         <div className="flex flex-col lg:flex-row gap-2 my-4 justify-center lg:justify-start">
-          <button className="font-nunito font-normal btn  bg-[#074226] h-[50px] md:h-[60px] text-white px-8 md:px-10 sm:text-xl">
+          <button className="font-nunito font-normal btn  bg-[#074226] h-[50px] md:h-[60px] text-white px-8 md:px-6 sm:text-xl">
             {t("getstarted")}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="size-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+              />
+            </svg>
           </button>
-          <button className="sm:text-xl font-nunito font-normal btn  h-[50px] md:h-[60px] border-[#074226] px-8 md:px-10">
+          <button className="sm:text-xl font-nunito font-normal btn  h-[50px] md:h-[60px] border-[#074226] px-8 md:px-6">
             {t("learnmore")}
           </button>
         </div>
 
         {/* Stats Section */}
-        <div className="bg-[#D1BF8FB8] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-around items-center text-black my-5 w-full lg:w-[402px] gap-4 md:gap-2 mx-auto lg:mx-0 font-nunito">
-          <div className="sm:text-left">
-            <span className="font-bold text-sm md:text-[13px] leading-tight ">{t("morethan")}</span>
-            <p className="font-bold text-4xl md:text-[53px] leading-tight">500+</p>
-            <p className="font-bold text-sm md:text-[13px] leading-tight">{t("tutors")}</p>
+        <div className="bg-[#D1BF8F52] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-evenly items-center text-black my-5 w-full lg:w-[402px] gap-4 md:gap-0 mx-auto lg:mx-0 font-nunito">
+          <div className="sm:text-left sm:border-r sm:border-[#D1BF8F80] pr-5 border-b  border-[#D1BF8F80] sm:border-b-transparent pb-4 sm:pb-0 ">
+            <span className="font-bold text-sm md:text-[13px] leading-tight ">
+              {t("morethan")}
+            </span>
+            <p className="font-bold text-4xl md:text-[53px] leading-tight">
+              500+
+            </p>
+            <p className="font-bold text-sm md:text-[13px] leading-tight">
+              {t("tutors")}
+            </p>
           </div>
           <div className="sm:text-left">
-            <p className="font-bold text-sm md:text-[13px] leading-tight">{t("morethan")}</p>
-            <p className="font-bold text-4xl md:text-[53px] leading-tight">1500+</p>
-            <p className="font-bold text-sm md:text-[13px] leading-tight">{t("students")}</p>
+            <p className="font-bold text-sm md:text-[13px] leading-tight">
+              {t("morethan")}
+            </p>
+            <p className="font-bold text-4xl md:text-[53px] leading-tight">
+              1500+
+            </p>
+            <p className="font-bold text-sm md:text-[13px] leading-tight">
+              {t("students")}
+            </p>
           </div>
         </div>
       </div>
 
       {/* Right Section */}
       <div className="lg:w-[50%] w-full flex justify-center">
-        <img src={bannerleft} alt="" className="w-full max-w-sm md:max-w-md lg:max-w-lg" />
+        <img
+          src={bannerleft}
+          alt=""
+          className="w-full max-w-sm md:max-w-md lg:max-w-lg"
+        />
       </div>
     </div>
   );

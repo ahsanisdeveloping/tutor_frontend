@@ -6,25 +6,26 @@ import { useTranslation } from "react-i18next";
 const OfferingSection = () => {
   const {t} = useTranslation("offering")
   return (
-    <div className="bg-gray-50 py-12">
+    <div className="bg-gray-50 py-5 sm:py-[130px]">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-5xl font-semibold mb-8 py-10 font-clash ">{t("title")}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <h2 className="sm:text-5xl text-[35px] font-semibold mb-8 pb-5 sm:pb-10 font-clash ">{t("title")}</h2>
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-10">
           {/* First Section */}
-          <div className="bg-teal-200 p-6 rounded-lg shadow-lg hover:shadow-xl transition font-nunito font-normal">
+          <div className="bg-[#62C9D08F] p-6 rounded-lg shadow-lg hover:shadow-xl transition font-nunito font-normal sm:w-[400px]">
             <div className="flex flex-col items-center mb-4">
               <div
-                className="bg-[#B3F2F6] rounded-full p-5"
+                className="bg-[#B3F2F6] rounded-full p-5 self-start"
                 style={{ border: "2px dashed #00000033" }}
               >
                 <img className="text-6xl" src={img1} />
               </div>
 
-              <h3 className="text-lg font-semibold text-gray-800">
-              {t("train").title}
-              </h3>
+           
             </div>
-            <ul className="text-left text-gray-700 space-y-2 mb-4">
+            <p className="text-left text-[23px] font-[700] text-[#0E2A46]">
+              {t("train").title}
+              </p>
+            <ul className="text-left text-black space-y-1 mb-4">
               <li className="flex items-start">
                 <span className="text-teal-600 mr-2">•</span>
                 {t("train").perks.perk1}
@@ -38,26 +39,27 @@ const OfferingSection = () => {
                 {t("train").perks.perk3}
               </li>
             </ul>
-            <button className="border border-teal-600 px-4 py-2 rounded text-teal-600 hover:bg-teal-600 hover:text-white transition">
+            <button className="border w-full border-teal-600 px-4 py-2 rounded text-[#0E2A46] text-[20px] font-[500] hover:bg-teal-600 hover:text-white transition">
             {t("exploremore")}
             </button>
           </div>
 
           {/* Second Section */}
-          <div className="bg-yellow-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+          <div className="bg-yellow-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition font-nunito font-normal sm:w-[400px]">
             <div className="flex flex-col items-center mb-4">
               
               <div
-                className="bg-yellow-100 rounded-full p-6"
+                className="bg-yellow-100 rounded-full p-6 self-start"
                 style={{ border: "2px dashed #00000033" }}
               >
                 <img className="text-6xl h-10 w-12" src={img2} />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800">
-              {t("consult").title}
-              </h3>
+              
             </div>
-            <ul className="text-left text-gray-700 space-y-2 mb-4">
+            <p className="text-left text-[23px] font-[700] text-gray-800">
+              {t("consult").title}
+              </p>
+            <ul className="text-left text-gray-700 space-y-1 mb-4">
               <li className="flex items-start">
                 <span className="text-yellow-600 mr-2">•</span>
                 {t("consult").perks.perk1}
@@ -71,7 +73,7 @@ const OfferingSection = () => {
                 {t("consult").perks.perk3}
               </li>
             </ul>
-            <button className="border border-yellow-600 px-4 py-2 rounded text-yellow-600 hover:bg-yellow-600 hover:text-white transition">
+            <button className="border border-yellow-600 px-4 py-2 rounded text-yellow-600 text-[20px] font-[500] w-full hover:bg-yellow-600 hover:text-white transition">
               Explore More
             </button>
           </div>

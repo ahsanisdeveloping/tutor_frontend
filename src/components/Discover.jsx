@@ -167,7 +167,7 @@ const Discover = () => {
                 }
               </select>
             </div>
-            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex ">
+            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex scrollbar-none px-2 mx-3" >
               {filterTags.map((tag) => (
                 <button
                   className={` rounded-2xl p-1 px-5 text-[13px] flex-shrink-0 ${

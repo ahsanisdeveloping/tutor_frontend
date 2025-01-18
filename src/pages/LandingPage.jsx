@@ -10,15 +10,25 @@ import LearningSolution from '../components/LearningSolution';
 import Carousel from "../components/Carousel";
 const LandingPage = () => {
     return (
-        <div>
+        <div >
+            <div className="sm:px-10">
+
             <Navbar />
             <Banner />
             <Carousel/>
             <OfferingSection />
+            </div>
+            
+           
             <ExplorePage />
+            <div className="sm:px-10">
+                
+            
             <SatisfactionSection />
             <Services />
             <LearningSolution />
+            </div>
+           
             <Footer />
         </div>
     )
