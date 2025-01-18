@@ -7,7 +7,7 @@ import pinterest from "../assets/images/footer/pntrst.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#074226] pt-10 px-6 lg:px-20">
+    <footer className="bg-[#074226] pt-10 px-6 lg:px-10">
       {/* Top Section */}
       <div className="flex flex-wrap justify-between items-center gap-8">
         <div className="flex-1">
@@ -31,9 +31,10 @@ const Footer = () => {
       </div>
 
       {/* Middle Section */}
-      <div className="flex flex-wrap justify-between items-start gap-8 py-10 font-nunito">
+      <div className="flex flex-wrap justify-between items-start gap-8 py-10 font-nunito
+      lg:grid lg:grid-cols-8">
         {/* About Section */}
-        <div className="w-full lg:w-auto">
+        <div className="w-full lg:w-auto col-span-2">
           <div className="w-16 h-16">
             <img src={footerlogo} alt="OpenSpace logo" />
           </div>
@@ -56,44 +57,61 @@ const Footer = () => {
         </div>
 
         {/* Company Links */}
-        <div className="w-40">
-          <h1 className="text-white text-lg font-bold">Company</h1>
+        <div className="w-30">
+          <h1 className="text-white text-lg font-bold">Legal</h1>
           <ul className="mt-4 text-gray-400 space-y-2">
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
+            <li>Terms & Conditions</li>
+            <li>Privacy & Cookies</li>
+            <li>Policy</li>
+            <li>Sitemap</li>
+            <li>FAQs</li>
           </ul>
         </div>
 
         {/* Services Links */}
-        <div className="w-40">
+        <div className="w-30">
           <h1 className="text-white text-lg font-bold">Services</h1>
           <ul className="mt-4 text-gray-400 space-y-2">
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
-            <li>Lorem Ipsum</li>
+            <li>In-House Training</li>
+            <li>Self Study</li>
+            <li>Live Online</li>
+          </ul>
+          <h1 className="text-white text-lg font-bold mt-4">Explore</h1>
+          <ul className="mt-1 text-gray-400 space-y-2">
+            <li>Courses</li>
+            <li>Certifications</li>
+            <li>Knowledge Areas</li>
+            <li>Training</li>
+            <li>Locations</li>
           </ul>
         </div>
 
         {/* Contact Info */}
-        <div className="w-40">
-          <h1 className="text-white text-lg font-bold">Contact</h1>
-          <ul className="mt-4 text-gray-400 space-y-2">
-            <li>Email: hello@openspace.com</li>
-            <li>Phone: 123 456 78</li>
-            <li>Address: Office# 02/04, SA</li>
+        <div className="w-30 col-span-2">
+          <h1 className="text-white text-lg font-bold">Contact Us</h1>
+          <ul className="mt-4 text-gray-400 space-y-2 ">
+            <li>+ Dubai, United Arab Emirates</li>
+            <li>+ Riyadh, Kingdom of Saudi Arabia
+            </li>
+            <li>+ Abu Dhabi, United Arab Emirates</li>
+            <li>+ Skopje, Macedonia</li>
+            <li>+ Almaty, Kazakhstan</li>
+            <li>+ London, United Kingdom</li>
+            <li>+ Cairo, Egypt</li>
+            <li>+ Bangalore, India</li>
+            <li>+ Prague, Czech Republic</li>
+            <li>+ Kuwait City, Kuwait</li>
           </ul>
         </div>
 
         {/* Subscription Form */}
-        <div className="w-full lg:w-auto">
+        <div className="w-full lg:w-auto col-span-2">
           <h1 className="text-white text-lg font-bold">Subscribe</h1>
-          <form className="mt-4 flex items-center gap-2">
+          <form className="mt-4 flex items-center gap-2 ">
             <input
               type="email"
               placeholder="Enter your Email"
-              className="flex-1 px-4 py-2 rounded-md text-sm text-black border border-white focus:outline-none"
+              className=" px-4 py-2 rounded-md text-sm text-black border border-white focus:outline-none"
               required
             />
             <button

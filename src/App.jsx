@@ -23,6 +23,7 @@ import BlogsPage from './pages/BlogsPage.jsx';
 import CoursesPage from './pages/CoursesPage.jsx';
 import Navigations from './routes/Navigations.jsx';
 import CoursesModalNav from './components/CoursesModalNav.jsx';
+import Carousel from './components/Carousel.jsx';
 // import Test from './components/Test.jsx';
 function App() {
  return (
@@ -35,6 +36,7 @@ function App() {
     {/* <BlogsPage/> */}
     {/* <CoursesPage/> */}
     <Navigations/>
+    {/* <Carousel/> */}
     {/* <CoursesModalNav/> */}
     </div>
  );

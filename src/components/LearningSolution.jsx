@@ -28,7 +28,9 @@ const LearningSolution = () => {
 
           {/* Live Class */}
           <div className="bg-gray-100 p-4 rounded-lg shadow-sm">
-            <h2 className="text-xl font-semibold mb-4">Live Class</h2>
+            <h2 className="text-xl font-semibold mb-4">Live Class</h2><button className="mt-4 w-full bg-[#074226] text-white py-2 rounded-lg">
+              Join
+            </button>
             <div className="relative bg-gray-300 rounded-lg overflow-hidden">
               <img
                 src={video} // Replace with the live class image URL
@@ -39,9 +41,7 @@ const LearningSolution = () => {
                 Live
               </div>
             </div>
-            <button className="mt-4 w-full bg-[#074226] text-white py-2 rounded-lg">
-              Join
-            </button>
+            
           </div>
 
           {/* Library */}
