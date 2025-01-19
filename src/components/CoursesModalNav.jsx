@@ -98,7 +98,7 @@ const TrainingAndConsulting = () => {
         </div>
         <h1 className=" text-[22px] z-10 text-gray-500">Corporate Level Training</h1>
         {corporateData.map((item) => (
-          <button className="sm:w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-3 text-left hover:cursor-auto z-10" onClick={()=>navigate('/discover')} >
+          <button className="sm:w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-3 text-left hover:cursor-pointer z-10" onClick={()=>navigate('/discover')} >
             <div>
               <img src={item.icon} alt=""  height="40px" width="50px" />
             </div>
@@ -110,7 +110,7 @@ const TrainingAndConsulting = () => {
         ))}
         <h1 className="pt-2 text-[22px] z-10 text-gray-500">Consulting Service</h1>
         {consultingData.map((item) => (
-            <button className="sm:w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-3 text-left hover:cursor-auto z-10" onClick={()=>navigate('/discover')} >
+            <button className="sm:w-[300px] border border-gray-300 rounded-lg flex px-4  py-3 items-center gap-3 text-left hover:cursor-pointer z-10" onClick={()=>navigate('/discover')} >
             <div>
               <img src={item.icon} alt=""  height="40px" width="50px" />
             </div>

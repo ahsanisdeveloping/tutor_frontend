@@ -58,8 +58,8 @@ const Discover = () => {
       console.error("Failed to fetch courses:", error.message);
     }
   };
-
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchCategories();
   }, []);
   return (

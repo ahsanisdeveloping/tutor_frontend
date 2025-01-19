@@ -2,7 +2,7 @@ import image from "../assets/icons/NavbarLogo.png";
 import { useTranslation } from "react-i18next";
 import LanguageSelector from "./LanguageSelector";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import CoursesModalNav from "./CoursesModalNav";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +32,9 @@ const Navbar = () => {
     clearTimeout(timer);
     setIsBlogOpen(false);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="">
       {/* // Mobile Navbar */}

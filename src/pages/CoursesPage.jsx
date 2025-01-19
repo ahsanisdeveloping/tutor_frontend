@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CourseInHouse from "../components/CourseInHouse";
 import CourseLiveOnline from "../components/CourseLiveOnline";
 import CourseSelfStudy from "../components/CourseSelfStudy";
@@ -10,8 +10,15 @@ const CoursesPage = () => {
     const handleToggleCourses = (comp) => {
         setCourseComponent(comp);
     }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return ( <>
+    <div className="sm:px-10">
+
     <Navbar/>
+    </div>
+
     {
         courseComponent === "self-study" && <CourseSelfStudy handleToggleCourses={handleToggleCourses}/>
     }
