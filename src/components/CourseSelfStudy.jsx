@@ -192,7 +192,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
           </p>
         </div>
         <div className="">
-          <h1 className="text-xl sm:text-[38px] font-semibold sm:p-5 p-3 ">
+          <h1 className="text-[38px] font-semibold sm:p-5 p-3 ">
             Key Takeaways
           </h1>
           <div className="flex flex-col gap-2 justify-evenly items-center sm:p-2">
@@ -209,7 +209,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
           </div>
         </div>
         <div className="max-w-xl  bg-white  rounded-lg sm:p-4  ">
-          <h2 className="text-xl sm:text-[38px] font-semibold mb-4 sm:my-5">
+          <h2 className="text-[38px] font-semibold mb-4 sm:my-5">
             Course Content
           </h2>
           <div className="space-y-2">
@@ -246,7 +246,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto bg-white sm:p-6 rounded-lg ">
-          <h1 className="text-xl sm:text-[38px] font-semibold sm:my-5 my-2">
+          <h1 className="text-[30px] sm:text-[38px] font-semibold sm:my-5 my-2">
             Select Course Type
           </h1>
           <div className="grid sm:grid-cols-2 sm:gap-6 gap-3">

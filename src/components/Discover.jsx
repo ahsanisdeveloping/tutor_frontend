@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Discover = () => {
   
   const navigate = useNavigate();   
-  const totalPages = 10; // Total number of pages
+  const totalPages = 3; // Total number of pages
   const [currentPage, setCurrentPage] = useState(1); // Current active page
   const [categories, setCategories] = useState(null);
   
@@ -296,7 +296,7 @@ const Discover = () => {
             <button
               key={i + 1}
               onClick={() => changePage(i + 1)}
-              className={`btn ${currentPage === i + 1 ? "btn-active" : ""}`}
+              className={`btn ${currentPage === i + 1 ? "btn-active" : ""} px-2 py-2 sm:px-4 sm:py-4`}
             >
               {i + 1}
             </button>

@@ -122,7 +122,7 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
         <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-semibold mb-2 font-clash">
           Foundations in Accounting and Auditing Principles
         </h1>
-        <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4 ">
+        <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4 font-nunito font-medium">
           Introductory course covering the basics of accounting and auditing,
           including financial statements, accounting standards, and audit
           procedures.
@@ -142,7 +142,7 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
             English
           </span>
         </div>
-        <div className="mb-6  h-[400px] overflow-hidden">
+        <div className="mb-6  h-[400px] overflow-hidden font-nunito">
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
           <p className="text-gray-600 text-[13px] sm:text-[20px]">
             This Accounting Management Master course is invaluable for those
@@ -178,7 +178,7 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
           </p>
         </div>
         <div className="">
-          <h1 className="text-xl sm:text-[38px] font-semibold sm:p-5 p-3 ">
+          <h1 className="text-[38px] font-semibold sm:p-5 p-3 ">
             Key Takeaways
           </h1>
           <div className="flex flex-col gap-2 justify-evenly items-center sm:p-2">
@@ -195,7 +195,9 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
           </div>
         </div>
         <div className="max-w-xl  bg-white  rounded-lg sm:p-4  ">
-          <h2 className="text-xl sm:text-[38px] font-semibold mb-4 sm:my-5">Course Content</h2>
+          <h2 className="text-[38px] font-semibold mb-4 sm:my-5">
+            Course Content
+          </h2>
           <div className="space-y-2">
             {sections.map((section, index) => (
               <div key={index} className="border rounded-lg overflow-hidden">
@@ -230,7 +232,9 @@ const CourseLiveOnline = ({handleToggleCourses}) => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto bg-white sm:p-6 rounded-lg ">
-          <h1 className="text-xl sm:text-[38px] font-semibold sm:my-5 my-2">Select Course Type</h1>
+          <h1 className="text-[30px] sm:text-[38px] font-semibold sm:my-5 my-2">
+            Select Course Type
+          </h1>
           <div className="grid sm:grid-cols-2 sm:gap-6 gap-3">
             {trimCourses.map((course) => (
               <div key={course.id} className="border p-4 rounded-lg shadow-md">
