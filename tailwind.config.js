@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         clash: ['Clash Display', 'sans-serif'], // Add font alias
         nunito: ['Nunito', 'sans-serif'],
+        montserrat: ["Montserrat", "sans-serif"]
       },
        wordSpacing: {
         tight: '-0.05em',

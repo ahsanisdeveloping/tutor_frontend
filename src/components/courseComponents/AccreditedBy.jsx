@@ -3,7 +3,7 @@ import accreditation1 from "../../assets/svgs/courses/accreditation1.svg";
 import accreditation2 from "../../assets/svgs/courses/accreditation2.svg";
 const AccreditedBy = () => {
     return ( <div className=" flex flex-col items-center bg-white  sm:p-8 max-w-lg mx-auto shadow border  sm:border-[#074226] p-6  rounded-lg sm:my-5">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 font-montserrat">
           Accredited by
         </h2>
         <div className="flex justify-start items-center space-x-4 mb-6  w-full">
@@ -19,8 +19,8 @@ const AccreditedBy = () => {
           />
         </div>
 
-        <p className="text-gray-600 sm:text-[17px]">
-          <span className="text-gray-600 sm:text-md my-2">
+        <p className="text-gray-600 sm:text-[17px] font-montserrat">
+          <span className="text-gray-600 sm:text-md my-2 font-montserrat">
             OpenSpace - Professional Development Institute
           </span>
           OpenSpace is the leading corporate training and EdTech company in

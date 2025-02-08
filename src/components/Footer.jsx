@@ -11,16 +11,16 @@ const Footer = () => {
       {/* Top Section */}
       <div className="flex flex-wrap justify-between items-center gap-8">
         <div className="flex-1">
-          <h1 className="text-white text-3xl lg:text-5xl font-bold font-clash">
+          <h1 className="text-white text-3xl lg:text-5xl font-bold font-montserrat">
             Start Your Career
           </h1>
-          <p className="text-white text-lg lg:text-2xl mt-4 font-nunito">
+          <p className="text-white text-lg lg:text-2xl mt-4 font-montserrat">
             Sign up to become an Educator. Join our community of passionate
             teachers!
           </p>
           <a
             href="#register"
-            className="inline-block mt-6 bg-white text-[#074226] font-bold px-6 py-3 rounded-lg text-lg font-clash"
+            className="inline-block mt-6 bg-white text-[#074226] font-bold px-6 py-3 rounded-lg text-lg font-montserrat"
           >
             Register as Teacher
           </a>
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
       {/* Middle Section */}
-      <div className="flex flex-wrap justify-between items-start gap-8 py-10 font-nunito
+      <div className="flex flex-wrap justify-between items-start gap-8 py-10 font-montserrat
       lg:grid lg:grid-cols-8">
         {/* About Section */}
         <div className="w-full lg:w-auto col-span-2">

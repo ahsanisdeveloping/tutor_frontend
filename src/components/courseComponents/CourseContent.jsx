@@ -20,7 +20,7 @@ const CourseContent = () => {
         { title: "Capstone Project and Final Assessment" },
       ];
     return ( <div className="max-w-xl  bg-white  rounded-lg sm:p-4  ">
-        <h2 className="text-[38px] font-semibold mb-4 sm:my-5">
+        <h2 className="text-[38px] font-semibold mb-4 sm:my-5 font-montserrat">
           Course Content
         </h2>
         <div className="space-y-2">
@@ -30,7 +30,7 @@ const CourseContent = () => {
                 className="flex justify-between items-center p-4 cursor-pointer bg-gray-100"
                 onClick={() => toggleSection(index)}
               >
-                <h3 className="sm:text-lg text-sm font-medium">
+                <h3 className="sm:text-lg text-sm font-medium font-montserrat">
                   {section.title}
                 </h3>
                 {activeSection === index ? (
@@ -44,10 +44,10 @@ const CourseContent = () => {
                   {section.content.map((item, idx) => (
                     <li
                       key={idx}
-                      className="text-sm text-gray-600 flex items-start space-x-2 mb-2"
+                      className="text-sm text-gray-600 flex items-start space-x-2 mb-2 font-montserrat"
                     >
-                      <span className="text-yellow-500">•</span>
-                      <span>{item}</span>
+                      <span className="text-yellow-500 font-montserrat">•</span>
+                      <span className="font-montserrat">{item}</span>
                     </li>
                   ))}
                 </ul>

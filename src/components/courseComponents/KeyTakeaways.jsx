@@ -27,17 +27,17 @@ const KeyTakeaways = () => {
         },
       ];
     return ( <div className="">
-        <h1 className="text-[38px] font-semibold sm:p-5 p-3 ">
+        <h1 className="text-[38px] font-semibold sm:p-5 p-3 font-montserrat">
           Key Takeaways
         </h1>
         <div className="flex flex-col gap-2 justify-evenly items-center sm:p-2">
           {keyTakeaways.map((point) => (
             <div className="flex items-center gap-5 border-b border-gray-300 ">
               <div className="p-5">
-                <span className="text-3xl">{point.id}</span>
+                <span className="text-3x font-montserratl">{point.id}</span>
               </div>
               <div className="flex-1">
-                <span className="text-lg leading-tight">{point.content}</span>
+                <span className="text-lg leading-tight font-montserrat">{point.content}</span>
               </div>
             </div>
           ))}

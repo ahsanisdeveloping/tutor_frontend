@@ -71,13 +71,13 @@ const Discover = () => {
       >
         <div className="h-full w-full bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
           <div className="container flex flex-col justify-center  items-center mx-auto px-4   py-6 h-[60vh] sm:h-[600px]">
-            <h1 className="sm:text-[46px] sm:w-[640px] sm:font-medium text-center font-clash text-2xl font-semibold my-3 sm:my-2 leading-tight">
+            <h1 className="sm:text-[46px] sm:w-[640px] sm:font-medium text-center font-montserrat text-2xl font-semibold my-3 sm:my-2 leading-tight">
               Discover interactive learning{" "}
               <span className="text-gray-400">materials,</span> and tutor
             </h1>
             <div className="flex flex-col sm:flex-row sm:gap-5 sm:px-5 relative justify-center mt-4 bg-white rounded-badge sm:rounded-full p-2 gap-2">
-             <button className={`${selectBannerButton == "Professional Certificate"?"bg-[#074226] text-white":""} sm:p-2 sm:px-5 rounded-full  px-3 p-2`} onClick={()=>{handleBannerButton("Professional Certificate")}}>Professional Certificate</button>
-             <button className={`${selectBannerButton == "Executive Education"?"bg-[#074226] text-white":""} sm:p-2 sm:px-5 rounded-full px-3 p-2`} onClick={()=>{handleBannerButton("Executive Education")}}>Executive Education</button>
+             <button className={`${selectBannerButton == "Professional Certificate"?"bg-[#074226] text-white":""} sm:p-2 sm:px-5 rounded-full  px-3 p-2 font-montserrat`} onClick={()=>{handleBannerButton("Professional Certificate")}}>Professional Certificate</button>
+             <button className={`${selectBannerButton == "Executive Education"?"bg-[#074226] text-white":""} sm:p-2 sm:px-5 rounded-full px-3 p-2 font-montserrat`} onClick={()=>{handleBannerButton("Executive Education")}}>Executive Education</button>
             </div>
           </div>
           {showAlert && (
@@ -86,7 +86,7 @@ const Discover = () => {
                 <div className="bg-[#074226] p-1 ">
                   <img src={alertimg} alt="" className="flex"/>
                 </div>
-                <span className="text-[17px]">
+                <span className="text-[17px] font-montserrat">
                   Introducing Live Tutoring: Real-time lessons with expert
                   tutors!
                 </span>
@@ -116,7 +116,7 @@ const Discover = () => {
           
       </header>
       <div className="sm:px-10 px-5 sm:pt-10 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
-        <h1 className="sm:text-[22px] font-bold  text-lg py-3">
+        <h1 className="sm:text-[22px] font-bold  text-lg py-3 font-montserrat">
           Results for Accounting and Auditing
         </h1>
       </div>
@@ -126,24 +126,24 @@ const Discover = () => {
       <main className=" sm:mx-auto sm:px-3 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8] ">
         {/* Sidebar Filters */}
         <aside className="sm:col-span-2 sm:p-0 p-3  rounded-lg font-semibol">
-          <button className="bg-[#074226] w-full text-[15px] text-white flex justify-between p-3 rounded text-left sm:text-sm whitespace-nowrap ">
-            <span>Filter Courses by Domain</span>
+          <button className="bg-[#074226] w-full text-[15px] text-white flex justify-between p-3 rounded text-left sm:text-sm whitespace-nowrap font-montserrat">
+            <span >Filter Courses by Domain</span>
             <span>15</span>
           </button>
 
-          <button className=" w-full flex justify-between p-3 rounded my-2">
+          <button className=" w-full flex justify-between p-3 rounded my-2 font-montserrat">
             <span>Field for filter</span>
             <span>87+</span>
           </button>
-          <button className=" w-full  flex justify-between p-3 rounded my-2">
+          <button className=" w-full  flex justify-between p-3 rounded my-2 font-montserrat">
             <span>Field for filter</span>
             <span>43+</span>
           </button>
-          <button className=" w-full  flex justify-between p-3 rounded my-2">
+          <button className=" w-full  flex justify-between p-3 rounded my-2 font-montserrat">
             <span>Field for filter</span>
             <span>53+</span>
           </button>
-          <button className="w-full  flex justify-between p-3 rounded my-2">
+          <button className="w-full  flex justify-between p-3 rounded my-2 font-montserrat">
             <span>Field for filter</span>
             <span>73+</span>
           </button>
@@ -153,12 +153,12 @@ const Discover = () => {
         <div className="sm:col-span-10">
           <div className="sm:mx-auto   flex flex-col sm:flex-row sm:justify-between sm:items-center">
             <div className="flex flex-col sm:flex-row sm:space-x-4">
-              <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px]">
+              <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px] font-montserrat">
                 <option>Self-Study</option>
                 <option>In-House Training</option>
                 <option>Live-Online Class</option>
               </select>
-              <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px]">
+              <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px] font-montserrat">
                 <option>Sponsored</option>
                 {
                   categories && categories.map((category) => (
@@ -174,7 +174,7 @@ const Discover = () => {
                     selectedTag === tag
                       ? "bg-[#074226] text-white" // Selected button styling
                       : "bg-white text-black" // Default button styling
-                  }`}
+                  } font-montserrat`}
                   onClick={() => {
                     handleTagClick(tag);
                   }}
@@ -194,12 +194,12 @@ const Discover = () => {
                 </div>
                 {/* Price */}
                 <div className="flex items-center gap-1">
-                  <p className="font-bold text-xl ">{course.price}</p>
-                  <span className="text-md"> /course</span>
+                  <p className="font-bold text-xl font-montserrat">{course.price}</p>
+                  <span className="text-md font-montserrat"> /course</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-md font-medium my-2">{course.title}</h3>
+                <h3 className="text-md font-medium my-2 font-montserrat">{course.title}</h3>
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4 justify-around w-full">
                   {course.tags.map((tag, index) => (
@@ -213,7 +213,7 @@ const Discover = () => {
                 </div>
                 {/* Button */}
                 <div className="flex px-2 justify-between items-center gap-2">
-                  <button className="bg-[#074226] text-white px-4 py-2 rounded-full hover:bg-[#194732] flex-1">
+                  <button className="bg-[#074226] text-white px-4 py-2 rounded-full hover:bg-[#194732] flex-1 font-montserrat">
                     {course.buttonText}
                   </button>
                 </div>

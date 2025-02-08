@@ -24,10 +24,10 @@ const BlogCard = ({ title, time }) => {
       </div>
       <div className="card-body px-3 flex flex-col justify-between">
         <div>
-          <h2 className="card-title text-white text-lg font-bold">{title}</h2>
+          <h2 className="card-title text-white text-lg font-bold font-montserrat">{title}</h2>
         </div>
         <div className="mt-4 flex gap-2 text-sm text-white ">
-          <span className="flex">
+          <span className="flex font-montserrat">
             {" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const BlogCard = ({ title, time }) => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="size-6"
+              className="size-6 font-montserrat"
             >
               <path
                 strokeLinecap="round"
@@ -45,7 +45,7 @@ const BlogCard = ({ title, time }) => {
             </svg>
             {time}
           </span>
-          <span className="text-white flex">
+          <span className="text-white flex font-montserrat">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

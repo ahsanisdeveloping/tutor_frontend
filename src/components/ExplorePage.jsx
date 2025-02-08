@@ -43,27 +43,27 @@ const CourseCategories = () => {
   return (
     <div style={{ backgroundImage: `url(${bg})` }} className={`bg-cover sm:py-12`}>
       <div className="max-w-6xl mx-auto text-center py-5 sm: sm:px-5">
-        <h2 className="text-3xl sm:py-8 sm:text-[52px] font-[500] mb-6 font-clash">{t("title")}</h2>
+        <h2 className="text-3xl sm:py-8 sm:text-[52px] font-[500] mb-6 font-montserrat">{t("title")}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 p-4 sm:p-0">
           {categories &&
             categories.map((category, index) => (
               <div
                 key={index}
-                className="flex items-center justify-center p-4 bg-white shadow rounded-lg hover:cursor-pointer hover:shadow-lg transition font-nunito"
+                className="flex items-center justify-center p-4 bg-white shadow rounded-lg hover:cursor-pointer hover:shadow-lg transition font-montserrat"
                 onClick={()=>navigate("/discover")}
               >
                 <img
                   className="text-2xl mr-3"
                   src={category.icon ? category.icon : icon1}
                 />
-                <span className=" text-gray-700 font-nunito font-[600]">
+                <span className=" text-gray-700 font-montserrat font-[600]">
                   {category.title}
                 </span>
               </div>
             ))}
         </div>
         <button
-          className="px-6 pr-8 py-3 bg-[#074226] text-white font-medium font-nunito rounded  relative hover:cursor-auto sm:px-10 sm:pr-16"
+          className="px-6 pr-8 py-3 bg-[#074226] text-white font-medium font-montserrat rounded  relative hover:cursor-auto sm:px-10 sm:pr-16"
           onClick={() => {
             navigate("/discover");
           }}

@@ -7,7 +7,7 @@ export default function ContactModal() {
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       {/* Button to open modal */}
       <button
-        className="btn btn-primary"
+        className="btn btn-green-600"
         onClick={() => setIsOpen(true)}
       >
         Open Modal
@@ -26,7 +26,7 @@ export default function ContactModal() {
             </button>
 
             {/* Form Title */}
-            <h2 className="text-xl font-semibold text-gray-700 text-center mb-4">
+            <h2 className="text-xl font-semibold text-gray-700 text-center mb-4 font-montserrat">
               Contact Us
             </h2>
 
@@ -63,14 +63,14 @@ export default function ContactModal() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <select className="select select-bordered w-full">
-                  <option>What are you looking for?*</option>
+                <select className="select select-bordered w-full font-montserrat">
+                  <option >What are you looking for?*</option>
                   <option>Cooperate Training</option>
                   <option>Individual Training</option>
                   <option>Other</option>
                 </select>
 
-                <select className="select select-bordered w-full">
+                <select className="select select-bordered w-full font-montserrat">
                   <option>Cooperate Training</option>
                   <option>Corporate Consulting</option>
                   <option>Custom Solutions</option>
@@ -83,7 +83,7 @@ export default function ContactModal() {
               ></textarea>
 
               <div className="text-center">
-                <button className="btn btn-success w-full text-white">
+                <button className="btn btn-success w-full text-white font-montserrat">
                   Submit
                 </button>
               </div>

@@ -21,7 +21,7 @@ const RegisterPage = () => {
 
           {/* Right Form Section */}
           <div className="md:w-1/2 p-8">
-            <button className="text-white bg-[#074226] p-2 px-5 rounded-3xl font-bold mb-6 absolute left-5" onClick={()=>navigate('/')}>
+            <button className="text-white bg-[#074226] p-2 px-5 rounded-3xl font-bold mb-6 absolute left-5 font-montserrat" onClick={()=>navigate('/')}>
               &lt; Back to Website
             </button>
             <h2 className="text-2xl font-bold mb-6 text-white">Register as</h2>
@@ -31,7 +31,7 @@ const RegisterPage = () => {
                   role === "Student"
                     ? "bg-yellow-600 text-white"
                     : "bg-gray-200 text-gray-700"
-                }`}
+                } font-montserrat`}
                 onClick={() => setRole("Student")}
               >
                 Student
@@ -41,7 +41,7 @@ const RegisterPage = () => {
                   role === "Teacher"
                     ? "bg-yellow-600 text-white"
                     : "bg-gray-200 text-gray-700"
-                }`}
+                } font-montserrat`}
                 onClick={() => setRole("Teacher")}
               >
                 Teacher
@@ -61,13 +61,13 @@ const StudentForm = () => (
     {/* Personal Information */}
     <div className="grid grid-cols-2 gap-4">
       <div>
-        <label htmlFor="" className="text-white">
+        <label htmlFor="" className="text-white font-montserrat">
           First Name
         </label>
         <input type="text" placeholder="First Name" className="input" />
       </div>
       <div>
-        <label htmlFor="" className="text-white">
+        <label htmlFor="" className="text-white font-montserrat">
           Last Name
         </label>
         <input type="text" placeholder="Last Name" className="input" />
@@ -77,34 +77,34 @@ const StudentForm = () => (
       <div className="flex items-center space-x-4">
         <label className="flex items-center space-x-2">
           <input type="radio" name="gender" value="Male" />
-          <span className="text-white">Male</span>
+          <span className="text-white font-montserrat">Male</span>
         </label>
         <label className="flex items-center space-x-2">
           <input type="radio" name="gender" value="Female" />
-          <span className="text-white">Female</span>
+          <span className="text-white font-montserrat">Female</span>
         </label>
       </div>
       <div>
-        <label htmlFor="" className="text-white">
+        <label htmlFor="" className="text-white font-montserrat" >
           Phone
         </label>
         <input type="text" placeholder="Phone Number" className="input" />
       </div>
     </div>
     <div className="flex flex-col">
-      <label htmlFor="" className="text-white">
+      <label htmlFor="" className="text-white font-montserrat">
         Email
       </label>
       <input type="email" placeholder="Email" className="input" />
     </div>
     <div className="flex flex-col">
-      <label htmlFor="" className="text-white">
+      <label htmlFor="" className="text-white font-montserrat">
         Password
       </label>
       <input type="password" placeholder="Password" className="input" />
     </div>
     <div className="flex flex-col">
-      <label htmlFor="" className="text-white">
+      <label htmlFor="" className="text-white font-montserrat">
         Confirm Password
       </label>
       <input type="password" placeholder="ConfirmPassword" className="input" />
@@ -112,21 +112,21 @@ const StudentForm = () => (
 
     <div className="flex items-center space-x-2">
       <input type="checkbox" id="terms" />
-      <label htmlFor="terms" className="text-white">
+      <label htmlFor="terms" className="text-white font-montserrat">
         I Agree to Terms and Conditions
       </label>
     </div>
 
     <button
       type="submit"
-      className="w-full bg-white text-[#074226] py-2 rounded-lg font-bold"
+      className="w-full bg-white text-[#074226] py-2 rounded-lg font-bold font-montserrat"
     >
       Sign In
     </button>
 
-    <p className="text-center text-white mt-4">
+    <p className="text-center text-white mt-4 font-montserrat">
       Already have an account?{" "}
-      <a href="#" className="text-[#FFBF44]">
+      <a href="#" className="text-[#FFBF44] font-montserrat">
         Login
       </a>
     </p>
@@ -141,13 +141,13 @@ const TeacherForm = () => (
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label htmlFor="" className="text-white">
+          <label htmlFor="" className="text-white font-montserrat">
             First Name
           </label>
           <input type="text" placeholder="First Name" className="input" />
         </div>
         <div>
-          <label htmlFor="" className="text-white">
+          <label htmlFor="" className="text-white font-montserrat">
             Last Name
           </label>
           <input type="text" placeholder="Last Name" className="input" />
@@ -157,31 +157,31 @@ const TeacherForm = () => (
         <div className="flex items-center space-x-4">
           <label className="flex items-center space-x-2">
             <input type="radio" name="gender" value="Male" />
-            <span className="text-white">Male</span>
+            <span className="text-white font-montserrat">Male</span>
           </label>
           <label className="flex items-center space-x-2">
             <input type="radio" name="gender" value="Female" />
-            <span className="text-white">Female</span>
+            <span className="text-white font-montserrat">Female</span>
           </label>
         </div>
         <div>
-          <label htmlFor="" className="text-white">Phone</label>
+          <label htmlFor="" className="text-white font-montserrat">Phone</label>
           <input type="text" placeholder="Phone Number" className="input" />
         </div>
       </div>
       <div className="flex flex-col">
-        <label htmlFor="" className="text-white">Email</label>
+        <label htmlFor="" className="text-white font-montserrat">Email</label>
         <input type="email" placeholder="Email" className="input" />
       </div>
       <div className="">
         <div className="flex flex-col">
-          <label htmlFor="" className="text-white">
+          <label htmlFor="" className="text-white font-montserrat">
             Password
           </label>
           <input type="Password" placeholder="Email" className="input" />
         </div>
         <div className="flex flex-col">
-          <label htmlFor="" className="text-white">Confirm Password</label>
+          <label htmlFor="" className="text-white font-montserrat">Confirm Password</label>
           <input
             type="Confirm Password"
             placeholder="Email"
@@ -191,16 +191,16 @@ const TeacherForm = () => (
       </div>
 
       {/* Location */}
-      <h3 className="text-lg font-bold text-green-800 mt-6">Location</h3>
+      <h3 className="text-lg font-bold text-green-800 mt-6 font-montserrat" >Location</h3>
       <div className="grid grid-cols-2 gap-4">
         <input type="text" placeholder="Country" className="input" />
         <input type="text" placeholder="City" className="input" />
       </div>
 
       {/* Qualifications */}
-      <h3 className="text-lg font-bold text-green-800 mt-6">Qualifications</h3>
+      <h3 className="text-lg font-bold text-green-800 mt-6 font-montserrat">Qualifications</h3>
       <div className="grid grid-cols-2 gap-4">
-        <select className="input">
+        <select className="input font-montserrat">
           <option>Specialization</option>
           <option>Business</option>
           <option>Science</option>
@@ -213,13 +213,13 @@ const TeacherForm = () => (
         />
       </div>
       <div className="grid grid-cols-2 gap-4">
-        <select className="input">
+        <select className="input font-montserrat">
           <option>Educational Background</option>
           <option>High School</option>
           <option>Bachelor's Degree</option>
           <option>Master's Degree</option>
         </select>
-        <select className="input">
+        <select className="input font-montserrat">
           <option>Rating</option>
           <option>1</option>
           <option>2</option>
@@ -227,7 +227,7 @@ const TeacherForm = () => (
         </select>
       </div>
       <div className="grid grid-cols-2 gap-4">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 font-montserrat">
           <label className="flex items-center space-x-2">
             <input type="radio" name="language" value="Yes" />
             <span>Yes</span>
@@ -252,14 +252,14 @@ const TeacherForm = () => (
 
       <div className="flex items-center space-x-2">
         <input type="checkbox" id="terms" />
-        <label htmlFor="terms" className="text-white">
+        <label htmlFor="terms" className="text-white font-montserrat">
           I Agree to Terms and Conditions
         </label>
       </div>
 
       <button
         type="submit"
-        className="w-full bg-green-700 text-white py-2 rounded-lg font-bold"
+        className="w-full bg-green-700 text-white py-2 rounded-lg font-bold font-montserrat"
       >
         Sign In
       </button>

@@ -8,7 +8,7 @@ const SignIn = () => {
       <div className="bg-white shadow-lg rounded-lg flex overflow-hidden max-w-4xl">
         {/* Left Side - Illustration */}
         <div className="w-1/2 p-8 flex flex-col justify-center items-center bg-white relative">
-          <button className="absolute top-4 left-4 text-sm text-white bg-[#074226] px-4 py-2 rounded-full hover:bg-green-300" onClick={()=>navigate('/')}>
+          <button className="absolute top-4 left-4 text-sm text-white bg-[#074226] px-4 py-2 rounded-full hover:bg-green-300 font-montserrat" onClick={()=>navigate('/')}>
             &larr; Back to Website
           </button>
           <img
@@ -25,10 +25,10 @@ const SignIn = () => {
 
         {/* Right Side - Form */}
         <div className="w-1/2 p-12 bg-green-900 text-white flex flex-col justify-center">
-          <h2 className="text-3xl font-semibold mb-6">Sign In</h2>
+          <h2 className="text-3xl font-semibold mb-6 font-montserrat">Sign In</h2>
           <form>
             <div className="mb-4">
-              <label htmlFor="username" className="block text-sm mb-1">
+              <label htmlFor="username" className="block text-sm mb-1 font-montserrat">
                 Username
               </label>
               <input
@@ -39,7 +39,7 @@ const SignIn = () => {
               />
             </div>
             <div className="mb-4">
-              <label htmlFor="password" className="block text-sm mb-1">
+              <label htmlFor="password" className="block text-sm mb-1 font-montserrat">
                 Password
               </label>
               <input
@@ -48,7 +48,7 @@ const SignIn = () => {
                 placeholder="Enter your password"
                 className="w-full p-3 rounded bg-gray-100 text-black"
               />
-              <div className="text-right text-xs text-green-300 mt-1 cursor-pointer hover:underline">
+              <div className="text-right text-xs text-green-300 mt-1 cursor-pointer hover:underline font-montserrat">
                 Forgot Password?
               </div>
             </div>
@@ -58,20 +58,20 @@ const SignIn = () => {
                 id="remember"
                 className="mr-2 h-4 w-4 text-green-500 border-green-500"
               />
-              <label htmlFor="remember" className="text-sm">
+              <label htmlFor="remember" className="text-sm font-montserrat">
                 Remember me
               </label>
             </div>
             <button
               type="submit"
-              className="w-full bg-white py-3 rounded text-[#074226] hover:bg-green-700"
+              className="w-full bg-white py-3 rounded text-[#074226] hover:bg-green-700 font-montserrat"
             >
               Login
             </button>
           </form>
-          <div className="text-center mt-4 text-sm">
+          <div className="text-center mt-4 text-sm font-montserrat">
             Do not have an account?{' '}
-            <span className="text-green-400 cursor-pointer hover:underline">
+            <span className="text-green-400 cursor-pointer hover:underline font-montserrat">
               Sign Up
             </span>
           </div>

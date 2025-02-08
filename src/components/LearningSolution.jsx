@@ -11,11 +11,11 @@ import percentage from "../assets/svgs/learning/percentage.svg";
 const LearningSolution = () => {
   return (
     <div className=" bg-gray-50 py-10 ">
-      <h1 className="text-4xl sm:text-[53px] sm:py-5 font-[500] text-center mb-10 font-clash">
+      <h1 className="text-4xl sm:text-[53px] sm:py-5 font-[500] text-center mb-10 font-montserrat">
         Compete Learning Solution
       </h1>
 
-      <div className=" mx-auto bg-white  rounded-lg  p-6 sm:px-20 font-nunito">
+      <div className=" mx-auto bg-white  rounded-lg  p-6 sm:px-20 font-montserrat">
         <div className="sm:grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 sm:h-[570px] gap-4">
           {/* Time Table */}
           <div className="bg-gray-100 p-4 rounded-lg  shadow-sm row-span-3 flex flex-col justify-evenly">

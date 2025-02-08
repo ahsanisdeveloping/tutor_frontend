@@ -103,7 +103,7 @@ const Navbar = () => {
                   navigate("/");
                   setIsOpen(false); // Close dropdown
                 }}
-                className="text-2xl border-b border-gray-200 rounded-none py-4 "
+                className="text-2xl border-b border-gray-200 rounded-none py-4 font-montserrat"
               >
                 {t("home")}
               </a>
@@ -114,14 +114,14 @@ const Navbar = () => {
                   navigate("/");
                   setIsOpen(false); // Close dropdown
                 }}
-                className="text-2xl border-b border-gray-200 rounded-none py-4"
+                className="text-2xl border-b border-gray-200 rounded-none py-4 font-montserrat"
               >
                 {t("aboutUs")}
               </a>
             </li>
             <li>
           <button
-            className="text-2xl border-b border-gray-200 rounded-none py-4"
+            className="text-2xl border-b border-gray-200 rounded-none py-4 font-montserrat"
             onClick={() =>
               document.getElementById("my_modal_1").showModal()
             }
@@ -129,7 +129,7 @@ const Navbar = () => {
             Courses
           </button>
           <dialog id="my_modal_1" className="modal">
-            <div className="modal-box w-full">
+            <div className="modal-box w-full font-montserrat">
             <CoursesModalNav/>
               <div className="modal-action">
                 <button
@@ -147,7 +147,7 @@ const Navbar = () => {
             <li>
               <a
                 onClick={() => navigate("/blogs")}
-                className="text-2xl border-b border-gray-200 rounded-none py-4"
+                className="text-2xl border-b border-gray-200 rounded-none py-4 font-montserrat"
               >
                 {t("blogs").title}
               </a>
@@ -155,7 +155,7 @@ const Navbar = () => {
             {/* Sign-Up and Login Buttons for Mobile */}
             <li className="my-2">
               <a
-                className="btn font-bold border-[#074226] text-center text-2xl"
+                className="btn font-bold border-[#074226] text-center text-2xl font-montserrat"
                 onClick={() => navigate("/signup")}
               >
                 {t("signup")}
@@ -163,14 +163,14 @@ const Navbar = () => {
             </li>
             <li className="my-1">
               <a
-                className="btn font-bold bg-[#074226] text-white text-center text-2xl"
+                className="btn font-bold bg-[#074226] text-white text-center text-2xl font-montserrat"
                 onClick={() => navigate("/signin")}
               >
                 {t("login")}
               </a>
             </li>
             {/* Language Selector for Mobile */}
-            <li className="my-3 ">
+            <li className="my-3 font-montserrat">
               <LanguageSelector />
             </li>
             {/* Theme Button for Mobile */}
@@ -195,7 +195,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="navbar bg-base-100 font-nunito hidden sm:flex">
+      <div className="navbar bg-base-100 font-montserrat hidden sm:flex">
         {/* Navbar Start */}
         <div className="navbar-start">
           {/* Mobile Dropdown */}
@@ -216,7 +216,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-8 text-[19px]">
             <li className="">
               <a
-                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 "
+                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
                 onClick={() => navigate("/")}
               >
                 {t("home")}
@@ -224,7 +224,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0"
+                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
                 onClick={() => navigate("/")}
               >
                 {t("aboutUs")}
@@ -263,7 +263,7 @@ const Navbar = () => {
               {isCourseOpen && (
                 <div
                   id="dropdownDelay"
-                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow left-[-500px] "
+                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow left-[-500px] font-montserrat"
                 >
                   <CoursesModalNav />
                 </div>
@@ -271,7 +271,7 @@ const Navbar = () => {
             </div>
             <li className="">
               <a
-                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0"
+                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
                 onClick={() => navigate("/blogs")}
               >
                 {t("blogs").title}
@@ -286,7 +286,7 @@ const Navbar = () => {
 
             <li>
               <a
-                className="border border-[#074226] font-bold py-2 px-9"
+                className="border border-[#074226] font-bold py-2 px-9  font-montserrat"
                 onClick={() => navigate("/signup")}
               >
                 {t("signup")}
@@ -294,7 +294,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                className="border border-[#074226]  font-bold bg-[#074226] text-white px-9 py-2 "
+                className="border border-[#074226]  font-bold bg-[#074226] text-white px-9 py-2 font-montserrat "
                 onClick={() => navigate("/signin")}
               >
                 {t("login")}
