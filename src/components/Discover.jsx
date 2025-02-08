@@ -123,10 +123,10 @@ const Discover = () => {
       {/* Filters and Sorting */}
 
       {/* Main Section */}
-      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-8 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
+      <main className=" sm:mx-auto sm:px-3 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8] ">
         {/* Sidebar Filters */}
         <aside className="sm:col-span-2 sm:p-0 p-3  rounded-lg font-semibol">
-          <button className="bg-[#074226] w-full text-[15px] text-white flex justify-between p-3 rounded text-left sm:text-md whitespace-nowrap">
+          <button className="bg-[#074226] w-full text-[15px] text-white flex justify-between p-3 rounded text-left sm:text-sm whitespace-nowrap ">
             <span>Filter Courses by Domain</span>
             <span>15</span>
           </button>
