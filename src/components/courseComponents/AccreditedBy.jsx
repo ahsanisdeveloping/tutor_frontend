@@ -2,7 +2,7 @@
 import accreditation1 from "../../assets/svgs/courses/accreditation1.svg";
 import accreditation2 from "../../assets/svgs/courses/accreditation2.svg";
 const AccreditedBy = () => {
-    return ( <div className=" flex flex-col items-center bg-white  sm:p-8 max-w-lg mx-auto shadow border  sm:border-[#074226] p-6  rounded-lg sm:my-5">
+    return ( <div className=" flex flex-col items-center bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]  sm:p-8 max-w-lg mx-auto shadow border  sm:border-[#074226] p-6  rounded-lg sm:my-5">
         <h2 className="text-2xl font-bold text-gray-800 mb-4 font-montserrat">
           Accredited by
         </h2>

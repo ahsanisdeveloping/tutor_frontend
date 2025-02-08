@@ -19,7 +19,7 @@ const CourseContent = () => {
         { title: "Advanced Topics and Specialized Accounting" },
         { title: "Capstone Project and Final Assessment" },
       ];
-    return ( <div className="max-w-xl  bg-white  rounded-lg sm:p-4  ">
+    return ( <div className="  bg-white  rounded-lg sm:p-4  ">
         <h2 className="text-[38px] font-semibold mb-4 sm:my-5 font-montserrat">
           Course Content
         </h2>

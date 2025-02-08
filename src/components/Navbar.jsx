@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <div className="">
       {/* // Mobile Navbar */}
-      <div className=" w-full sm:hidden flex justify-between py-2">
+      <div className=" w-full sm:hidden flex items-center justify-between py-2">
         <a className="btn btn-ghost text-xl  sm:hidden">
           <img
             src={image}
@@ -49,10 +49,28 @@ const Navbar = () => {
         </a>
         <div className="dropdown dropdown-end">
           {/* Dropdown Button */}
+          <button className="  ">
+              <a className="btn font-bold bg-[#074226] text-white rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                  />
+                </svg>
+              </a>
+            </button>
           <button
             tabIndex={0}
             role="button"
-            className="btn btn-ghost lg:hidden"
+            className="btn relative top-1 btn-ghost lg:hidden"
             onClick={toggleDropdown}
           >
             {isOpen ? (
@@ -174,24 +192,7 @@ const Navbar = () => {
               <LanguageSelector />
             </li>
             {/* Theme Button for Mobile */}
-            <li className="my-3">
-              <a className="btn font-bold bg-[#074226] text-white rounded-full">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-                  />
-                </svg>
-              </a>
-            </li>
+            
           </ul>
         </div>
       </div>
