@@ -133,7 +133,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
             </p>
           </div>
         </div>
-        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-semibold mb-2 font-clash">
+        <h1 className="text-3xl sm:text-[47px] sm:leading-tight font-[600] mb-2 font-clash">
           Foundations in Accounting and Auditing Principles
         </h1>
         <p className="text-gray-500 text-[15px] sm:text-[20px] mb-4 font-nunito font-medium">
@@ -156,7 +156,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
             English
           </span>
         </div>
-        <div className="mb-6  h-[400px] overflow-hidden font-nunito">
+        <div className="mb-6  h-[400px] overflow-hidden font-nunito bg-white rounded-md">
           <h2 className="text-[38px] font-semibold mb-2 ">Course Overview</h2>
           <p className="text-gray-600 text-[13px] sm:text-[20px]">
             This Accounting Management Master course is invaluable for those

@@ -63,7 +63,7 @@ const Discover = () => {
     fetchCategories();
   }, []);
   return (
-    <div className="bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
+    <div className=" bg-[radial-gradient(circle,_#f8edd7_40%,_#f9f9f8_100%)]">
       {/* Header Section */}
       <header
         className="bg-base-100  bg-cover bg-center relative"
@@ -123,10 +123,10 @@ const Discover = () => {
       {/* Filters and Sorting */}
 
       {/* Main Section */}
-      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-2 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
+      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-8 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
         {/* Sidebar Filters */}
-        <aside className="sm:col-span-2 sm:p-0 p-3  rounded-lg font-semibold">
-          <button className="bg-[#074226] w-full text-white flex justify-between p-3 rounded text-left sm:text-md">
+        <aside className="sm:col-span-2 sm:p-0 p-3  rounded-lg font-semibol">
+          <button className="bg-[#074226] w-full text-[15px] text-white flex justify-between p-3 rounded text-left sm:text-md whitespace-nowrap">
             <span>Filter Courses by Domain</span>
             <span>15</span>
           </button>
@@ -213,24 +213,8 @@ const Discover = () => {
                 </div>
                 {/* Button */}
                 <div className="flex px-2 justify-between items-center gap-2">
-                  <button className="bg-[#074226] text-white px-4 py-2 rounded-full hover:bg-green-700 flex-1">
+                  <button className="bg-[#074226] text-white px-4 py-2 rounded-full hover:bg-[#194732] flex-1">
                     {course.buttonText}
-                  </button>
-                  <button className="bg-[#074226] text-white p-2 rounded-full hover:bg-green-700">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="size-6 text-white"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                      />
-                    </svg>
                   </button>
                 </div>
               </div>

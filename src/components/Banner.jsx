@@ -14,7 +14,7 @@ const Banner = () => {
         {/* Heading Section */}
         <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
           <div className="h-[2px] w-[50px] md:w-[80px] bg-black"></div>
-          <p className="font-clash text-xl md:text-2xl">{t("heading1")}</p>
+          <p className="font-clash font-[600] text-xl md:text-[18px]">{t("heading1")}</p>
         </div>
 
         {/* Main Headings */}
@@ -78,24 +78,24 @@ const Banner = () => {
         {/* Stats Section */}
         <div className="bg-[#D1BF8F52] flex flex-col md:flex-row p-4 md:p-3 rounded-[10px] justify-evenly items-center text-black my-5 w-full lg:w-[402px] gap-4 md:gap-0 mx-auto lg:mx-0 font-nunito">
           <div className="sm:text-left sm:border-r sm:border-[#D1BF8F80] pr-5 border-b  border-[#D1BF8F80] sm:border-b-transparent pb-4 sm:pb-0 ">
-            <span className="font-bold text-sm md:text-[13px] leading-tight ">
+            <span className="font-bold text-sm md:text-[13px] leading-tight font-nunito">
               {t("morethan")}
             </span>
-            <p className="font-bold text-4xl md:text-[53px] leading-tight">
+            <p className="font-bold text-4xl md:text-[53px] leading-tight font-nunito">
               500+
             </p>
-            <p className="font-bold text-sm md:text-[13px] leading-tight">
+            <p className="font-bold text-sm md:text-[13px] leading-tight font-nunito">
               {t("tutors")}
             </p>
           </div>
           <div className="sm:text-left">
-            <p className="font-bold text-sm md:text-[13px] leading-tight">
+            <p className="font-bold text-sm md:text-[13px] leading-tight font-nunito">
               {t("morethan")}
             </p>
-            <p className="font-bold text-4xl md:text-[53px] leading-tight">
+            <p className="font-bold text-4xl md:text-[53px] leading-tight font-nunito">
               1500+
             </p>
-            <p className="font-bold text-sm md:text-[13px] leading-tight">
+            <p className="font-bold text-sm md:text-[13px] leading-tight font-nunito">
               {t("students")}
             </p>
           </div>

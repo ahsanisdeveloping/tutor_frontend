@@ -56,14 +56,14 @@ const CourseCategories = () => {
                   className="text-2xl mr-3"
                   src={category.icon ? category.icon : icon1}
                 />
-                <span className="font-medium text-gray-700">
+                <span className=" text-gray-700 font-nunito font-[600]">
                   {category.title}
                 </span>
               </div>
             ))}
         </div>
         <button
-          className="px-6 pr-8 py-3 bg-[#074226] text-white font-medium rounded  relative hover:cursor-auto sm:px-10 sm:pr-16"
+          className="px-6 pr-8 py-3 bg-[#074226] text-white font-medium font-nunito rounded  relative hover:cursor-auto sm:px-10 sm:pr-16"
           onClick={() => {
             navigate("/discover");
           }}
