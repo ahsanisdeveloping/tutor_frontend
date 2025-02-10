@@ -42,7 +42,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
     <div className="flex flex-col p-0  lg:flex-row gap-8 sm:p-6  min-h-screen font-montserrat">
       {/* Left Section */}
 
-      <div className="flex-1 bg-white sm:p-6 rounded-lg p-3  bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
+      <div className="flex-1  sm:p-6 rounded-lg p-3  bg-[#fffdf8]">
         <button
           className="flex items-center justify-between gap-1 text-white bg-[#074226] font-semibold mb-4 px-3 pr-4 p-2 rounded-badge"
           onClick={() => navigate("/discover")}
@@ -95,7 +95,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
             English
           </span>
         </div>
-        <div className="shadow border  border-[#074226] p-6  rounded-lg block sm:hidden bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
+        <div className="shadow-[0px_0px_10px_rgba(0,0,0,0.2)] border border-[#074226]  p-6  rounded-lg block sm:hidden bg-[#fffdf8]">
           <div className="text-gray-600 mb-4">
             <div className="relative  h-[423px] w-full">
               <img src={courseImg} alt="" className="w-full" />
@@ -178,7 +178,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
             {products.map(({ id, label, price }) => (
               <label
                 key={id}
-                className="flex items-center justify-between p-4 px-2 border rounded-lg cursor-pointer bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]"
+                className="flex items-center justify-between p-4 px-2 border rounded-lg cursor-pointer bg-gradient-to-r bg-[#fffdf8]"
               >
                 <div className="flex items-center space-x-3 ">
                   <input
@@ -233,7 +233,7 @@ const CourseSelfStudy = ({ handleToggleCourses }) => {
 
       {/* Right Section */}
       <div className="w-full lg:w-1/3 bg-white">
-        <div className="shadow border  border-[#074226] p-6  rounded-lg hidden sm:block bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8]">
+        <div className="shadow-[0px_0px_10px_rgba(0,0,0,0.2)] border border-[#074226]  p-6  rounded-lg hidden sm:block bg-[#f8f2e6]">
           <div className="text-gray-600 mb-4">
             <div className="relative  h-[423px] w-full">
               <img src={courseImg} alt="" className="w-full" />
