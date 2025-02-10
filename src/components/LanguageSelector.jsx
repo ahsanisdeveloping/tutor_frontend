@@ -23,9 +23,9 @@ const LanguageSelector = () => {
         document.body.dir = i18n.dir();
     },[i18n,i18n.language])
     return (
-        <select className="text-2xl sm:text-lg" onChange={(e) => changeLanguage(e.target.value)}>
+        <select className="text-2xl sm:text-lg bg-[#074226] text-white pr-2 active:bg-[#074226] active:text-white" onChange={(e) => changeLanguage(e.target.value)}>
             {languages.map((ln) => (
-                <option key={ln.code} value={ln.code}>
+                <option key={ln.code} value={ln.code} className="bg-[#074226] text-white border-b border-white">
                     {ln.lang}
                 </option>
             ))}

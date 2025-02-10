@@ -4,7 +4,7 @@ const CourseOverview = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <div className="relative bg-white rounded-lg shadow-lg p-6 sm:p-10 w-full max-w-4xl mx-auto font-nunito">
+    <div className="relative bg-white rounded-lg shadow-lg p-6 sm:p-10 w-full max-w-4xl mx-auto font-nunito my-5">
       {/* Heading */}
       <h2 className="text-[28px] sm:text-[38px] font-semibold mb-4 font-montserrat">
         Course Overview

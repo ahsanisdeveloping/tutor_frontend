@@ -123,12 +123,12 @@ const Discover = () => {
       {/* Filters and Sorting */}
 
       {/* Main Section */}
-      <main className=" sm:mx-auto sm:px-3 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8] ">
+      <main className=" sm:mx-auto sm:px-10 sm:py-6 sm:grid sm:grid-cols-12 sm:gap-6 bg-gradient-to-r from-[#f8edd7] to-[#f9f9f8] ">
         {/* Sidebar Filters */}
-        <aside className="sm:col-span-2 sm:p-0 p-3  rounded-lg font-semibol">
-          <button className="bg-[#074226] w-full text-[15px] text-white flex justify-between p-3 rounded text-left sm:text-sm whitespace-nowrap font-montserrat">
+        <aside className="sm:col-span-2 sm:p-0 p-3 px-5 sm:px-0 text-xs rounded-lg ">
+          <button className="bg-[#074226] w-full text-xs text-white flex justify-between p-3 rounded text-left sm:text-xs whitespace-nowrap font-montserrat">
             <span >Filter Courses by Domain</span>
-            <span>15</span>
+            {/* <span>15</span> */}
           </button>
 
           <button className=" w-full flex justify-between p-3 rounded my-2 font-montserrat">
@@ -151,7 +151,7 @@ const Discover = () => {
 
         {/* Course Cards */}
         <div className="sm:col-span-10">
-          <div className="sm:mx-auto   flex flex-col sm:flex-row sm:justify-between sm:items-center">
+          <div className="sm:mx-auto px-5 sm:px-0  flex flex-col sm:flex-row sm:justify-between sm:items-center">
             <div className="flex flex-col sm:flex-row sm:space-x-4">
               <select className="select font-bold my-2 sm:my-0 bg-transparent sm:w-[150px] font-montserrat">
                 <option>Self-Study</option>
@@ -167,7 +167,7 @@ const Discover = () => {
                 }
               </select>
             </div>
-            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex scrollbar-none px-2 mx-3" >
+            <div className="bg-[#EDE8DA] p-[8px] sm:px-3 px-5 rounded-2xl sm:flex gap-1 overflow-x-scroll sm:flex-nowrap flex scrollbar-none  mx-3" >
               {filterTags.map((tag) => (
                 <button
                   className={` rounded-2xl p-1 px-5 text-[13px] flex-shrink-0 ${
@@ -185,7 +185,7 @@ const Discover = () => {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3 my-2 px-3 sm:px-0">
+          <div className="grid sm:grid-cols-3 sm:gap-6 gap-3 my-2 px-7 sm:px-0 ">
             {courses.map((course) => (
               <div key={course.id} className="border p-4 rounded-lg shadow-md bg-white max-w-[400px]" onClick={()=>navigate(`/courses`)}>
                 {/* Logo */}

@@ -36,7 +36,7 @@ const blogs = [
 
 const TrendingBlogs = () => {
   return (
-    <div className="px-2 sm:px-20 py-10 font-montserrat">
+    <div className="px-5 sm:px-20 py-10 font-montserrat">
       <div className="bg-[#DBCFBC] rounded-3xl p-8 shadow-lg flex flex-col lg:flex-row gap-8 ">
         <div className="flex-1">
           <h2 className="text-lg sm:text-[55px] font-semibold font-montserrat text-black mb-2 sm:leading-relaxed">

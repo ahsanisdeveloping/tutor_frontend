@@ -56,7 +56,7 @@ const CourseCategories = () => {
                   className="text-2xl mr-3"
                   src={category.icon ? category.icon : icon1}
                 />
-                <span className=" text-gray-700 font-montserrat font-[600]">
+                <span className=" text-gray-700 font-montserrat text-sm font-[600]">
                   {category.title}
                 </span>
               </div>

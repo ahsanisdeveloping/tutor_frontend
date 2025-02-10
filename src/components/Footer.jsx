@@ -106,8 +106,8 @@ const Footer = () => {
 
         {/* Subscription Form */}
         <div className="w-full lg:w-auto col-span-2">
-          <h1 className="text-white text-lg font-bold">Subscribe</h1>
-          <form className="mt-4 flex items-center gap-2 ">
+          <h1 className="text-white text-md font-bold">Subscribe</h1>
+          <form className="mt-4 flex items-center gap-1 sm:gap-1">
             <input
               type="email"
               placeholder="Enter your Email"
@@ -116,7 +116,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="bg-[#074226] text-white sm:px-4 py-2 rounded-md text-sm font-bold hover:bg-[#05631b]"
+              className="bg-[#074226] text-white sm:px-4 px-3 py-2 rounded-md text-sm font-bold hover:bg-[#05631b] border border-white-[1px]"
             >
               Subscribe
             </button>

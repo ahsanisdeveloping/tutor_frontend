@@ -26,7 +26,7 @@ const KeyTakeaways = () => {
             "Learn how to prioritise and launch IT projects, and integrate it to the business strategy successfully.",
         },
       ];
-    return ( <div className="bg-white rounded-lg my-2 shadow-xl">
+    return ( <div className="bg-white rounded-lg my-5 shadow-xl">
         <h1 className="text-[38px] font-semibold sm:p-5 p-3 font-montserrat">
           Key Takeaways
         </h1>

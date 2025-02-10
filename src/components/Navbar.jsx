@@ -217,7 +217,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-8 text-[19px]">
             <li className="">
               <a
-                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
+                className="font-medium hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
                 onClick={() => navigate("/")}
               >
                 {t("home")}
@@ -225,7 +225,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
+                className="font-medium hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
                 onClick={() => navigate("/")}
               >
                 {t("aboutUs")}
@@ -242,7 +242,7 @@ const Navbar = () => {
                 className=" hover:bg-gray-200    font-medium  text-sm  py-2.5 text-center inline-flex items-center  hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 group "
                 type="button"
               >
-                <b className="text-[19px]">{t("courses").title}</b>
+                <b className="text-[19px] font-medium">{t("courses").title}</b>
                 <svg
                   className="w-2.5 h-2.5 ms-3 group-hover:rotate-180 transition-all"
                   aria-hidden="true"
@@ -272,7 +272,7 @@ const Navbar = () => {
             </div>
             <li className="">
               <a
-                className="font-bold hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
+                className="font-medium hover:border-b-[3px] border-[#074226] hover:bg-auto rounded-none pb-1 hover:bg-transparent px-0 font-montserrat"
                 onClick={() => navigate("/blogs")}
               >
                 {t("blogs").title}
@@ -287,7 +287,7 @@ const Navbar = () => {
 
             <li>
               <a
-                className="border border-[#074226] font-bold py-2 px-9  font-montserrat"
+                className="border border-[#074226] font-semibold py-2 px-9  font-montserrat"
                 onClick={() => navigate("/signup")}
               >
                 {t("signup")}
@@ -295,7 +295,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                className="border border-[#074226]  font-bold bg-[#074226] text-white px-9 py-2 font-montserrat "
+                className="border border-[#074226]  font-semibold bg-[#074226] text-white px-9 py-2 font-montserrat "
                 onClick={() => navigate("/signin")}
               >
                 {t("login")}

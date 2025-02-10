@@ -2,7 +2,7 @@
 import { courses } from "../../data/courses";
 const SelectCourseType = () => {
   const trimCourses = courses.slice(0, 4);
-    return ( <div className="max-w-4xl mx-auto bg-white sm:p-6 rounded-lg ">
+    return ( <div className="max-w-4xl mx-auto bg-white sm:p-6 rounded-lg my-5">
       <h1 className="text-[30px] sm:text-[38px] font-semibold sm:my-5 my-2 font-montserrat">
         Select Course Type
       </h1>
