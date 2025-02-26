@@ -4,6 +4,7 @@ import LanguageSelector from "./LanguageSelector";
 import { useNavigate } from "react-router-dom";
 import { useState,useEffect } from "react";
 import CoursesModalNav from "./CoursesModalNav";
+import CoursesModalNavNew from "./CoursesModalNavNew";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -148,7 +149,8 @@ const Navbar = () => {
           </button>
           <dialog id="my_modal_1" className="modal">
             <div className="modal-box w-full font-montserrat">
-            <CoursesModalNav/>
+            {/* <CoursesModalNav/> */}
+            <CoursesModalNavNew/>
               <div className="modal-action">
                 <button
                   className="btn bg-[#074226] text-white"
@@ -264,9 +266,10 @@ const Navbar = () => {
               {isCourseOpen && (
                 <div
                   id="dropdownDelay"
-                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow left-[-500px] font-montserrat"
+                  className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow left-[-550px] font-montserrat"
                 >
-                  <CoursesModalNav />
+                  {/* <CoursesModalNav /> */}
+                  <CoursesModalNavNew/>
                 </div>
               )}
             </div>
